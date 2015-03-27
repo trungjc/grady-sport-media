@@ -1,0 +1,127 @@
+<!-- header-19 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header19" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+	<header class="header-19">
+		<div class="container">
+			<div class="row">
+				<div class="navbar col-sm-12" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle">
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top hardRight">
+                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+                            </customizer>
+                            {% endif %}
+                        </button>
+                        <a
+                        href="{{ brand.url }}"
+                        class="brand custom-img"
+                        {% if edit_mode %}
+                            ng-href="[[ data.brand.url ]]"
+                        {% endif %}>
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top dm-image">
+                                <div class="dm-control-button" data-width="50" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                                <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                                <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                            </customizer>
+                            {% endif %}
+                            <img
+                            width="50"
+                            height="50"
+                            alt=""
+                            ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                            src="{{ sfBuildUri }}{{ brand.image }}"
+                            {% if edit_mode %}
+                                ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                            {% endif %} />
+                            <span {% if edit_mode %}dm-contenteditable ng-model="data.brand.name"{% endif %}>{{ brand.name }}</span>
+                        </a>
+					</div>
+					<div class="navbar-collapse collapse">
+						{% macro render_one_line_menu(items) %}
+        					<ul class="nav pull-right">
+                                {% for item in items %}
+                                    <li>
+                                        <a href="{{ item.url }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endmacro %}
+                        {% if wp_mode %}
+                            {{ _self.render_one_line_menu(headerMenu.items) }}
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+                            </customizer>
+                            {% endif %}
+                        {% else %}
+                            {{ _self.render_one_line_menu(menu) }}
+                        {% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section
+    class="header-19-sub"
+    {% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+        <div
+        class="background"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                'opacity': data.opacity
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+        {% endif %}>&nbsp;</div>
+		<img class="hidden-xs" src="{{sfBuildUri}}/common-files/img/header/ipad@2x.png" alt="">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7">
+					<h1 {% if edit_mode %} text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h1>
+					<p {% if edit_mode %} text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+					<div class="btns">
+                        {% if edit_mode %}
+                        <a
+                        ng-repeat="btn in data.btns"
+                        ng-href="[[ btn.url ]]"
+                        class="btn btn-primary [[ btn.icon ]]"
+                        dm-contenteditable
+                        ng-model="btn.name">
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" ng-class="{hasUrl: btn.url}" dm-edit-url="btn.url"></div>
+                            </customizer>
+                            {{ btn.name }}
+                        </a>
+                        {% else %}
+                            {% for btn in btns %}
+                                <a
+                                href="{{ btn.url }}"
+                                class="btn btn-primary">
+                                    <span class="{{ btn.icon }}"> </span>
+                                    <span>{{ btn.name }}</span>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+					</div>
+                    <div class="additional-links" {% if edit_mode %} text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.add_links"{% endif %}>{{ add_links }}</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

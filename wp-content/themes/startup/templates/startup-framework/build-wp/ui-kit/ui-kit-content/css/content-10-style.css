@@ -1,0 +1,108 @@
+/**
+ * Content 10 stylesheet  
+ * */
+.content-10 {
+  padding-top: 130px;
+  padding-bottom: 125px;
+  position: relative;
+}
+.content-10 .carousel {
+  margin-bottom: 0;
+  display: inline-block;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .content-10 .carousel {
+    margin-top: 80px;
+  }
+}
+.content-10 .carousel .item img {
+  margin: 0 auto;
+}
+.content-10 .carousel .carousel-indicators {
+  position: static;
+  text-align: center;
+  margin: 0;
+  padding-top: 40px;
+}
+.content-10 .carousel .carousel-indicators li {
+  display: inline-block;
+  float: none;
+  width: 12px;
+  height: 12px;
+  margin-left: 7px;
+  text-indent: -999px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.content-10 .carousel .carousel-indicators li:first-child {
+  margin-left: 0;
+}
+.content-10 .carousel .carousel-indicators .active {
+  background-color: #c0392b;
+}
+.content-10 .carousel .item {
+  -webkit-transition: 0.6s ease-in-out opacity;
+  -moz-transition: 0.6s ease-in-out opacity;
+  -o-transition: 0.6s ease-in-out opacity;
+  transition: 0.6s ease-in-out opacity;
+  left: 0!important;
+}
+.content-10 .carousel .item.active.left,
+.content-10 .carousel .item.active.right {
+  opacity: 0;
+  z-index: 2;
+}
+.content-10 .carousel .item.next {
+  opacity: 1;
+  z-index: 1;
+}
+.content-10 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 48px;
+  font-weight: 300;
+}
+.content-10 p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+}
+.content-10 .features .box {
+  position: relative;
+  padding-left: 140px;
+  padding-top: 50px;
+  margin-top: 50px;
+  min-height: 100px;
+  border-top: 2px solid #ecf0f1;
+}
+.content-10 .features .box.first,
+.content-10 .features .box:first-child,
+.content-10 .features .box:first-of-type {
+  margin-top: 0;
+  border-top: 0;
+}
+.content-10 .features .box .img-holder {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.content-10 .features h6 {
+  text-transform: none;
+  font-size: 22px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+.content-10 .features p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+}

@@ -1,0 +1,52 @@
+{
+    "bg_image": "",
+    "bg_color": "#1F2225",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "title": "Features of Startup Framework",
+    "description": "We’ve created the product that will help your startup to look even better",
+    "btn_primary": {
+        "name": "SIGN IN",
+        "url": "\/"
+    },
+    "btn_huge": {
+        "name": "Sign In with Facebook",
+        "url": "\/"
+    },
+    "slider": [{
+        "image": "common-files/img/header/ticket-clear@2x.png",
+        "header": "The Second Sneak-Peek of Startup Design Framework",
+        "title": "Smart Layers",
+        "description": "Just put the image with your App screen inside Smart Layer and get the photo."
+    }, {
+        "image": "common-files/img/header/ticket-clear@2x.png",
+        "header": "The Second Sneak-Peek of Startup Design Framework",
+        "title": "Smart Layers",
+        "description": "Just put the image with your App screen inside Smart Layer and get the photo."
+    }, {
+        "image": "common-files/img/header/ticket-clear@2x.png",
+        "header": "The Second Sneak-Peek of Startup Design Framework",
+        "title": "Smart Layers",
+        "description": "Just put the image with your App screen inside Smart Layer and get the photo."
+    }],
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

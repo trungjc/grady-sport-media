@@ -1,0 +1,102 @@
+/**
+ * Footer 13 stylesheet  
+ * */
+.footer-13 {
+  padding-top: 44px;
+  padding-bottom: 40px;
+  background: #ebedee;
+  text-align: center;
+}
+.footer-13 a {
+  font-weight: normal;
+}
+.footer-13 > .container {
+  position: relative;
+}
+.footer-13 > .container [class*="fui-"] {
+  font-size: 24px;
+  font-weight: normal;
+  color: #e74c3c;
+}
+.footer-13 nav {
+  font-size: 12px;
+  font-weight: normal;
+  color: inherit;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer-13 nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-13 nav ul li {
+  float: left;
+  margin-left: 125px;
+  line-height: 25px;
+}
+@media (max-width: 991px) {
+  .footer-13 nav ul li {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-13 nav ul li {
+    margin-left: 20px;
+  }
+}
+.footer-13 nav ul li:first-child {
+  margin-left: 0;
+}
+.footer-13 nav ul li a {
+  color: #95a5a6;
+}
+.footer-13 nav ul li a:hover,
+.footer-13 nav ul li a:focus,
+.footer-13 nav ul li a.active {
+  color: #e74c3c;
+}
+.footer-13 nav ul li.skip-item {
+  width: 24px;
+  height: 30px;
+}
+.footer-13 nav.left-menu {
+  float: left;
+}
+.footer-13 nav.right-menu {
+  float: right;
+}
+.footer-13 .nav-icon {
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  margin-left: -12px;
+}
+@media (max-width: 620px) {
+  .footer-13 > .container > [class*="fui-"] {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .footer-13 nav {
+    float: none !important;
+    text-align: left;
+  }
+  .footer-13 nav.pull-right {
+    margin-top: 18px;
+  }
+  .footer-13 nav ul li {
+    float: none;
+    margin: 18px 0 0;
+  }
+  .footer-13 nav ul li:first-child {
+    margin-top: 0;
+  }
+  .footer-13 .nav-icon {
+    position: static;
+    margin: 18px 0;
+    text-align: left;
+  }
+}

@@ -1,0 +1,264 @@
+/**
+ * Header 1 stylesheet
+ * */
+.header-1 {
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.header-1 > .container {
+  position: relative;
+}
+.header-1 .navbar {
+  position: absolute;
+  z-index: 2;
+  top: 45px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.header-1 .navbar.navbar-fixed-top {
+  position: fixed;
+}
+.header-1 .navbar .navbar-toggle {
+  background: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/icons/menu-icon@2x.png") 50% no-repeat;
+  -webkit-background-size: 17px 12px;
+  -moz-background-size: 17px 12px;
+  -o-background-size: 17px 12px;
+  background-size: 17px 12px;
+}
+.header-1 .navbar .brand {
+  font-size: 25px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+}
+.header-1 .navbar .brand:hover,
+.header-1 .navbar .brand:focus,
+.header-1 .navbar .brand.active {
+  color: #ffffff;
+}
+.header-1 .navbar .brand .custom-img-wrapper {
+  margin: -10px 15px 0 0;
+}
+.header-1 .navbar .brand .custom-img-wrapper .dm-image {
+  width: 121px;
+}
+.header-1 .navbar .brand img:first-child {
+  float: left;
+  margin: -10px 15px 0 0;
+}
+.header-1 .navbar .nav > li {
+  margin-left: 20px;
+}
+.header-1 .navbar .nav > li:first-child {
+  margin-left: 0;
+}
+.header-1 .navbar .nav > li > a {
+  text-transform: uppercase;
+  padding: 35px 0 27px;
+  font-size: 13px;
+  font-weight: normal;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.header-1 .navbar .nav > li > a:hover,
+.header-1 .navbar .nav > li > a:focus,
+.header-1 .navbar .nav > li > a.active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.header-1 .navbar .nav > li.active > a {
+  color: rgba(0, 0, 0, 0.4);
+}
+.header-1 .navbar .nav > li.active > a:hover,
+.header-1 .navbar .nav > li.active > a:focus,
+.header-1 .navbar .nav > li.active > a.active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.header-1-sub {
+  position: relative;
+  z-index: 50;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  background-color: #222527;
+}
+@media (max-width: 480px) {
+  .header-1-sub {
+    height: 420px;
+  }
+}
+.header-1-sub .container {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header-1-sub .container {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+.header-1-sub h3 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .header-1-sub h3 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+@media (max-width: 480px) {
+  .header-1-sub h3 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0 0 24px 0;
+  }
+}
+.header-1-sub .lead {
+  font-size: 30px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .header-1-sub .lead {
+    font-size: 26px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+@media (max-width: 480px) {
+  .header-1-sub .lead {
+    font-size: 22px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+.header-1-sub .pt-perspective {
+  position: relative;
+  height: 100%!important;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
+.header-1-sub .pt-page {
+  width: 100%;
+  height: 100%!important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: #363940;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.header-1-sub .pt-page-1 .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/NY_002.jpg");
+  opacity: 75;
+  filter: alpha(opacity=7500);
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  background-position: 50% 30%;
+}
+.header-1-sub .pt-page-2 .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/header/img-2.jpg");
+  opacity: 75;
+  filter: alpha(opacity=7500);
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  background-position: 50% 30%;
+}
+.header-1-sub .pt-page-3 .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/header/img-3.jpg");
+  opacity: 75;
+  filter: alpha(opacity=7500);
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  background-position: 50% 30%;
+}
+.header-1-sub .pt-page-current,
+.header-1-sub .no-js .pt-page {
+  visibility: visible;
+  z-index: 1;
+}
+.header-1-sub .pt-page-ontop {
+  z-index: 999;
+}
+.header-1-sub .page-transitions * {
+  line-height: normal;
+}
+.header-1-sub .page-transitions .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.header-1-sub .page-transitions .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 140px;
+}
+@media (max-width: 480px) {
+  .header-1-sub .page-transitions .caption {
+    bottom: 73px;
+  }
+}
+.header-1-sub .page-transitions .controls > * {
+  position: absolute;
+  left: 15;
+  top: 410px;
+  z-index: 1000;
+  width: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 18px;
+  color: #7f8c8d;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.header-1-sub .page-transitions .controls > *:hover,
+.header-1-sub .page-transitions .controls > *:focus,
+.header-1-sub .page-transitions .controls > *.active {
+  color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 480px) {
+  .header-1-sub .page-transitions .controls > * {
+    top: 363px;
+  }
+}
+.header-1-sub .page-transitions .controls > *.control-next {
+  left: 45px;
+}

@@ -1,0 +1,51 @@
+{
+    "cols": [{
+        "top": {
+            "title": "Easy to use",
+            "description": "To get started, you select the desired sample and base the entire website on it.",
+            "image": "common-files/img/content/arrow-tl@2x.png"
+        },
+        "bottom": {
+            "title": "Variety of designs",
+            "description": "Without iconic symbols really finish your work - for clearly understand.",
+            "image": "common-files/img/content/arrow-bl@2x.png"
+        },
+        "image": "common-files/img/content/screen-1@2x.png"
+    }, {
+        "top": {
+            "title": "Easy to use",
+            "description": "To get started, you select the desired sample and base the entire website on it.",
+            "image": "common-files/img/content/arrow-tl@2x.png"
+        },
+        "bottom": {
+            "title": "Variety of designs",
+            "description": "Without iconic symbols really finish your work - for clearly understand.",
+            "image": "common-files/img/content/arrow-br@2x.png"
+        },
+        "image": "common-files/img/content/screen-2@2xc-30.png"
+    }, {
+        "top": {
+            "title": "Easy to use",
+            "description": "To get started, you select the desired sample and base the entire website on it.",
+            "image": "common-files/img/content/arrow-tr@2x.png"
+        },
+        "bottom": {
+            "title": "Variety of designs",
+            "description": "Without iconic symbols really finish your work - for clearly understand.",
+            "image": "common-files/img/content/arrow-bl@2x.png"
+        },
+        "image": "common-files/img/content/screen-3@2x.png"
+    }, {
+        "top": {
+            "title": "Easy to use",
+            "description": "To get started, you select the desired sample and base the entire website on it.",
+            "image": "common-files/img/content/arrow-tr@2x.png"
+        },
+        "bottom": {
+            "title": "Variety of designs",
+            "description": "Without iconic symbols really finish your work - for clearly understand.",
+            "image": "common-files/img/content/arrow-br@2x.png"
+        },
+        "image": "common-files/img/content/screen-4@2x.png"
+    }]
+}

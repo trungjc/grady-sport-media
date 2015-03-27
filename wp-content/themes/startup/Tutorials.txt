@@ -1,0 +1,19 @@
+Tutorials:
+
+How to Start - https://www.youtube.com/watch?v=k2yic95ncqQ
+Startup Framework for WordPress - Short Review - https://www.youtube.com/watch?v=MTN4xvzHUsM
+How to install and activate our WordPress Theme - https://www.youtube.com/watch?v=15dO4QB14us
+Upload and activate a WordPress theme using FTP - https://www.youtube.com/watch?v=TNuHXSAQvtc
+
+FAQ:
+http://designmodo.com/startup-wordpress/faq/
+
+Support:
+http://designmodo.com/contact-us/
+
+Social Media:
+Twitter - http://www.twitter.com/designmodo
+Facebook - http://www.facebook.com/designmodo
+Google+ - https://www.google.com/+designmodo
+Dribbble - http://dribbble.com/designmodo
+Github - https://github.com/designmodo

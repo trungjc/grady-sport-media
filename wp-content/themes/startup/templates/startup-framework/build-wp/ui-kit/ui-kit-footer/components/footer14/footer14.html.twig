@@ -1,0 +1,66 @@
+<!-- footer-14 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer14" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-14">
+        <div class="container">
+            <a
+            {% if edit_mode %}
+                ng-href="[[ data.brand.url ]]"
+            {% endif %}
+            class="brand custom-img"
+            href="{{ brand.url }}">
+                <img
+                width="41"
+                height="21"
+                alt=""
+                ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                src="{{ sfBuildUri }}{{ brand.image }}"
+                {% if edit_mode %}
+                    ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                {% endif %} />
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top dm-image">
+                    <div class="dm-control-button" data-width="41" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                    <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                    <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                </customizer>
+                {% endif %}
+            </a>
+            <nav>
+                <ul>
+                    {% for nav in headerMenu.items %}
+                        <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                <ul class="subnav">
+                    {% for subnav in subnavs %}
+                        <li><a href="{{ subnav.url }}">{{ subnav.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <div class="social-btns">
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top">
+                    <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                </customizer>
+                <span
+                class="social-item"
+                ng-repeat="social_btn in data.social_btns">
+                    <a
+                    class="social-holder"
+                    ng-href="[[ social_btn.url ]]">
+                        <div class="[[ social_btn.name ]]"></div>
+                        <div class="[[ social_btn.name ]]"></div>
+                    </a>
+                </span>
+                {% else %}
+                    {% for social_btn in social_btns %}
+                        <a class="social-holder" href="{{ social_btn.url }}">
+                            <div class="{{ social_btn.name }}"></div>
+                            <div class="{{ social_btn.name }}"></div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+</div>

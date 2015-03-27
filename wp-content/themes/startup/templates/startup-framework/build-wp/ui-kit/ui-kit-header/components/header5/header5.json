@@ -1,0 +1,43 @@
+{
+    "icon": {
+        "url": "",
+        "name": "fui-home"
+    },
+    "slider": [{
+        "bg_image": "",
+        "bg_color": "#2c3e50",
+        "opacity": "0.2",
+        "title": "Mail App",
+        "description": "Beautiful Project",
+        "icon": {
+            "name": "fui-mic",
+            "url": ""
+        }
+    }, {
+        "bg_image": "",
+        "bg_color": "#1abc9c",
+        "opacity": "0.2",
+        "title": "Mail App",
+        "description": "Beautiful Project",
+        "icon": {
+            "name": "fui-mic",
+            "url": ""
+        }
+    }],
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

@@ -1,0 +1,39 @@
+<!--content-37 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content37" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-37">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <div class="signup-form">
+                        <form method="post">
+                            {% if register_form_errors %}
+                                <div>
+                                    {% for error in register_form_errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                    <br />
+                                </div>
+                            {% elseif _REQUEST.success %}
+                                <div>
+                                    <div>Registered!</div>
+                                </div>
+                                <br />
+                            {% endif %}
+                            <div class="clearfix">
+                                <input type="text" class="form-control" placeholder="Your E-mail" name="sf_register_user[email]" value="{{ _REQUEST.sf_register_user.email }}" />
+                                <input type="password" class="form-control" placeholder="Password" name="sf_register_user[pwd]" value="{{ _REQUEST.sf_register_user.pwd }}" />
+                                <input type="password" class="form-control" placeholder="Confirmation" name="sf_register_user[rpwd]" value="{{ _REQUEST.sf_register_user.rpwd }}" />
+                                {% if edit_mode %}
+                                <span class="dm-form-button btn btn-inverse" dm-contenteditable ng-model="data.btn_inverse.name"></span>
+                                {% else %}
+                                <button type="submit" class="btn btn-inverse">{{ btn_inverse.name }}</button>
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

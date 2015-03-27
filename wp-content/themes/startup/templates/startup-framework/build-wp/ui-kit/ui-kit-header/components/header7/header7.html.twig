@@ -1,0 +1,151 @@
+<!-- header-7 -->
+<div {% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header7" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !h7ptMainSlide.bg_image || h7ptMainSlide.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="h7ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="h7ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="h7ptMainSlide.opacity" dm-gradient="h7ptMainSlide.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="h7ptMainSlide.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="header-7-sub">
+        {% if edit_mode %}
+        <div
+        dm-slider="h-7-pt-main-{{ component_id }}"
+        dm-slider-model="data.slider"
+        dm-slider-archive="h7ptMain"
+        class="page-transitions pt-perspective">
+            <div
+            class="pt-page"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat>
+                <section
+                class="h-7-section h-7-section-[[$index + 1]]"
+                ng-style="{'background-color': slide.bg_color}">
+                    <div>
+                        <div class="background"
+                        ng-style="{
+                            'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                            'opacity': slide.opacity
+                        }">&nbsp;</div>
+                        <header class="header-7">
+                            <div class="container">
+                                <a
+                                class="brand custom-img"
+                                ng-href="[[ data.slider[0].brand.url ]]">
+                                    {% if edit_mode %}
+                                    <customizer class="dm-popover popover fade top dm-image">
+                                        <div class="dm-control-button" data-width="50" dm-upload-type="image" dm-upload-media="data.slider[0].brand.image"></div>
+                                        <div class="dm-control-button" data-width="50" dm-remove-media="data.slider[0].brand.image"></div>
+                                        <div class="dm-control-button" ng-class="{hasUrl: data.slider[0].brand.url}" dm-edit-url="data.slider[0].brand.url"></div>
+                                    </customizer>
+                                    {% endif %}
+                                    <img
+                                    ng-src="{{ sfBuildUri }}[[ data.slider[0].brand.image ]]"
+                                    ng-class="{'removed-image': data.slide[0].image == '../../../img/1x1.png'}"
+                                    width="50"
+                                    height="50"
+                                    alt="" />
+                                    <span dm-contenteditable ng-model="data.slider[0].brand.name"></span>
+                                </a>
+                            </div>
+                        </header>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <div class="player-wrapper">
+                                        <div class="player">
+                                            <customizer class="dm-popover popover fade top">
+                                                <div class="dm-control-button" ng-class="{hasUrl: slide.player.src}" dm-edit-url="slide.player.src" dm-edit-url-type="video"></div>
+                                            </customizer>
+                                            <div
+                                                dm-video="slide.player.src"
+                                                width="212"
+                                                height="142"
+                                                class="embed-video"
+                                                id="pPlayer{{ component_id }}_[[$index]]">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h3>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <p class="lead" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="box" ng-repeat="box in slide.box">
+                                        <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.title"></h6>
+                                        <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.description"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {% else %}
+        <div id="h-7-pt-main-{{ component_id }}" class="page-transitions pt-perspective">
+            {% for slide in slider %}
+            <div class="pt-page">
+                <section class="h-7-section h-7-section-{{ loop.index }}" style="background-color: {{ slide.bg_color }}">
+                    <div>
+                        <div class="background" style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}">&nbsp;</div>
+                        <header class="header-7">
+                            <div class="container">
+                                <a class="brand" href="{{ slide.brand.url }}">
+                                    <img
+                                    width="50"
+                                    height="50"
+                                    alt=""
+                                    src="{{ sfBuildUri }}{{ slide.brand.image }}" />
+                                    <span>{{ slide.brand.name }}</span>
+                                </a>
+                            </div>
+                        </header>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <div class="player-wrapper">
+                                        <div class="player">
+                                            <div class="embed-video">
+                                                <iframe id="pPlayer{{ component_id }}_{{ loop.index }}" data-src="{{ slide.player.src }}" frameborder="0" width="212" height="142" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>{{ slide.title }}</h3>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <p class="lead">{{ slide.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    {% for box in slide.box %}
+                                    <div class="box">
+                                        <h6>{{ box.title }}</h6>
+                                        <span>{{ box.description }}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="pt-controls">
+            <ol class="pt-indicators"></ol>
+        </div>
+    </div>
+</div>

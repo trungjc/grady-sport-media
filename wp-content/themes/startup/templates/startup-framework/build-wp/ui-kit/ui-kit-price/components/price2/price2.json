@@ -1,0 +1,105 @@
+{
+    "plans": [{
+        "title": "FREE PLAN",
+        "currency": "$",
+        "count": "0",
+        "period": "/ MO",
+        "btn": {
+            "name": "AND GET FREE MONTH",
+            "url": "\/"
+        },
+        "descriptions": [{
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "text": "10,000 messages"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-mic"
+            },
+            "text": "<b>unlimited</b> data"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-user"
+            },
+            "text": "<b>unlimited</b> users"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-windows"
+            },
+            "text": " first 10 day free"
+        }]
+    }, {
+        "title": "BUSINESS PLAN",
+        "currency": "$",
+        "count": "29",
+        "period": "/ MO",
+        "btn": {
+            "name": "AND GET FREE MONTH",
+            "url": "\/"
+        },
+        "descriptions": [{
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "text": "10,000 messages"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-mic"
+            },
+            "text": "<b>unlimited</b> data"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-user"
+            },
+            "text": "<b>unlimited</b> users"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-windows"
+            },
+            "text": " first 10 day free"
+        }]
+    }, {
+        "title": "EXTENDED PLAN",
+        "currency": "$",
+        "count": "50",
+        "period": "/ MO",
+        "btn": {
+            "name": "AND GET FREE MONTH",
+            "url": "\/"
+        },
+        "descriptions": [{
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "text": "10,000 messages"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-mic"
+            },
+            "text": "<b>unlimited</b> data"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-user"
+            },
+            "text": "<b>unlimited</b> users"
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-windows"
+            },
+            "text": " first 10 day free"
+        }]
+    }]
+}

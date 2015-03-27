@@ -1,0 +1,132 @@
+<!-- header-5 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header5" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !h5pt1Slide.bg_image || h5pt1Slide.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="h5pt1Slide.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="h5pt1Slide.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="h5pt1Slide.opacity" dm-gradient="h5pt1Slide.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="h5pt1Slide.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <header class="header-5">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar col-sm-12" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle"></button>
+                        <span class="home">
+                            {% if edit_mode %}
+                            <span ng-class="data.icon.name">
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-change-icon" dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url"></div>
+                                </customizer>
+                            </span>
+                            {% else %}
+                                {% if icon.url %}
+                                    <a href="{{ icon.url }}">
+                                        <span class="{{ icon.name }}"> </span>
+                                    </a>
+                                {% else %}
+                                    <span class="{{ icon.name }}"> </span>
+                                {% endif %}
+                            {% endif %}
+                        </span>
+                        <a class="search" href="#"> <span class="fui-search"> </span></a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <div class="nav">
+                            <div class="nav-holder">
+                                {% macro render_one_line_menu(items) %}
+                                    <ul class="nav-list">
+                                        {% for item in items %}
+                                            <li>
+                                                <a href="{{ item.url }}">{{ item.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endmacro %}
+                                {% if wp_mode %}
+                                    {{ _self.render_one_line_menu(headerMenu.items) }}
+                                    {% if edit_mode %}
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+                                    </customizer>
+                                    {% endif %}
+                                {% else %}
+                                    {{ _self.render_one_line_menu(menu) }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <form class="navbar-search" action="{{ baseUrl }}" method="get">
+                        <a class="close-search" href="#"><span class="fui-cross"> </span></a>
+                        <input type="text" name="s" placeholder="Search query">
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="header-5-sub">
+        {% if edit_mode %}
+        <div
+        dm-slider="h-5-pt-1-{{ component_id }}"
+        dm-slider-model="data.slider"
+        dm-slider-archive="h5pt1"
+        class="page-transitions pt-perspective">
+            <div
+            class="pt-page pt-page-[[$index + 1]]"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat>
+                <div
+                class="pt-page-inner"
+                ng-style="{ 'background-color': slide.bg_color }">
+                    <div
+                    class="background"
+                    ng-style="{
+                        'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                        'opacity': slide.opacity
+                    }">&nbsp;</div>
+                    <div class="container">
+                        <div class="box-icon">
+                            <a class="fui-arrow-left pt-control-prev" href="#"> </a>
+                            <span class="icon" ng-class="slide.icon.name">
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-change-icon" dm-change-icon="slide.icon.name" dm-change-icon-url="slide.icon.url"></div>
+                                </customizer>
+                            </span>
+                            <a class="fui-arrow-right pt-control-next" href="#"> </a>
+                        </div>
+                        <div class="hero-unit">
+                            <h1 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h1>
+                            <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div id="h-5-pt-1-{{ component_id }}" class="page-transitions pt-perspective">
+            {% for slide in slider %}
+            <div class="pt-page pt-page-{{ loop.index }}" style="background-color: {{ slide.bg_color }}">
+                <div class="pt-page-inner">
+                    <div class="background" style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}">&nbsp;</div>
+                    <div class="container">
+                        <div class="box-icon">
+                            <a class="fui-arrow-left pt-control-prev" href="#"> </a>
+                            <span class="icon {{ slide.icon.name }}"> </span>
+                            <a class="fui-arrow-right pt-control-next" href="#"> </a>
+                        </div>
+                        <div class="hero-unit">
+                            <h1>{{ slide.title }}</h1>
+                            <p>{{ slide.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+</div>

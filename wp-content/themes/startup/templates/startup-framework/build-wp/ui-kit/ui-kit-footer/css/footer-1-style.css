@@ -1,0 +1,178 @@
+/**
+ * Footer 1 stylesheet  
+ * */
+.footer-1 {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  font-size: 14px;
+  color: #bdc3c7;
+}
+.footer-1 .lead {
+  margin-bottom: 15px;
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+.footer-1 .lead b {
+  font-weight: 500;
+}
+.footer-1 .social-btns {
+  white-space: nowrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.footer-1 .social-btns > * {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #979c9f;
+  width: 20px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+}
+.footer-1 .social-btns > *:first-child {
+  margin-left: 0;
+}
+.footer-1 .social-btns > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.footer-1 .social-btns > * > *:first-child {
+  color: #bdc3c7;
+}
+.footer-1 .social-btns > *:hover > * {
+  top: -100%;
+}
+.footer-1 .social-btns .social-holder > * {
+  display: block;
+}
+.footer-1 .btn.btn-danger {
+  background-color: #c0392b;
+}
+.footer-1 .btn.btn-danger:hover,
+.footer-1 .btn.btn-danger:focus {
+  background-color: #cd6155;
+}
+.footer-1 .btn.btn-danger:active,
+.footer-1 .btn.btn-danger.active {
+  background-color: #a33025;
+}
+.footer-1 a {
+  color: #bdc3c7;
+  font-weight: normal;
+}
+.footer-1 a:hover,
+.footer-1 a:focus,
+.footer-1 a.active {
+  color: #979c9f;
+}
+.footer-1 nav h6 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+}
+.footer-1 nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #bdc3c7;
+}
+.footer-1 nav ul li {
+  margin-bottom: 5px;
+}
+.footer-1 .buy-btn {
+  text-align: center;
+}
+.footer-1 .buy-btn a.btn {
+  font-size: 15px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.footer-1 .buy-btn .btn {
+  margin-bottom: 17px;
+}
+.footer-1 .additional-links {
+  border-top: 1px solid #374859;
+  padding-top: 17px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #95a5a6;
+}
+@media (max-width: 767px) {
+  .footer-1 .additional-links {
+    margin-top: 17px;
+    margin-bottom: 0;
+  }
+}
+.footer-1 .additional-links ul {
+  font-size: 14px;
+  font-weight: normal;
+  color: #95a5a6;
+}
+.footer-1 .additional-links li {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.footer-1 .additional-links a {
+  margin-right: 10px;
+  color: #95a5a6;
+}
+.footer-1 .additional-links a:hover,
+.footer-1 .additional-links a:focus,
+.footer-1 .additional-links a.active {
+  color: #778485;
+}
+@media (max-width: 767px) {
+  .footer-1 .col-sm-6 {
+    margin-bottom: 20px;
+  }
+  .footer-1 nav .col-sm-2,
+  .footer-1 .buy-btn {
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+  }
+  .footer-1 nav .col-sm-2:first-child {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .footer-1 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .footer-1 .buy-btn {
+    float: none;
+    clear: both;
+    width: auto;
+    padding-top: 15px;
+    margin: 0;
+  }
+  .footer-1 .buy-btn .btn {
+    margin: 0 0 10px;
+  }
+  .footer-1 nav .col-sm-2 {
+    width: 47%;
+    margin-left: 6%;
+  }
+}
+.footer-1 .fb_iframe_widget {
+  vertical-align: top;
+}

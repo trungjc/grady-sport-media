@@ -1,0 +1,112 @@
+<!--projects-1 -->
+<div{% if wp_mode %} class="dm-template" dm-template="projects.projects1" component-id="{{ component_id }}"{% endif %}>
+    <section class="projects-1">
+        <div class="container">
+            <div class="title">
+                {% if edit_mode %}
+                <span ng-repeat="title in data.titles">
+                    <a dm-contenteditable ng-model="title.name" href="#"></a>
+                </span>
+                {% else %}
+                    {% for title in titles %}
+                    <span ng-repeat="title in data.titles">
+                        <a href="#">{{ title.name }}</a>
+                    </span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="head-box">
+                <div class="brand custom-img">
+                    <img
+                    src="{{ sfBuildUri }}{{ brand.image }}"
+                    width="42"
+                    height="21"
+                    alt=""
+                    ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                    {% if edit_mode %}
+                        ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                    {% endif %}/>
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top dm-image">
+                        <div class="dm-control-button" data-width="42" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                        <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                    </customizer>
+                    {% endif %}
+                    <span {% if edit_mode %}dm-contenteditable ng-model="data.brand.name"{% endif %}>{{ brand.name }}</span>
+                </div>
+                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+                <div class="features">
+                    {% if edit_mode %}
+                    <div ng-repeat="feature in data.features">
+                        <span ng-class="feature.icon.name">
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-change-icon" dm-change-icon="feature.icon.name" dm-change-icon-url="feature.icon.url"></div>
+                            </customizer>
+                        </span>
+                        <span class="text-features" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.text"></span>
+                    </div>
+                    {% else %}
+                        {% for feature in features %}
+                            <div>
+                                {% if feature.icon.url %}
+                                    <a href="{{ feature.icon.url }}">
+                                        <span class="{{ feature.icon.name }}"> </span>
+                                    </a>
+                                {% else %}
+                                    <span class="{{ feature.icon.name }}"> </span>
+                                {% endif %}
+                                <span>{{ feature.text }}</span>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="background"></div>
+            </div>
+            <div class="projects">
+                {% if edit_mode %}
+                <div class="project-wrapper" ng-repeat="project in data.projects">
+                    <div class="project">
+                        <div class="photo-wrapper custom-img">
+                            <div class="photo" ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + project.image + ')'}">
+                                <img
+                                alt=""
+                                ng-class="{'removed-image': project.image == '../../../img/1x1.png'}"
+                                ng-src="{{ sfBuildUri }}[[ project.image ]]" />
+                            </div>
+                            <customizer class="dm-popover popover fade top dm-image">
+                                <div class="dm-control-button" data-width="270" dm-upload-type="image" dm-upload-media="project.image"></div>
+                                <div class="dm-control-button" data-width="50" dm-remove-media="project.image"></div>
+                            </customizer>
+                            <div class="overlay"><span class="fui-eye"></span></div>
+                        </div>
+                        <div class="info">
+                            <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="project.name" class="name"></div>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="project.info"></span>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                    {% for project in projects %}
+                        <div class="project-wrapper">
+                            <div class="project">
+                                <div class="photo-wrapper">
+                                    <div class="photo">
+                                        <img
+                                        alt=""
+                                        src="{{ sfBuildUri }}{{ project.image }}"
+                                        />
+                                    </div>
+                                    <div class="overlay"><span class="fui-eye"></span></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name">{{ project.name }}</div>
+                                    <span>{{ project.info }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

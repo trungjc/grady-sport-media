@@ -1,0 +1,41 @@
+/**
+ * Content 9 stylesheet  
+ * */
+.content-9 {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  position: relative;
+}
+.content-9 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.content-9 p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+  line-height: 30px;
+}
+.content-9 h6 {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #34495e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.content-9 .info {
+  font-size: 14px;
+  font-weight: normal;
+  color: #7f8c8d;
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .content-9 .info {
+    margin-top: 20px;
+  }
+}

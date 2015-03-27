@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+/**
+ * Header 9 stylesheet  
+ * */
+.header-9 {
+  z-index: 100;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.header-9 .navbar {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.header-9 .navbar.navbar-fixed-top {
+  position: fixed;
+  margin-top: 20px;
+}
+.loaded .header-9 .navbar {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header-9 .navbar .brand {
+  padding: 0 !important;
+  font-weight: normal;
+  color: #aa5a17;
+}
+.header-9 .navbar .brand:hover,
+.header-9 .navbar .brand:focus,
+.header-9 .navbar .brand.active {
+  color: #ffffff;
+}
+.header-9 .navbar .brand img:first-child {
+  float: left;
+  margin: -10px 15px 0 0;
+}
+@media (min-width: 992px) {
+  .header-9 .navbar .nav {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    right: 15px;
+    overflow: visible;
+    text-align: right;
+  }
+  .header-9 .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    margin-left: 9%;
+    margin-top: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-9 .navbar .nav > li {
+    margin-left: 10%;
+  }
+}
+.header-9 .navbar .nav > li > a {
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 13px;
+  font-weight: normal;
+  color: #7f8c8d;
+  color: #aa5a17;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-9 .navbar .nav > li > a:hover,
+.header-9 .navbar .nav > li > a:focus,
+.header-9 .navbar .nav > li > a.active {
+  color: #ffffff;
+}
+.header-9 .navbar .nav > li.active > a {
+  color: #ffffff;
+}
+.header-9 .navbar .nav > li.active > a:hover,
+.header-9 .navbar .nav > li.active > a:focus,
+.header-9 .navbar .nav > li.active > a.active {
+  color: #cccccc;
+}
+.header-9 .navbar .navbar-toggle {
+  margin-top: 8px;
+  background: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/icons/menu-icon@2x.png") 50% no-repeat;
+  -webkit-background-size: 17px 12px;
+  -moz-background-size: 17px 12px;
+  -o-background-size: 17px 12px;
+  background-size: 17px 12px;
+}
+.header-9 .navbar .navbar-header {
+  position: relative;
+  z-index: 2;
+}
+.header-9 > .container {
+  position: relative;
+}
+.header-9-sub {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+  padding-top: 330px;
+  padding-bottom: 75px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+.header-9-sub .background {
+  background-image: url('../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/header/img-4.jpg');
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header-9-sub > .container {
+  position: relative;
+  z-index: 51;
+}
+.header-9-sub .hero-unit.bordered {
+  display: inline-block;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 8px solid white;
+  padding: 26px 25px 18px;
+  margin-bottom: 35px;
+}
+.header-9-sub .hero-unit.bordered p {
+  font-size: 46px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  line-height: 46px;
+  letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  .header-9-sub .hero-unit.bordered p {
+    font-size: 36px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+.header-9-sub .wide-text.text-warning {
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.header-9-sub .hero-unit {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.loaded .header-9-sub .hero-unit {
+  -webkit-transition: 1.2s opacity;
+  -moz-transition: 1.2s opacity;
+  -o-transition: 1.2s opacity;
+  transition: 1.2s opacity;
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media (max-width: 480px) {
+  .header-9-sub {
+    padding-top: 150px;
+    padding-bottom: 60px;
+    background-attachment: scroll;
+    background-position: 50% 50%!important;
+  }
+}
+.header-9-sub .nav-steps {
+  margin-top: 185px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 25px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.header-9-sub .nav-steps > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-9-sub .nav-steps a {
+  color: #ffffff;
+  opacity: 20;
+  filter: alpha(opacity=2000);
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  min-width: 150px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.header-9-sub .nav-steps a:hover,
+.header-9-sub .nav-steps a:focus,
+.header-9-sub .nav-steps a.active {
+  color: #ffffff;
+}
+.header-9-sub .nav-steps a:first-child {
+  min-width: 100px;
+}
+.header-9-sub .nav-steps a:hover,
+.header-9-sub .nav-steps a:focus {
+  opacity: 50;
+  filter: alpha(opacity=5000);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.header-9-sub .nav-steps a.active {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header-9-sub .nav-steps .steps-selectors {
+  margin: 0 40px;
+  font-size: 22px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -7px;
+}
+.loaded .header-9-sub .nav-steps {
+  -webkit-transition: 1.2s 1.2s opacity;
+  -moz-transition: 1.2s 1.2s opacity;
+  -o-transition: 1.2s 1.2s opacity;
+  transition: 1.2s 1.2s opacity;
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media (max-width: 480px) {
+  .header-9-sub .nav-steps {
+    margin-top: 82px;
+  }
+  .header-9-sub .nav-steps .steps-selectors {
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "title": "You have the design, you have the code",
+    "description": "You can decide whether to create your site using UI Kit blocks or samples.",
+    "player": {
+        "src": "https://vimeo.com/80282064"
+    },
+    "rows": [{
+        "title": "Block Model",
+        "description": "You can easily combine any components in a variety of design projects.",
+        "image": "common-files/icons/Chat@2x.png"
+    }, {
+        "title": "Based on Bootstrap",
+        "description": "HTML layout is based on one of the common and reliable frameworks at this time - Twitter Bootstrap v2.3.2.",
+        "image": "common-files/icons/Responsive1@2x.png"
+    }, {
+        "title": "Save Your Time",
+        "description": "Use your time for generating new ideas for your startup. Take a break from the routine.",
+        "image": "common-files/icons/ps@2x.png"
+    }]
+}

@@ -1,0 +1,44 @@
+{
+    "titles": [{
+        "name": "web design"
+    }, {
+        "name": "graphic design"
+    }, {
+        "name": "product design"
+    }, {
+        "name": "ios development"
+    }, {
+        "name": "web development"
+    }],
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/logo-2@2x.png"
+    },
+    "description": "Responsive web design is a web design approach aimed at crafting sites.",
+    "features": [{
+        "icon": {
+            "url": "",
+            "name": "fui-mic"
+        },
+        "text": "Aligned to grid"
+    }, {
+        "icon": {
+            "url": "",
+            "name": "fui-cmd"
+        },
+        "text": "Don’t waste your time"
+    }],
+    "projects": [{
+        "image": "",
+        "name": "Flat UI Pro",
+        "info": "Designer who makes easy to change and easy to create new elements."
+    }, {
+        "image": "",
+        "name": "Startup Kit",
+        "info": "Designer who makes easy to change and easy to create new elements."
+    }, {
+        "image": "",
+        "name": "Impressionist UI",
+        "info": "Designer who makes easy to change and easy to create new elements."
+    }]
+}

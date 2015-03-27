@@ -1,0 +1,216 @@
+<!-- content-35 -->
+<section{% if wp_mode %} class="content-35 dm-template" dm-template="content.content35" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <ul class="content-35-customPager">
+        <li class="menuicon"><span aria-hidden="true" class="fui-list"></span></li>
+        <li ng-repeat="slide in data.slider">
+            <a data-slide-index="[[$index]]" dm-contenteditable ng-model="slide.tab_name"></a>
+        </li>
+    </ul>
+    <div
+    class="content-35-slider"
+    dm-slider="content-35-pt-main-{{ component_id }}"
+    dm-slider-model="data.slider"
+    dm-slider-archive="content35ptMain">
+        <div id="content-35-pt-main-bxSlider-{{ component_id }}">
+            <div
+            class="content-35-slider-item"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat
+            ng-switch="slide.type">
+                <div class="background">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="dm-controlsView-holder custom-img">
+                                    <img
+                                    alt=""
+                                    ng-class="{'removed-image': slide.image == '../../../img/1x1.png'}"
+                                    ng-src="{{ sfBuildUri }}[[ slide.image ]]" />
+                                    <div class="dm-controls dm-controlsView-btns dm-image">
+                                        <div class="btn-group">
+                                            <div class="dm-control-button" dm-upload-type="image" dm-upload-media="slide.image"></div>
+                                            <div class="dm-control-button" data-width="50" dm-remove-media="slide.image"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="1" class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-5">
+                            <h2 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h2>
+                            <p class="lead" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                            <div class="row columns">
+                                <div class="col-sm-6 text-box" ng-repeat="textBox in slide.textBoxes">
+                                    <a
+                                    ng-href="[[ textBox.url ]]">
+                                        <div class="img-holder custom-img">
+                                            <img
+                                            alt=""
+                                            ng-class="{'removed-image': textBox.image == '../../../img/1x1.png'}"
+                                            ng-src="{{ sfBuildUri }}[[ textBox.image ]]" />
+                                            <customizer class="dm-popover popover fade top dm-image">
+                                                <div class="dm-control-button" data-width="214" dm-upload-type="image" dm-upload-media="textBox.image"></div>
+                                                <div class="dm-control-button" data-width="50" dm-remove-media="textBox.image"></div>
+                                                <div class="dm-control-button" ng-class="{hasUrl: textBox.url}" dm-edit-url="textBox.url"></div>
+                                            </customizer>
+                                        </div>
+                                    </a>
+                                    <b>
+                                        <strong dm-contenteditable  ng-model="textBox.title"></strong>
+                                        <span class="svgIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16" viewBox="0 0 32 32"><path d="M30 0h-16c-1.105 0-2 0.894-2 2v16c0 1.105 0.895 2 2 2h16c1.105 0 2-0.895 2-2v-16c0-1.105-0.895-2-2-2zM28 16h-12v-12h12v12zM16 28h-12v-12h4v-4h-6c-1.105 0-2 0.895-2 2v16c0 1.105 0.894 2 2 2h16c1.105 0 2-0.895 2-2v-6h-4v4z" fill="#eaeaea"/></svg>
+                                        </span>
+                                    </b>
+                                    <span dm-contenteditable ng-model="textBox.text"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="2" class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-5">
+                            <h2 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h2>
+                            <p class="lead" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                            <div class="row columns">
+                                <div class="col-sm-6" ng-repeat="textBox in slide.textBoxes">
+                                    <h3 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="textBox.title"></h3>
+                                    <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="textBox.text"></p>
+                                </div>
+                            </div>
+                            <div
+                            class="contact custom-img"
+                            ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + slide.contact.bg_image + ')'}">
+                                <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.contact.text"></span>
+                                <customizer class="dm-popover popover fade top dm-image">
+                                    <div class="dm-control-button" dm-upload-type="image" dm-upload-media="slide.contact.bg_image"></div>
+                                    <div class="dm-control-button" data-width="50" dm-remove-media="slide.contact.bg_image"></div>
+                                </customizer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="3" class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-5">
+                            <h2 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h2>
+                            <p class="lead" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                            <a
+                            class="ask-question"
+                            ng-href="[[ slide.link.url ]]"
+                            dm-contenteditable ng-model="slide.link.name">
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" ng-class="{hasUrl: slide.link.url}" dm-edit-url="slide.link.url"></div>
+                                </customizer>
+                            </a>
+                            <dl class="tech-info">
+                                <dt ng-repeat-start="list in slide.lists" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="list.title"></dt>
+                                <dd ng-repeat-end text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="list.text"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <ul class="content-35-customPager content-35-customPager-{{ component_id }}">
+        <li class="menuicon"><span aria-hidden="true" class="fui-list"></span></li>
+        {% for slide in slider %}
+        <li>
+            <a data-slide-index="{{ loop.index - 1 }}">{{ slide.tab_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="content-35-slider" id="content-35-pt-main-reg-{{ component_id }}">
+        {% for slide in slider %}
+        <div class="content-35-slider-item">
+            <div class="background">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div>
+                                <img
+                                alt=""
+                                src="{{ sfBuildUri }}{{ slide.image }}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if slide.type == "1" %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-5">
+                        <h2>{{ slide.title }}</h2>
+                        <p class="lead">{{ slide.description }}</p>
+                        <div class="row columns">
+                            {% for textBox in slide.textBoxes %}
+                            <div class="col-sm-6">
+                                <a href="{{ textBox.url }}">
+                                    <img
+                                    alt=""
+                                    src="{{ sfBuildUri }}{{ textBox.image }}" />
+                                    <b>
+                                        <strong>{{ textBox.title }}</strong>
+                                        <span class="svgIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16" viewBox="0 0 32 32"><path d="M30 0h-16c-1.105 0-2 0.894-2 2v16c0 1.105 0.895 2 2 2h16c1.105 0 2-0.895 2-2v-16c0-1.105-0.895-2-2-2zM28 16h-12v-12h12v12zM16 28h-12v-12h4v-4h-6c-1.105 0-2 0.895-2 2v16c0 1.105 0.894 2 2 2h16c1.105 0 2-0.895 2-2v-6h-4v4z" fill="#eaeaea"/></svg>
+                                        </span>
+                                    </b>
+                                    <span>{{ textBox.text }}</span>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if slide.type == "2" %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-5">
+                        <h2>{{ slide.title }}</h2>
+                        <p class="lead">{{ slide.description }}</p>
+                        <div class="row columns">
+                            {% for textBox in slide.textBoxes %}
+                            <div class="col-sm-6">
+                                <h3>{{ textBox.title }}</h3>
+                                <p>{{ textBox.text }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="contact" style="background-image: url({{ sfBuildUri }}{{ slide.contact.bg_image }})">
+                            <span>{{ slide.contact.text }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if slide.type == "3" %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-5">
+                        <h2>{{ slide.title }}</h2>
+                        <p class="lead">{{ slide.description }}</p>
+                        <a class="ask-question"
+                        href="{{ slide.link.url }}">{{ slide.link.name }}</a>
+                        <dl class="tech-info">
+                            {% for list in slide.lists %}
+                            <dt>{{ list.title }}</dt>
+                            <dd>{{ list.text }}</dd>
+                            {% endfor %}
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>

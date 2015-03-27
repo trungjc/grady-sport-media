@@ -1,0 +1,44 @@
+<!--content-19 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content19" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-19">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="quote">
+                        <div {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.mainQuote.description"{% endif %} class="quote-text">{{ mainQuote.description }} 
+                        </div>
+                        <div class="quote-author">
+                            <div class="quote-author-photo"></div>
+                            <div {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.mainQuote.title"{% endif %} class="quote-author-name">
+                                {{ mainQuote.title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    {% if edit_mode %}
+                    <div class="quote" ng-repeat="quote in data.quotes">
+                        <div class="quote-author">
+                            <div class="quote-author-photo"></div>
+                            <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="quote.title" class="quote-author-name"></div>
+                        </div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="quote.time" class="quote-date"></div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="quote.description" class="quote-text"></div>
+                    </div>
+                    {% else %}
+                        {% for quote in quotes %}
+                        <div class="quote">
+                            <div class="quote-author">
+                                <div class="quote-author-photo"></div>
+                                <div class="quote-author-name">{{ quote.title }}</div>
+                            </div>
+                            <div class="quote-date">{{ quote.time }}</div>
+                            <div class="quote-text">{{ quote.description }}</div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

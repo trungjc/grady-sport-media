@@ -1,0 +1,32 @@
+{
+    "title": "Features of Startup Design Framework",
+    "membersRows": [{
+        "members": [{
+            "name": "Vladimir Kudinov",
+            "title": "UI Designer",
+            "image": "common-files/img/crew/vladimir-k.png"
+        }, {
+            "name": "Sergey Shmidt",
+            "title": "UI Designer",
+            "image": "common-files/img/crew/sergey-s.png"
+        }, {
+            "name": "Adrian Valeanu",
+            "title": "Founder",
+            "image": "common-files/img/crew/adrian-v.png"
+        }]
+    }, {
+        "members": [{
+            "name": "Vladimir Kudinov",
+            "title": "UI Designer",
+            "image": "common-files/img/crew/edvard-k.png"
+        }, {
+            "name": "Sergey Shmidt",
+            "title": "UI Designer",
+            "image": "common-files/img/crew/oxana-n.png"
+        }, {
+            "name": "Adrian Valeanu",
+            "title": "Founder",
+            "image": "common-files/img/crew/tatiana-y.png"
+        }]
+    }]
+}

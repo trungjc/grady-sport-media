@@ -1,0 +1,35 @@
+{
+    "bg_image": "common-files/img/header/img-4.jpg",
+    "bg_color": "#000",
+    "opacity": "1",
+    "icon": {
+        "url": "",
+        "name": "fui-cmd"
+    },
+    "title": "Startup Framework",
+    "description": "suit up your startup",
+    "first_link": {
+        "url": "\/",
+        "name": "Home page"
+    },
+    "last_link": {
+        "url": "\/",
+        "name": "Upcoming events"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

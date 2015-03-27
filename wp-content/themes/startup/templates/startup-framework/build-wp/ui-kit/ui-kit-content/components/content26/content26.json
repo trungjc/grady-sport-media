@@ -1,0 +1,17 @@
+{
+    "title": "The Second Sneak-Peek of Startup Framework",
+    "description": "We’ve created the product that will help your startup to look even better.",
+    "rows": [{
+        "title": "Based on Bootstrap",
+        "description": "HTML layout is based on one of the common frameworks.",
+        "image": "common-files/icons/Chat@2x.png"
+    }, {
+        "title": "HTML 5, Less, CSS 3",
+        "description": "We used checked-out technologies to give the best results.",
+        "image": "common-files/icons/Responsive1@2x.png"
+    }, {
+        "title": "Block Mode",
+        "description": "You can easily combine any blocks in a variety of design projects.",
+        "image": "common-files/icons/ps@2x.png"
+    }]
+}

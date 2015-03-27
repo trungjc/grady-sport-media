@@ -1,0 +1,42 @@
+{
+    "bg_image": "",
+    "bg_color": "#fff",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "title": "We love what we do. This is a feature",
+    "description": "We have a great surprise for our Designmodo fans.",
+    "learn_more": {
+        "url": "\/",
+        "name": "Learn More"
+    },
+    "video_box": [{
+        "description": " Ultra fast <br> scripting",
+        "src": "https://vimeo.com/80282064"
+    }, {
+        "description": " Time <br> economy",
+        "src": "https://vimeo.com/80282064"
+    }, {
+        "description": "Ready for<br>retina",
+        "src": "https://vimeo.com/80282064"
+    }],
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

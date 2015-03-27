@@ -1,0 +1,22 @@
+{
+    "bg_image": "",
+    "bg_color": "#EBEDEE",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "\/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "title": "Solution for those who want to change their startup not wasting time",
+    "description": "Startup Framework will help you to find an awesome form for your startup project in a short time. There are a lot of different blocks that will help you to make a perfect suit for your project.",
+    "btn_primary": {
+        "name": "SIGN IN",
+        "url": "\/"
+    },
+    "btns": [{
+        "name": "Buy in Appstore",
+        "icon": "fui-apple",
+        "url": "\/"
+    }],
+    "add_links": "By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy</a>"
+}

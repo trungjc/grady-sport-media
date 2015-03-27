@@ -1,0 +1,61 @@
+/**
+ * Content 17 stylesheet  
+ * */
+.content-17 {
+  position: relative;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+@media (max-width: 768px) {
+  .content-17 {
+    padding-top: auto;
+    padding-bottom: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.content-17 p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #7f8c8d;
+  margin: 0;
+}
+.content-17 a {
+  color: #e74c3c;
+}
+.content-17 .img-holder {
+  display: inline-block;
+}
+.content-17 .carousel {
+  margin-top: 40px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-weight: 500;
+  line-height: 25px;
+}
+.content-17 .carousel .item {
+  -webkit-transition: .8s ease-in-out top, .6s ease-in-out opacity;
+  -moz-transition: .8s ease-in-out top, .6s ease-in-out opacity;
+  -o-transition: .8s ease-in-out top, .6s ease-in-out opacity;
+  transition: .8s ease-in-out top, .6s ease-in-out opacity;
+  opacity: 0;
+}
+.content-17 .carousel .item.active.left,
+.content-17 .carousel .item.active.right {
+  opacity: 0;
+  z-index: 2;
+}
+.content-17 .carousel .item.active,
+.content-17 .carousel .item.prev,
+.content-17 .carousel .item.next {
+  opacity: 1;
+  z-index: 1;
+}
+.content-17 .carousel + * {
+  position: relative;
+}

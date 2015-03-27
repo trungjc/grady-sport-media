@@ -1,0 +1,82 @@
+<!-- price-5 -->
+<div{% if wp_mode %} class="dm-template" dm-template="price.price5" component-id="{{ component_id }}"{% endif %}>
+    <section class="price-5">
+        <div class="container">
+            <div class="plans">
+            {% if edit_mode %}
+            <div class="plan" ng-repeat="plan in data.plans" ng-class="{'plan-2': $index = '1'}">
+                <div class="title">
+                    <div class="price">
+                        <small dm-contenteditable ng-model="plan.currency"></small>
+                        <span dm-contenteditable ng-model="plan.count"></span>
+                    </div>
+                    <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.title"></span>
+                </div>
+                <div>
+                    <div class="description" ng-style="{'opacity': '1'}">
+                        <div class="description-box" ng-repeat="description in plan.descriptions">
+                            <big text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="description.title"></big>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="description.text"></span>
+                        </div>
+                    </div>
+                    <div class="description-more" ng-style="{'position': 'static', 'opacity': '1'}">
+                        <span ng-class="plan.description_more.icon.name">
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-change-icon" dm-change-icon="plan.description_more.icon.name" dm-change-icon-url="plan.description_more.icon.url"></div>
+                            </customizer>
+                        </span>
+                        <big text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.description_more.title"></big>
+                        <p class="info" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.description_more.info"></p>
+                        <a class="btn btn-primary"
+                           dm-contenteditable
+                           ng-model="plan.description_more.btn.name"
+                           ng-href="[[ plan.description_more.btn.url ]]">
+                           <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" ng-class="{hasUrl: plan.description_more.btn.url}" dm-edit-url="plan.description_more.btn.url"></div>
+                            </customizer>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                {% for plan in plans %}
+                    <div class="plan {% if loop.index == 2 %}plan-2{% endif %}">
+                        <div class="title">
+                            <div class="price">
+                                <small>{{ plan.currency }}</small>
+                                <span>{{ plan.count }}</span>
+                            </div>
+                            <span>{{ plan.title }}</span>
+                        </div>
+                        <div>
+                            <div class="description">
+                                {% for description in plan.descriptions %}
+                                <div class="description-box">
+                                    <big>{{ description.title }}</big>
+                                    <span>{{ description.text }}</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="description-more">
+                                {% if plan.description_more.icon.url %}
+                                    <a href="{{ plan.description_more.icon.url }}">
+                                        <span class="{{ plan.description_more.icon.name }}"> </span>
+                                    </a>
+                                {% else %}
+                                    <span class="{{ plan.description_more.icon.name }}"> </span>
+                                {% endif %}
+                                <big>{{ plan.description_more.title }}</big>
+                                <p class="info">{{ plan.description_more.info }}</p>
+                                <a class="btn btn-primary" href="{{ plan.description_more.btn.url }}">
+                                    {{ plan.description_more.btn.name }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <div class="terms" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.terms"{% endif %}>{{ terms }}</div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,18 @@
+{
+    "block_one": {
+    	"bg_image": "common-files/img/Hawaii_001.jpg",
+        "title": "Startup Framework",
+        "description": "Suit up your startup"
+    },
+    "block_two": {
+    	"bg_image": "common-files/img/Italy_001.jpg",
+        "title": "Made in New York"
+    },
+    "block_three": {
+    	"bg_image": "common-files/img/NY_002.jpg",
+        "icon": {
+	        "url": "",
+	        "name": "fui-cmd"
+	    }
+    }
+}

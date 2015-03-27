@@ -1,0 +1,31 @@
+{
+    "bg_image": "common-files/img/NY_001.jpg",
+    "bg_color": "#1b1f23",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "/"
+    },
+    "title": "Startup Framework is a set of components",
+    "description": "We’ve created the product that will help your<br/> startup to look even better.",
+    "btn_primary": {
+        "name": "Sign In",
+        "url": "\/"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

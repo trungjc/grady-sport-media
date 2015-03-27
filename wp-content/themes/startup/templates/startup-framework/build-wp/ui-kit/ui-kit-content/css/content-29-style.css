@@ -1,0 +1,99 @@
+.content-29 {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  position: relative;
+}
+.content-29 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+.content-29 p {
+  font-size: 22px;
+  font-weight: normal;
+  color: #7f8c8d;
+  text-align: center;
+  padding-bottom: 35px;
+}
+.content-29 .player {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: rgba(52, 152, 219, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 1140px;
+  height: 640px;
+  margin: 40px auto 105px;
+}
+.content-29 .player .btn-play {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  margin: -20px 0 0 -30px;
+  padding-left: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.content-29 .player .embed-video,
+.content-29 .player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .content-29 .player {
+    width: 100%;
+    height: 530px;
+  }
+}
+@media (max-width: 1000px) {
+  .content-29 .player {
+    height: 406px;
+  }
+}
+@media (max-width: 840px) {
+  .content-29 .player {
+    height: 406px;
+  }
+}
+@media (max-width: 768px) {
+  .content-29 .player {
+    max-height: 330px;
+  }
+}
+@media (max-width: 568px) {
+  .content-29 .player {
+    max-height: 280px;
+  }
+}
+@media (max-width: 400px) {
+  .content-29 .player {
+    max-height: 180px;
+  }
+}
+.content-29 .features > * {
+  margin-top: 67px;
+}
+.content-29 .features h6 {
+  text-transform: none;
+  margin-top: 37px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .content-29 .features {
+    margin-top: -52px;
+  }
+}

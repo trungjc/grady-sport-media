@@ -1,0 +1,185 @@
+/**
+ * Header 14 stylesheet  
+ * */
+.header-14-sub {
+  color: #bdc3c7;
+  background-color: #1c201d;
+  position: relative;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  text-align: center;
+}
+.header-14-sub h1,
+.header-14-sub .h1,
+.header-14-sub h2,
+.header-14-sub .h2,
+.header-14-sub h3,
+.header-14-sub .h3,
+.header-14-sub h4,
+.header-14-sub .h4,
+.header-14-sub h5,
+.header-14-sub .h5,
+.header-14-sub h6,
+.header-14-sub .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
+.header-14-sub h1 {
+  font-weight: 300;
+}
+.header-14-sub h3 {
+  font-size: 32px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 300;
+}
+@media (max-width: 480px) {
+  .header-14-sub {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.header-14-sub h3 {
+  margin: 0 0 30px;
+}
+.header-14-sub .header-14 {
+  margin-bottom: 65px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.header-14-sub .header-14 [class*="fui-"] {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.header-14-sub .hero-unit {
+  display: table;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 190px auto 170px;
+  background: transparent;
+  color: white;
+}
+.header-14-sub .hero-unit > * {
+  display: table-cell;
+  vertical-align: middle;
+  border: 8px solid #fff;
+  padding: 25px 30px;
+  text-align: left;
+}
+.header-14-sub .hero-unit h1 {
+  margin: 0;
+  font-size: 46px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .header-14-sub .hero-unit h1 {
+    text-align: center;
+  }
+}
+.header-14-sub .hero-unit p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  .header-14-sub .hero-unit {
+    margin: 0 auto 65px;
+  }
+}
+.header-14-sub .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/NY_001.jpg");
+  opacity: 20;
+  filter: alpha(opacity=2000);
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.header-14-sub .subscribe-form form {
+  margin: 40px 0 10px;
+}
+.header-14-sub .subscribe-form form .input-group input[type="text"] {
+  border-color: white;
+  border-right: 0;
+  min-height: 0;
+}
+@media (max-width: 480px) {
+  .header-14-sub .subscribe-form form .input-group input[type="text"] {
+    min-height: 41px;
+  }
+}
+.header-14-sub .subscribe-form form .input-group .btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 0;
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+  border: 0;
+  color: #fff;
+  background: #1abc9c;
+  line-height: 22px;
+  font-size: 17px;
+  font-weight: 500;
+}
+@media (max-width: 480px) {
+  .header-14-sub .subscribe-form form .input-group .btn {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+}
+.header-14-sub .subscribe-form form .input-group .dm-form-button {
+  height: 42px;
+}
+@media (max-width: 480px) {
+  .header-14-sub .subscribe-form form .input-group .form-control {
+    float: none;
+  }
+  .header-14-sub .subscribe-form form .input-group .input-group-btn {
+    display: block;
+    width: 100%;
+  }
+}
+.header-14-sub .subscribe-form .btn.btn-primary:hover,
+.header-14-sub .subscribe-form .btn.btn-primary:focus {
+  background-color: #e74c3c;
+}
+.header-14-sub .subscribe-form .btn.btn-primary:active,
+.header-14-sub .subscribe-form .btn.btn-primary.active {
+  background-color: #c44133;
+}
+@media (max-width: 480px) {
+  .header-14-sub .subscribe-form .input-group,
+  .header-14-sub .subscribe-form .input-group input[type="text"],
+  .header-14-sub .subscribe-form .input-group .btn {
+    display: block;
+    width: 100%;
+  }
+  .header-14-sub .subscribe-form .input-group input[type="text"],
+  .header-14-sub .subscribe-form .input-group .btn {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .header-14-sub .subscribe-form .input-group .btn {
+    margin-top: 15px;
+  }
+}
+.header-14-sub .input-group {
+  background: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .header-14-sub .input-group {
+    background: none;
+  }
+}

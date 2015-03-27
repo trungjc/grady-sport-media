@@ -1,0 +1,42 @@
+{
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/img/header/logo@2x.png",
+        "url": ""
+    },
+    "slider": [{
+        "bg_image": "common-files/img/NY_002.jpg",
+        "bg_color": "#363940",
+        "opacity": "0.75",
+        "title": "We’ve created the product that will help your <br />startup to look even better.",
+        "description": "You have the design, you have the code"
+    }, {
+        "bg_image": "common-files/img/header/img-2.jpg",
+        "bg_color": "#363940",
+        "opacity": "0.75",
+        "title": "Example headline.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }, {
+        "bg_image": "common-files/img/header/img-3.jpg",
+        "bg_color": "#363940",
+        "opacity": "0.75",
+        "title": "Another example headline.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }],
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

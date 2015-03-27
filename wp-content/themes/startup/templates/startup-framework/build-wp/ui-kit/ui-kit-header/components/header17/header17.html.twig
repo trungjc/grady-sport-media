@@ -1,0 +1,194 @@
+<!-- header-17 -->
+<div{% if wp_mode %} class="dm-template" dm-template="header.header17" component-id="{{ component_id }}"{% endif %}>
+	<header class="header-17">
+		<div class="container">
+			<div class="row">
+				<div class="navbar col-sm-12" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle"></button>
+					 	<a
+					 	href="{{ brand.url }}"
+					 	class="brand custom-img"
+					 	{% if edit_mode %}
+					 		ng-href="[[ data.brand.url ]]"
+					 	{% endif %}>
+					 		{% if edit_mode %}
+                            <customizer class="dm-popover popover fade top dm-image">
+                                <div class="dm-control-button" data-width="50" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                                <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                                <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                            </customizer>
+                            {% endif %}
+							<img
+							width="50"
+							height="50"
+							alt=""
+                            ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+							src="{{ sfBuildUri }}{{ brand.image }}"
+							{% if edit_mode %}
+                                ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                            {% endif %} />
+							<span {% if edit_mode %}dm-contenteditable ng-model="data.brand.name"{% endif %}>{{ brand.name }}</span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse pull-right">
+						<div class="pull-left">
+							{% macro render_one_line_menu(items) %}
+	        					<ul class="nav">
+	                                {% for item in items %}
+	                                    <li>
+	                                        <a href="{{ item.url }}">{{ item.title }}</a>
+	                                    </li>
+	                                {% endfor %}
+	                            </ul>
+	                        {% endmacro %}
+	                        {% if wp_mode %}
+	                            {{ _self.render_one_line_menu(headerMenu.items) }}
+	                            {% if edit_mode %}
+	                            <customizer class="dm-popover popover fade top">
+	                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+	                            </customizer>
+	                            {% endif %}
+	                        {% else %}
+	                            {{ _self.render_one_line_menu(menu) }}
+	                        {% endif %}
+                        </div>
+						<form class="navbar-form pull-left">
+							<a
+							href="{{ btn_primary.url }}"
+							class="btn btn-primary"
+							{% if edit_mode %}
+								dm-contenteditable
+					 			ng-href="[[ data.btn_primary.url ]]"
+					 			ng-model="data.btn_primary.name"
+							{% endif %}>
+							{{ btn_primary.name }}
+							{% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" ng-class="{hasUrl: data.btn_primary.url}" dm-edit-url="data.btn_primary.url"></div>
+                            </customizer>
+                            {% endif %}
+							</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-background"></div>
+	</header>
+	<section
+	class="header-17-sub text-center dm-controlsView-holder"
+	{% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+    	{% if edit_mode %}
+        <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+	        <div class="btn-group">
+	            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+	            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+	            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+	            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+	        </div>
+	    </div>
+        {% endif %}
+		<div
+		class="background"
+		{% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                'opacity': data.opacity
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+        {% endif %}>&nbsp;</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="hero-unit">
+						<h1 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h1>
+						<p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+					</div>
+					<a href="{{ btn_huge.url }}" class="btn btn-huge btn-clear fui-facebook" {% if edit_mode %} ng-href="[[ data.btn_huge.url ]]" dm-contenteditable ng-model="data.btn_huge.name" {% endif %}>
+						{% if edit_mode %}
+	                        <customizer class="dm-popover popover fade top">
+	                            <div class="dm-control-button" ng-class="{hasUrl: data.btn_huge.url}" dm-edit-url="data.btn_huge.url"></div>
+	                        </customizer>
+                        {% endif %}
+                        {{ btn_huge.name }}
+					</a>
+				</div>
+			</div>
+			{% if edit_mode %}
+			<div
+			dm-slider="h-17-pt-1-{{ component_id }}"
+	        dm-slider-model="data.slider"
+	        dm-slider-archive="h17pt1"
+			class="page-transitions pt-perspective">
+				<div
+				class="pt-page"
+				ng-repeat="slide in data.slider"
+				dm-slider-repeat>
+					<div class="row v-center">
+						<div class="col-sm-3 ani-processed" >
+							<big text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.header"></big>
+						</div>
+						<div class="col-sm-6 ani-processed">
+							<div class="img-holder">
+								<div class="img-wrapper custom-img">
+									{% if edit_mode %}
+		                            <customizer class="dm-popover popover fade top dm-image">
+		                                <div class="dm-control-button" data-width="384" dm-upload-type="image" dm-upload-media="slide.image"></div>
+                                        <div class="dm-control-button" data-width="50" dm-remove-media="slide.image"></div>
+		                            </customizer>
+		                            {% endif %}
+									<img
+									width="384"
+									height="191"
+									alt=""
+                                    ng-class="{'removed-image': slide.image == '../../../img/1x1.png'}"
+									ng-src="{{ sfBuildUri }}[[ slide.image ]]" />
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 ani-processed">
+							<h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h6>
+							<span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></span>
+						</div>
+					</div>
+				</div>
+				<div class="pt-controls">
+					<ol class="pt-indicators"></ol>
+				</div>
+			</div>
+			{% else %}
+			<div id="h-17-pt-1-{{ component_id }}" class="page-transitions pt-perspective">
+				{% for slide in slider %}
+				<div class="pt-page">
+					<div class="row v-center">
+						<div class="col-sm-3 ani-processed" >
+							<big>{{ slide.header }}</big>
+						</div>
+						<div class="col-sm-6 ani-processed">
+							<img
+							width="384"
+							height="191"
+							alt=""
+							src="{{ sfBuildUri }}{{ slide.image }}" />
+						</div>
+						<div class="col-sm-3 ani-processed">
+							<h6>{{ slide.title }}</h6>
+							<span>{{ slide.description }}</span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				<div class="pt-controls">
+					<ol class="pt-indicators"></ol>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</section>
+</div>

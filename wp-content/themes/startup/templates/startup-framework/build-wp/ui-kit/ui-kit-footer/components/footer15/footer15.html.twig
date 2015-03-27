@@ -1,0 +1,40 @@
+<!-- footer-15 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer15" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-15">
+        <div class="container">
+            <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</span>
+            <div class="btns">
+                <a
+                {% if edit_mode %}
+                    dm-contenteditable
+                    ng-model="data.twitter.name"
+                    ng-href="[[ data.twitter.url ]]"
+                {% endif %}
+                href="{{ twitter.url }}"
+                class="btn btn-default">
+                    {{ twitter.name }}
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-control-button" ng-class="{hasUrl: data.twitter.url}" dm-edit-url="data.twitter.url"></div>
+                    </customizer>
+                    {% endif %}
+                </a>
+                <a
+                {% if edit_mode %}
+                    dm-contenteditable
+                    ng-model="data.facebook.name"
+                    ng-href="[[ data.facebook.url ]]"
+                {% endif %}
+                href="{{ facebook.url }}"
+                class="btn btn-default">
+                    {{ facebook.name }}
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-control-button" ng-class="{hasUrl: data.facebook.url}" dm-edit-url="data.facebook.url"></div>
+                    </customizer>
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>

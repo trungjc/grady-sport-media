@@ -1,0 +1,126 @@
+/**
+ * Content 7 stylesheet  
+ * */
+.content-7 {
+  padding-top: 125px;
+  padding-bottom: 130px;
+  position: relative;
+  text-align: center;
+}
+.content-7 h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 80px;
+  line-height: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+@media (max-width: 767px) {
+  .content-7 h3 {
+    margin-bottom: 20px;
+    line-height: 36px;
+  }
+}
+.content-7.v-center,
+.content-7 .v-center {
+  display: table;
+  width: 100%;
+}
+.content-7.v-center > div,
+.content-7 .v-center > div {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+}
+@media (min-width: 768px) {
+  .content-7 .v-center.row:before,
+  .content-7 .v-center.row:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .content-7 .v-center {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .content-7 .v-center.row {
+    display: block;
+    width: auto;
+  }
+  .content-7 .v-center.row:before,
+  .content-7 .v-center.row:after {
+    display: none;
+  }
+  .content-7 .v-center.row > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+.content-7 .row {
+  text-align: left;
+}
+.content-7 h6 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #e74c3c;
+  font-weight: 500;
+  text-transform: none;
+}
+@media (max-width: 767px) {
+  .content-7 h6 {
+    margin-top: 20px;
+  }
+}
+.content-7 .text-block {
+  margin-top: 60px;
+}
+.content-7 .text-block:first-child {
+  margin-top: auto;
+}
+.content-7 .row > .col-sm-3:first-child {
+  font-size: 22px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 32px;
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  .content-7 .v-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .content-7 .row > [class*="col-sm-"] {
+    margin-top: 45px;
+  }
+  .content-7 .row > [class*="col-sm-"]:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .content-7 h3 {
+    text-align: left;
+  }
+}
+.content-7 .screen-wrapper {
+  position: relative;
+  height: 437px;
+}
+.content-7 .screen-wrapper .screen {
+  position: absolute;
+  left: 50%;
+  margin-left: -151px;
+  overflow: hidden;
+}
+.content-7 .screen-wrapper .screen img {
+  position: relative;
+  max-width: 302px;
+}

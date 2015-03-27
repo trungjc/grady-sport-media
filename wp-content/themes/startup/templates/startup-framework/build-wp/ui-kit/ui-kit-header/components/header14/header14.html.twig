@@ -1,0 +1,76 @@
+<!-- header-14 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header14" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <section
+    class="header-14-sub"
+    {% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+        <div class="background"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                'opacity': data.opacity
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+        {% endif %}>&nbsp;</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="header-14">
+                        {% if edit_mode %}
+                        <span ng-class="data.icon.name">
+                            <customizer class="dm-popover popover fade top">
+                                <div dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url" class="dm-change-icon"></div>
+                            </customizer>
+                        </span>
+                        {% else %}
+                            {% if icon.url %}
+                                <a href="{{ icon.url }}">
+                                    <span class="{{ icon.name }}"> </span>
+                                </a>
+                            {% else %}
+                                <span class="{{ icon.name }}"> </span>
+                            {% endif %}
+                        {% endif %}
+                        <div {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.top.name"{% endif %}>{{ top.name }}</div>
+                    </div>
+                    <div class="hero-unit">
+                        <h1 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h1>
+                    </div>
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.text.title"{% endif %}>{{ text.title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.text.description"{% endif %}>{{ text.description }}</p>
+                    <div class="row">
+                        <div class="subscribe-form col-sm-8 col-sm-offset-2">
+                            <form method="post">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="sf_register_user[email]" placeholder="mr.madbyte@gmail.com">
+                                    <input type="hidden" name="sf_register_user[subscribe]" value="true">
+                                    <span class="input-group-btn">
+                                        {% if edit_mode %}
+                                        <span class="dm-form-button btn btn-primary" dm-contenteditable ng-model="data.btn.name"></span>
+                                        {% else %}
+                                        <button class="btn btn-primary" type="submit">{{ btn.name }}</button>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

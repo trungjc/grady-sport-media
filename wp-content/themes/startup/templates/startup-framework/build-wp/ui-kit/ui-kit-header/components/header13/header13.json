@@ -1,0 +1,19 @@
+{
+    "bg_image": "common-files/img/header/img-1.jpg",
+    "bg_color": "#2c3e50",
+    "opacity": "0.9",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "/"
+    },
+    "title": "Startup Framework is a set of components",
+    "description": "We’ve created the product that will help your<br/> startup to look even better.",
+    "btn_danger": {
+        "name": "Buy in Appstore",
+        "url": "\/"
+    },
+    "iphone": {
+        "image": "common-files/img/header/iphone.png"
+    }
+}

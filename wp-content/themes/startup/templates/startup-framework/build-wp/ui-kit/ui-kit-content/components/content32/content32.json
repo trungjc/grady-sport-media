@@ -1,0 +1,14 @@
+{
+    "title": "Documentation",
+    "description": "The most important parts of the Startup Framework are Samples and the UI Kit that includes a set of different components. The samples consist of a set of 25 pages. Each of these pages you can use as-is or with new blocks from a UI Kit.",
+    "boxes": [{
+        "title": "High Resolution",
+        "description": "We did a 2.5K size high resolution photo that will suit even for a very large web site."
+    }, {
+        "title": "Easy to Use",
+        "description": "Blocks fixed to 12 Grid system. It allows you to find understanding between the designer and developer."
+    }, {
+        "title": "Many Components",
+        "description": "To get started, you select the desired sample and base the entire website on it."
+    }]
+}

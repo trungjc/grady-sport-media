@@ -1,0 +1,29 @@
+<!-- footer-8 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer8" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-8">
+        <div class="container">
+            <nav>
+                {% macro render_one_line_menu_with_btn(items) %}
+					<ul>
+                        {% for item in items %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endmacro %}
+                {% if wp_mode %}
+                    {{ _self.render_one_line_menu_with_btn(footerMenuOneLine.items) }}
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuOneLine.id) }}"></div>
+                    </customizer>
+                    {% endif %}
+                {% else %}
+                    {{ _self.render_one_line_menu_with_btn(menu) }}
+                {% endif %}
+            </nav>
+            <div class="additional-links" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.add_links"{% endif %}>{{ add_links }}</div>
+        </div>
+    </footer>
+</div>

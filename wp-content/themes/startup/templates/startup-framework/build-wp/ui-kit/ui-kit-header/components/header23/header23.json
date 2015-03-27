@@ -1,0 +1,34 @@
+{
+    "bg_video": {
+        "types": {
+            "mp4": "common-files/video/preview.mp4",
+            "ogg": "common-files/video/preview.ogg",
+            "webm": "common-files/video/preview.webm"
+        }
+    },
+    "player": {
+        "src": "https://vimeo.com/80282064"
+    },
+    "brand": {
+        "name": "Startup",
+        "url": "/"
+    },
+    "title": "Startup Framework",
+    "description": "Now you have the design",
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

@@ -1,0 +1,16 @@
+{
+    "count": "200,000 users registered since January ",
+    "description": "We’ve created the product that will help your startup to look even better.",
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }],
+    "btn_buy": {
+        "title": "Buy App",
+        "url": "\/"
+    },
+    "text": "or <a href=\"\/\">Learn More</a>"
+}

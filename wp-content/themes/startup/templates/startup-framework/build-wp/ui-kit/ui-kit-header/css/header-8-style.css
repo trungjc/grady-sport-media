@@ -1,0 +1,132 @@
+/**
+ * Header 8 stylesheet  
+ * */
+.header-8-startup-antiflicker {
+  border-bottom: 1px #bdc3c7 solid;
+}
+.header-8 {
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 110px;
+}
+.header-8 .header-background {
+  background: #fff;
+}
+.header-8 .navbar {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  margin: 18px 0 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-8 .navbar.navbar-fixed-top {
+  top: 0 !important;
+}
+.header-8 .navbar .brand {
+  padding-top: 18px;
+  font-size: 25px;
+  font-weight: normal;
+  color: #34495e;
+  font-weight: 800;
+}
+.header-8 .navbar .brand img:first-child {
+  float: left;
+  margin: -10px 15px 0 0;
+}
+.header-8 .navbar .nav {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+  text-align: center;
+}
+.header-8 .navbar .nav .nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header-8 .navbar .nav li {
+  float: none;
+  display: inline-block;
+  line-height: 15px;
+  margin-left: 50px;
+}
+.header-8 .navbar .nav li:first-child {
+  margin-left: 0;
+}
+.header-8 .navbar .nav li > a {
+  display: block;
+  padding: 30px 0 22px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-weight: 800;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #95a5a6;
+}
+.header-8 .navbar .nav li > a:hover,
+.header-8 .navbar .nav li > a:focus,
+.header-8 .navbar .nav li > a.active {
+  color: #34495e;
+}
+.header-8 .navbar .nav li.active > a {
+  color: #34495e;
+}
+.header-8 .navbar .nav li.active > a:hover,
+.header-8 .navbar .nav li.active > a:focus,
+.header-8 .navbar .nav li.active > a.active {
+  color: #34495e;
+}
+.header-8 .navbar .nav-holder {
+  display: inline-block;
+}
+.header-8 .navbar .navbar-header {
+  position: relative;
+  z-index: 2;
+}
+.header-8 .navbar .navbar-toggle {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/icons/menu-icon-header-8@2x.png");
+  -webkit-background-size: 17px 12px;
+  -moz-background-size: 17px 12px;
+  -o-background-size: 17px 12px;
+  background-size: 17px 12px;
+  margin-top: 22px;
+}
+.header-8-sub {
+  position: relative;
+  padding-top: 95px;
+  padding-bottom: 0;
+}
+.header-8-sub h3 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 300;
+  color: #2c3e50;
+}
+.header-8-sub .lead {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: 300;
+  color: #2c3e50;
+}
+.header-8-sub .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/Italy_001.jpg");
+  background-position: 50% 0;
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header-8-sub .img-holder {
+  margin-top: 60px;
+  text-align: center;
+}
+.header-8-sub .img-wrapper {
+  display: inline-block;
+}

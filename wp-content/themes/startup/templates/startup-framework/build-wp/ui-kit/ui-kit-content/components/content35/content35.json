@@ -1,0 +1,66 @@
+{
+    "slider": [{
+        "type": "1",
+        "tab_name": "Showcase",
+        "image": "common-files/img/content/bread.jpg",
+        "title": "Showcase",
+        "description": "The most important parts of the Startup Framework are Samples and the UI Kit that includes a set of different components. The samples consist of a set of 25 pages.",
+        "textBoxes": [{
+        	"url": "/",
+        	"image": "common-files/img/content/thumbnail-crumbs.jpg",
+        	"title": "Crumbs",
+        	"text": "Fresh food, delicious desserts, artisan breads and cozy atmosphere. All at one place."
+        }, {
+        	"url": "/",
+        	"image": "common-files/img/content/thumbnail-hipstafood.jpg",
+        	"title": "Hipstafood",
+        	"text": "Handy iPhone App preparing for the launch will show you recipes and teach you to cook."
+        }]
+    }, {
+        "type": "2",
+        "tab_name": "Images",
+        "image": "common-files/img/content/landscape.jpg",
+        "title": "More Than Image",
+        "description": "We prepared some HQ photos that you can use in your projects. When you have to present an app or website on iPhone, iPad or Macbook, these images are available. It’s a quick solution if you don’t have ready-to-use images.",
+        "textBoxes": [{
+        	"title": "Smart Layers",
+        	"text": "Just put the image with your App screen inside Smart Layer and get the photo."
+        }, {
+        	"title": "High Resolution",
+        	"text": "Photos are saved at a size of 2.5K and will work even for large sites."
+        }],
+        "contact": {
+        	"bg_image": "common-files/img/content/anthony.png",
+        	"text": "Photos for samples are made by <a href=\"\/\">Anton Repponen</a> during his travels around the world. Check out his amazing works!"
+        }
+    }, {
+        "type": "3",
+        "tab_name": "Tech Info",
+        "image": "common-files/img/content/documentation.jpg",
+        "title": "Technical Information",
+        "description": "We will be glad to answer your questions. We strive to improve each Designmodo product and plan to release cool updates soon.",
+        "link": {
+        	"url": "/",
+        	"name": "Ask a question"
+        },
+        "lists": [{
+        	"title": "Release Date",
+        	"text": "December 16, 2013"
+        }, {
+        	"title": "Format",
+        	"text": "PSD, HTML, CSS, JS, LESS"
+        }, {
+        	"title": "Size",
+        	"text": "637 MB, Zip"
+        }, {
+        	"title": "Consists",
+        	"text": "Components<br />25 Samples<br />Photos"
+        }, {
+        	"title": "Botstrap Version",
+        	"text": "3.0.3"
+        }, {
+        	"title": "License",
+        	"text": "Commercial License"
+        }]
+    }]
+}

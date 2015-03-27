@@ -1,0 +1,36 @@
+.content-36 {
+  background: #1b1f23;
+  text-align: center;
+  color: #95a5a6;
+  padding-top: 230px;
+  padding-bottom: 180px;
+}
+.content-36 h2 {
+  color: #fff;
+  font-size: 46px;
+  line-height: 55px;
+  margin: 0 0 60px;
+  letter-spacing: -2px;
+}
+.content-36 .btn-success {
+  background: #27ae60;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 15px 46px;
+  margin: 0 0 55px;
+}
+.content-36 .btn-success:hover {
+  background: #58D68D;
+}
+.content-36 p {
+  margin: 0 auto;
+  width: 48%;
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .content-36 p {
+    width: 80%;
+  }
+}

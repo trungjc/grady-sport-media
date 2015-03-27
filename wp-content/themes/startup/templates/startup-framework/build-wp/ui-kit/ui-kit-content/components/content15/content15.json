@@ -1,0 +1,18 @@
+{
+    "title": "We have considered your needs in developing the html version of our UI Kit, which contains components &amp; elements.",
+    "description": "You have the design, you have the code",
+    "image": "common-files/img/content/screen-2@2x.png",
+    "rows": [{
+        "title": "Aligned to grid",
+        "description": "We have considered your needs in developing the html version of "
+    }, {
+        "title": "Retina Ready",
+        "description": "Your needs in developing the html version of UI which contains "
+    }],
+    "col_right": {
+        "description": "Designmodo fans – our first free HTML user interface kit. Flat UI Free is made on the basis of Twitter Bootstrap in a stunning flat-style, and the kit also includes a PSD version for developers."
+    },
+    "col_left": {
+        "description": "We have a great surprise for Designmodo fans – our first free HTML user interface kit. Flat UI Free is made on the basis of Twitter Bootstrap in a stunning flat-style, and the kit also includes a PSD version for designers."
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "title": "Startup Framework",
+    "description": "You have the design, you have the code",
+    "image": "common-files/img/content/page.png",
+    "rowLeft": [{
+        "title": "Money",
+        "description": "Startups can save money on design and code and spend it on concept and functionality. "
+    }, {
+        "title": "Retina Ready",
+        "description": "Startup Framework works fine on devices supporting Retina Display. "
+    }, {
+        "title": "Easy to use",
+        "description": "To get started, you select the desired sample and base the entire website on it. "
+    }, {
+        "title": "User Guide",
+        "description": "You’ll get a description of each component and learn how to connect and use them."
+    }],
+    "rowRight": [{
+        "title": "Save your time",
+        "description": "Use your time for generating new ideas for your startup."
+    }, {
+        "title": "Responsive Layout",
+        "description": "Of course we haven’t forgotten about the responsive layout."
+    }, {
+        "title": "Clear Grid",
+        "description": "Components fixed to 12 Grid system. It allows you to find understanding between the designer and developer."
+    }, {
+        "title": "Video Tutorials",
+        "description": "Video tutorials show you how to make a site from design to code."
+    }]
+}

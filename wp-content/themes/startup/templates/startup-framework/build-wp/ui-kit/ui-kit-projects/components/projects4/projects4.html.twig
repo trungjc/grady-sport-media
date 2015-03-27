@@ -1,0 +1,145 @@
+<!--projects-4 -->
+<div{% if wp_mode %} class="dm-template" dm-template="projects.projects4" component-id="{{ component_id }}"{% endif %}>
+    <section class="projects-4">
+        <div class="container">
+            <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+            <div class="projects row">
+                {% if edit_mode %}
+                <div class="project-wrapper col-sm-3">
+                    <a ng-href="[[ data.projects[0].url ]]" class="project">
+                        <div class="photo-wrapper" ng-style="{'background-color': data.projects[0].bg_color}">
+                            <div class="photo"></div>
+                            <span class="overlay">
+                                <span ng-class="data.projects[0].icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.projects[0].icon.name" dm-change-icon-url="data.projects[0].icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </span>
+                        </div>
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.projects[0].url}" dm-edit-url="data.projects[0].url"></div>
+                        </customizer>
+                    </a>
+                    <div class="info">
+                        <span dm-contenteditable ng-model="data.projects[0].name" class="name color-pomegranate"></span>
+                        <span dm-contenteditable ng-model="data.projects[0].year"></span>
+                    </div>
+                </div>
+                <div class="project-wrapper col-sm-3">
+                    <a ng-href="[[ data.projects[1].url ]]" class="project">
+                        <div class="photo-wrapper" ng-style="{'background-color': data.projects[1].bg_color}">
+                            <div class="photo"></div>
+                            <span class="overlay">
+                                <span ng-class="data.projects[1].icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.projects[1].icon.name" dm-change-icon-url="data.projects[1].icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </span>
+                        </div>
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.projects[1].url}" dm-edit-url="data.projects[1].url"></div>
+                        </customizer>
+                    </a>
+                    <div class="info">
+                        <span dm-contenteditable ng-model="data.projects[1].name" class="name color-orange"></span>
+                        <span dm-contenteditable ng-model="data.projects[1].year"></span>
+                    </div>
+                </div>
+                <div class="project-wrapper col-sm-3">
+                    <a ng-href="[[ data.projects[2].url ]]" class="project">
+                        <div class="photo-wrapper" ng-style="{'background-color': data.projects[2].bg_color}">
+                            <div class="photo"></div>
+                            <span class="overlay">
+                                <span ng-class="data.projects[2].icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.projects[2].icon.name" dm-change-icon-url="data.projects[2].icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </span>
+                        </div>
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.projects[2].url}" dm-edit-url="data.projects[2].url"></div>
+                        </customizer>
+                    </a>
+                    <div class="info">
+                        <span dm-contenteditable ng-model="data.projects[2].name" class="name color-belize-hole"></span>
+                        <span dm-contenteditable ng-model="data.projects[2].year"></span>
+                    </div>
+                </div>
+                <div class="project-wrapper col-sm-3">
+                    <a ng-href="[[ data.projects[3].url ]]" class="project">
+                        <div class="photo-wrapper" ng-style="{'background-color': data.projects[3].bg_color}">
+                            <div class="photo"></div>
+                            <span class="overlay">
+                                <span ng-class="data.projects[3].icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.projects[3].icon.name" dm-change-icon-url="data.projects[3].icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </span>
+                        </div>
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.projects[3].url}" dm-edit-url="data.projects[3].url"></div>
+                        </customizer>
+                    </a>
+                    <div class="info">
+                        <span dm-contenteditable ng-model="data.projects[3].name" class="name color-green-sea"></span>
+                        <span dm-contenteditable ng-model="data.projects[3].year"></span>
+                    </div>
+                </div>
+                {% else %}
+                    <div class="project-wrapper col-sm-3">
+                        <a href="{{ projects[0].url }}" class="project">
+                            <div class="photo-wrapper" style="background-color: {{ projects[0].bg_color }}">
+                                <div class="photo"></div>
+                                <span class="overlay"><span class="{{ projects[0].icon.name }}"> </span></span>
+                            </div>
+                            <div class="info">
+                                <span class="name color-pomegranate">{{ projects[0].name }}</span>
+                                <span>{{ projects[0].year }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapper col-sm-3">
+                        <a href="{{ projects[1].url }}" class="project">
+                            <div class="photo-wrapper" style="background-color: {{ projects[1].bg_color }}">
+                                <div class="photo"></div>
+                                <span class="overlay"><span class="{{ projects[1].icon.name }}"> </span></span>
+                            </div>
+                            <div class="info">
+                                <span class="name color-orange">{{ projects[1].name }}</span>
+                                <span>{{ projects[1].year }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapper col-sm-3">
+                        <a href="{{ projects[2].url }}" class="project">
+                            <div class="photo-wrapper" style="background-color: {{ projects[2].bg_color }}">
+                                <div class="photo"></div>
+                                <span class="overlay"><span class="{{ projects[2].icon.name }}"> </span></span>
+                            </div>
+                            <div class="info">
+                                <span class="name color-belize-hole">{{ projects[2].name }}</span>
+                                <span>{{ projects[2].year }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-wrapper col-sm-3">
+                        <a href="{{ projects[3].url }}" class="project">
+                            <div class="photo-wrapper" style="background-color: {{ projects[3].bg_color }}">
+                                <div class="photo"></div>
+                                <span class="overlay"><span class="{{ projects[3].icon.name }}"> </span></span>
+                            </div>
+                            <div class="info">
+                                <span class="name color-green-sea">{{ projects[3].name }}</span>
+                                <span>{{ projects[3].year }}</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

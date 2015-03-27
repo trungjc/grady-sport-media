@@ -1,0 +1,51 @@
+{
+    "slider": [{
+        "brand": {
+            "name": "Startup",
+            "url": "\/",
+            "image": "common-files/icons/Infinity-Loop@2x.png"
+        },
+        "bg_image": "",
+        "bg_color": "#2c3e50",
+        "opacity": "0.2",
+        "title": "You have the design, you have the code",
+        "description": "We’ve created the product that will help your startup to look even better.",
+        "player": {
+            "src": "https://vimeo.com/80282064"
+        },
+        "box": [{
+            "title": "Block Model",
+            "description": "You can easily combine any components in a variety of design projects. It’s easy!"
+        }, {
+            "title": "HTML 5, Less, CSS 3",
+            "description": " We used checked-out technologies to give the best results."
+        }, {
+            "title": "Easy to use",
+            "description": " To get started, you select the desired sample and base the entire website on it.simple!"
+        }]
+    }, {
+        "brand": {
+            "name": "Startup",
+            "url": "\/",
+            "image": "common-files/icons/Infinity-Loop@2x.png"
+        },
+        "bg_image": "",
+        "bg_color": "#2c3e50",
+        "opacity": "0.2",
+        "title": "You have the design, you have the code",
+        "description": "We’ve created the product that will help your startup to look even better.",
+        "player": {
+            "src": "https://vimeo.com/80282064"
+        },
+        "box": [{
+            "title": "Block Model",
+            "description": "You can easily combine any components in a variety of design projects. It’s easy!"
+        }, {
+            "title": "HTML 5, Less, CSS 3",
+            "description": " We used checked-out technologies to give the best results."
+        }, {
+            "title": "Easy to use",
+            "description": " To get started, you select the desired sample and base the entire website on it.simple!"
+        }]
+    }]
+}

@@ -1,0 +1,52 @@
+{
+    "plan": {
+        "title": "Starter Plan",
+        "price": "19$/month",
+        "descriptions": [{
+            "text": "10,000 messages"
+        }, {
+            "text": "<b>unlimited</b> data"
+        }, {
+            "text": "<b>unlimited</b> users"
+        }, {
+            "text": "first 10 day free"
+        }],
+        "btn": {
+            "name": "Buy this plan",
+            "url": "\/"
+        }
+    },
+    "rows": [{
+        "row": [{
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "title": "Aligned to grid",
+            "text": "Without iconic symbols really finish your work - for clearly understand."
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-mic"
+            },
+            "title": "Design → Layout",
+            "text": "Easy to change and easy to create new elements with color swatches."
+        }]
+    }, {
+        "row": [{
+            "icon": {
+                "url": "",
+                "name": "fui-user"
+            },
+            "title": "Aligned to grid",
+            "text": "Without iconic symbols really finish your work - for clearly understand."
+        }, {
+            "icon": {
+                "url": "",
+                "name": "fui-windows"
+            },
+            "title": "Design → Layout",
+            "text": "Easy to change and easy to create new elements with color swatches."
+        }]
+    }]
+}

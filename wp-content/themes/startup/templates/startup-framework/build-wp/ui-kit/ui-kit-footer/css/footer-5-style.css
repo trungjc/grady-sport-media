@@ -1,0 +1,59 @@
+/**
+ * Footer 5 stylesheet  
+ * */
+.footer-5 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.footer-5 .brand {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.footer-5 .text {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 80px;
+  line-height: 1.45;
+}
+.footer-5 .btn {
+  margin-top: 30px;
+  background-color: #ebedee;
+  color: #7f8c8d;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 6px 13px 8px;
+}
+.footer-5 .btn:hover,
+.footer-5 .btn:focus {
+  background-color: #eff1f1;
+}
+.footer-5 .btn:active,
+.footer-5 .btn.active {
+  background-color: #c8c9ca;
+}
+.footer-5 .btn [class^="fui-"] {
+  font-size: 16px;
+  font-weight: normal;
+  color: #3498db;
+}
+@media (max-width: 991px) {
+  .footer-5 .text {
+    margin: 0;
+  }
+}
+.footer-5 .btn.btn-editable {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.footer-5 .btn.btn-editable:before {
+  font-size: 16px;
+  font-weight: normal;
+  color: #3498db;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Flat-UI-Pro-Icons';
+  margin-right: 8px;
+  margin-left: 4px;
+  margin-bottom: -1px;
+}

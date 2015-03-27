@@ -1,0 +1,75 @@
+<!--crew-2 -->
+<div{% if wp_mode %} class="dm-template" dm-template="crew.crew2" component-id="{{ component_id }}"{% endif %}>
+    <section class="crew-2">
+        <div class="container">
+            <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+            {% if edit_mode %}
+            <div class="members" ng-repeat="membersRow in data.membersRows">
+                <div class="member-wrapper" ng-repeat="member in membersRow.members">
+                    <div class="member">
+                        <div class="photo-wrapper">
+                            <div class="photo custom-img" ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + member.image + ')'}">
+                                <img
+                                ng-class="{'removed-image': member.image == '../../../img/1x1.png'}"
+                                ng-src="{{ sfBuildUri }}[[ member.image ]]"
+                                alt="" />
+                            </div>
+                            <div class="name" dm-contenteditable ng-model="member.name"></div>
+                            <div class="position" dm-contenteditable ng-model="member.position"></div>
+                            <customizer class="dm-popover popover fade top dm-image">
+                                <div class="dm-control-button" data-width="265" dm-upload-type="image" dm-upload-media="member.image"></div>
+                                <div class="dm-control-button" data-width="50" dm-remove-media="member.image"></div>
+                            </customizer>
+                        </div>
+                        <div class="info">
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="member.info"></span>
+                            <div class="social-btns">
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-social-btns" dm-social-btns="member.social_btns"></div>
+                                </customizer>
+                                <span
+                                class="social-item"
+                                ng-repeat="social_btn in member.social_btns">
+                                    <a
+                                    class="social-holder"
+                                    ng-href="[[ social_btn.url ]]">
+                                        <div class="[[ social_btn.name ]]"></div>
+                                        <div class="[[ social_btn.name ]]"></div>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                {% for membersRow in membersRows %}
+                    <div class="members">
+                        {% for member in membersRow.members %}
+                        <div class="member-wrapper">
+                            <div class="member">
+                                <div class="photo-wrapper">
+                                    <div class="photo" style="background-image: url({{ sfBuildUri }}{{ member.image }})">&nbsp;</div>
+                                    <div class="name">{{ member.name }}</div>
+                                    <div class="position">{{ member.position }}</div>
+                                </div>
+                                <div class="info">
+                                    <span>{{ member.info }}</span>
+                                    <div class="social-btns">
+                                        {% for social_btn in member.social_btns %}
+                                            <a href="{{ social_btn.url }}">
+                                                <div class="{{ social_btn.name }}"></div>
+                                                <div class="{{ social_btn.name }}"></div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</div>

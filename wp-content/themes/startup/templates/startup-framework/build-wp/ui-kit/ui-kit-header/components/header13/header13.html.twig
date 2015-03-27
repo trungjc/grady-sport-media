@@ -1,0 +1,105 @@
+<!-- header-13 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header13" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <header class="header-13">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-11 col-sm-offset-1">
+                    <a
+                    href="{{ brand.url }}"
+                    class="brand custom-img"
+                    {% if edit_mode %}
+                        ng-href="[[ data.brand.url ]]"
+                    {% endif %}>
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="100" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                            <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                        </customizer>
+                        {% endif %}
+                        <img
+                        width="100"
+                        height="100"
+                        alt=""
+                        ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                        src="{{ sfBuildUri }}{{ brand.image }}"
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                        {% endif %} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section
+    class="header-13-sub v-center"
+    {% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+        <div>
+            <div class="background"
+            {% if edit_mode %}
+                ng-style="{
+                    'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                    'opacity': data.opacity
+                }"
+            {% else %}
+                style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+            {% endif %}>&nbsp;</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                        <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %} class="lead">{{ description }}</p> <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a
+                                {% if edit_mode %}
+                                dm-contenteditable
+                                ng-model="data.btn_danger.name"
+                                ng-href="[[ data.btn_danger.url ]]"
+                                {% endif %}
+                                class="btn btn-danger btn-huge"
+                                href="{{ btn_danger.url }}">
+                                    {{ btn_danger.name }}
+                                {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" ng-class="{hasUrl: data.btn_danger.url}" dm-edit-url="data.btn_danger.url"></div>
+                                </customizer>
+                                {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1 custom-img">
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="390" dm-upload-type="image" dm-upload-media="data.iphone.image"></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.iphone.image"></div>
+                        </customizer>
+                        {% endif %}
+                        <img
+                        src="{{ sfBuildUri }}{{ iphone.image }}"
+                        class="hidden-xs"
+                        alt=""
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.iphone.image ]]"
+                        {% endif %} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

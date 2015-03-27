@@ -1,0 +1,23 @@
+<!--content-11 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content11" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-11">
+        <div class="container">
+            <span class="text" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</span>
+            <a 
+            {% if edit_mode %}
+                dm-contenteditable
+                ng-model="data.btn_danger.name"
+                ng-href="[[ data.btn_danger.url ]]"
+            {% endif %} 
+            class="btn btn-large btn-danger" 
+            href="{{ btn_danger.url }}">
+                {{ btn_danger.name }}
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top">
+                    <div class="dm-control-button" ng-class="{hasUrl: data.btn_danger.url}" dm-edit-url="data.btn_danger.url"></div>
+                </customizer>
+                {% endif %}
+            </a>
+        </div>
+    </section>
+</div>

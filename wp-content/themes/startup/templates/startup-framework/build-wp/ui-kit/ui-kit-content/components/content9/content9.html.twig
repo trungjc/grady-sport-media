@@ -1,0 +1,52 @@
+<!--content-9 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content9" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-9">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}
+                    </p>
+                    <div class="row">
+                        {% if edit_mode %}
+                        <div class="col-sm-6 info" ng-repeat="item in data.row">
+                            <h6
+                            text-angular
+                            ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                            ng-model="item.title"></h6>
+                            <span 
+                            text-angular
+                            ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                            ng-model="item.name"></span>
+                        </div>
+                        {% else %}
+                            {% for item in row %}
+                            <div class="col-sm-6 info">
+                                <h6>{{ item.title }}</h6>
+                                <span>{{ item.name }}</span>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 hidden-xs custom-img">
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top dm-image">
+                        <div class="dm-control-button" data-width="300" dm-upload-type="image" dm-upload-media="data.image"></div>
+                        <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+                    </customizer>
+                    {% endif %}
+                    <img 
+                    src="{{ sfBuildUri }}{{ image }}" 
+                    width="300" 
+                    height="300"
+                    ng-class="{'removed-image': data.image == '../../../img/1x1.png'}"
+                    alt="" 
+                    {% if edit_mode %}
+                        ng-src="{{ sfBuildUri }}[[ data.image ]]"
+                    {% endif %}/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

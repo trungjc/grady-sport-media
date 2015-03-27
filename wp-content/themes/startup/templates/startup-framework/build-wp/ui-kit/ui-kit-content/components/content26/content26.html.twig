@@ -1,0 +1,55 @@
+<!--content-26 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content26" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-26 bg-clouds">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %} class="lead">{{ description }}</p>
+                </div>
+            </div>
+            <div class="row features">
+                {% if edit_mode %}
+                <div ng-repeat="row in data.rows" ng-class="{
+                  'col-sm-3': $index == 0,
+                  'col-sm-4 col-sm-offset-1': $index == 1,
+                  'col-sm-3 col-sm-offset-1': $index == 2
+                }">
+                  <div class="img-holder">
+                    <div class="img-wrapper custom-img">
+                      <img 
+                      alt="" 
+                      width="100" 
+                      height="100"
+                      ng-class="{'removed-image': row.image == '../../../img/1x1.png'}"
+                      ng-src="{{ sfBuildUri }}[[ row.image ]]" />
+                      <customizer class="dm-popover popover fade top dm-image">
+                          <div class="dm-control-button" data-width="100" dm-upload-type="image" dm-upload-media="row.image"></div>
+                          <div class="dm-control-button" data-width="50" dm-remove-media="row.image"></div>
+                      </customizer>
+                    </div>
+                  </div>
+                  <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.title"></h6>
+                  <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.description"></span>
+                </div>
+                {% else %}
+                {% for row in rows %}
+                  <div class="{% if loop.index == 1 %}col-sm-3{% endif %} {% if loop.index == 2 %}col-sm-4 col-sm-offset-1{% endif %} {% if loop.index == 3 %}col-sm-3 col-sm-offset-1{% endif %}">
+                    <div class="img-holder">
+                      <div class="img-wrapper">
+                      <img 
+                      src="{{sfBuildUri}}{{ row.image }}"
+                      alt="" 
+                      width="100" 
+                      height="100" />
+                    </div>
+                  </div>
+                  <h6>{{ row.title }}</h6>
+                  <span>{{ row.description }}</span>
+                  </div>
+                  {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

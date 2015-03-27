@@ -1,0 +1,44 @@
+<!--content-22 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content22" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-22 bg-midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+                    <a 
+                    {% if edit_mode %}
+                        dm-contenteditable 
+                        ng-model="data.btn_clear.name"
+                        ng-href="[[ data.btn_clear.url ]]"
+                    {% endif %} 
+                    class="btn btn-clear" 
+                    href="{{ btn_clear.url }}">
+                        {{ btn_clear.name }}
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.btn_clear.url}" dm-edit-url="data.btn_clear.url"></div>
+                        </customizer>
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="img hidden-xs">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board.png" width="974" height="713" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-1.png" width="834" height="713" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-2.png" width="974" height="533" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-3.png" width="512" height="549" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-4.png" width="653" height="367" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-5.png" width="952" height="267" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-6.png" width="512" height="518" alt="">
+                        <img src="{{sfBuildUri}}/common-files/img/content/board-7.png" width="512" height="488" alt="">
+                    </div>
+                    <div class="description">
+                        <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.desc.title"{% endif %}>{{ desc.title }}</h6>
+                        <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.desc.description"{% endif %}>{{ desc.description }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

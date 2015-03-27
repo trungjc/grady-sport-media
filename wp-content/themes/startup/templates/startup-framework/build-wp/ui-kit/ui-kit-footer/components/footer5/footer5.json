@@ -1,0 +1,11 @@
+{
+    "brand": {
+        "url": "\/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "description": "Startup Framework will help you to find an awesome form for your <br/>startup project in a short time",
+    "btn": {
+        "name": "Follow @Designmodo",
+        "url": "\/"
+    }
+}

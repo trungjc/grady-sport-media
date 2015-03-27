@@ -1,0 +1,22 @@
+{
+    "title": "Variety of designs ",
+    "description": "Use samples as-is or with new blocks from a UI Kit ",
+    "image": "common-files/icons/Infinity-Loop@2x.png",
+    "featuresRow": [{
+        "item": [{
+            "title": "Easy to use",
+            "name": "To get started, you select the desired sample and base the entire website on it. It’s that simple! "
+        }, {
+            "title": "Variety of designs",
+            "name": "Each of these beautiful samples you can use as-is or with new blocks from a UI Kit to make your startup. "
+        }]
+    }, {
+        "item": [{
+            "title": "User Guide ",
+            "name": "You’ll get a description of each component and learn how to connect and use them. "
+        }, {
+            "title": "Responsive Layout",
+            "name": "Of course we haven’t forgotten about the responsive layout. Create a website with full mobile support. "
+        }]
+    }]
+}

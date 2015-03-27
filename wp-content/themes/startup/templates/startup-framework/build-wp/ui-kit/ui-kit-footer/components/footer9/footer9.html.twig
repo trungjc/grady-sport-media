@@ -1,0 +1,41 @@
+<!-- footer-9 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer9" component-id="{{ component_id }}"{% endif %}>
+    <section class="footer-9-map">
+        {% if edit_mode %}
+        <div class="google-maps" dm-map="data.map"></div>
+        {% else %}
+        <div class="google-maps" data-map="{{ map|json_encode|e }}"></div>
+        {% endif %}
+    </section>
+    <footer class="footer-9 v-center">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        {% if edit_mode %}
+                        <div class="box" ng-class="{'box-first': $first}" ng-repeat="address in data.addresses">
+                            <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="address.title"></h6>
+                            <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="address.description"></p>
+                        </div>
+                        {% else %}
+                            {% for address in addresses %}
+                            <div class="box {% if loop.first %} box-first{% endif %}">
+                                <h6>{{ address.title }}</h6>
+                                <p>{{  address.description }}</p>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1 box">
+                        <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.help.title"{% endif %}>{{ help.title }}</h6>
+                        <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.help.description"{% endif %}>{{ help.description }}</p>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1 box">
+                        <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.inquiries.title"{% endif %}>{{ inquiries.title }}</h6>
+                        <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.inquiries.description"{% endif %}>{{ inquiries.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

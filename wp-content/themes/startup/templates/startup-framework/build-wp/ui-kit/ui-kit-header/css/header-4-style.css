@@ -1,0 +1,112 @@
+/**
+ * Header 4 stylesheet  
+ * */
+.header-4 {
+  padding-top: 358px;
+  padding-bottom: 360px;
+  color: white;
+}
+.header-4.v-center,
+.header-4 .v-center {
+  display: table;
+  width: 100%;
+}
+.header-4.v-center > div,
+.header-4 .v-center > div {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+}
+@media (min-width: 768px) {
+  .header-4 .v-center.row:before,
+  .header-4 .v-center.row:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header-4 .v-center {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .header-4 .v-center.row {
+    display: block;
+    width: auto;
+  }
+  .header-4 .v-center.row:before,
+  .header-4 .v-center.row:after {
+    display: none;
+  }
+  .header-4 .v-center.row > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+.header-4 .hero-unit {
+  margin: 0 0 35px;
+  padding: 0;
+  background: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-4 .hero-unit h1 {
+  margin: 0 0 17px;
+  font-size: 41px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 44px;
+  font-weight: 500;
+}
+.header-4 .hero-unit p {
+  font-size: 28px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 38px;
+  font-weight: 300;
+}
+.header-4 .btn.btn-gray {
+  background-color: #7f8c8d;
+  color: #fff;
+}
+.header-4 .btn.btn-gray:hover,
+.header-4 .btn.btn-gray:focus {
+  background-color: #99a3a4;
+}
+.header-4 .btn.btn-gray:active,
+.header-4 .btn.btn-gray.active {
+  background-color: #6c7778;
+}
+.header-4 .btns .btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 500;
+}
+.header-4 .btns .btn + .btn {
+  margin-left: 20px;
+}
+.header-4 .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/Hawaii_001.jpg");
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media (max-width: 768px) {
+  .header-4 .background {
+    -webkit-background-size: auto 200%;
+    -moz-background-size: auto 200%;
+    -o-background-size: auto 200%;
+    background-size: auto 200%;
+  }
+}
+@media (max-width: 480px) {
+  .header-4 .btns .btn {
+    display: block;
+  }
+  .header-4 .btns .btn + .btn {
+    margin: 10px 0 0;
+  }
+}

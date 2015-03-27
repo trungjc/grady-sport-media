@@ -1,0 +1,128 @@
+<!-- header-9 -->
+<div {% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header9" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <header class="header-9">
+		<div class="container">
+			<div class="row">
+				<div class="navbar col-sm-12" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle"></button>
+                        <span class="brand">
+                            {% if edit_mode %}
+                            <span ng-class="data.icon.name">
+                                <customizer class="dm-popover popover fade top">
+                                    <div dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url" class="dm-change-icon"></div>
+                                </customizer>
+                            </span>
+                            {% else %}
+                                {% if icon.url %}
+                                    <a href="{{ icon.url }}">
+                                        <span class="{{ icon.name }}"> </span>
+                                    </a>
+                                {% else %}
+                                    <span class="{{ icon.name }}"> </span>
+                                {% endif %}
+                            {% endif %}
+                        </span>
+					</div>
+					<div class="collapse navbar-collapse">
+                        <div>
+                            {% macro render_one_line_menu(items) %}
+            					<ul class="nav pull-right">
+                                    {% for item in items %}
+                                        <li>
+                                            <a href="{{ item.url }}">{{ item.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endmacro %}
+                            {% if wp_mode %}
+                                {{ _self.render_one_line_menu(headerMenu.items) }}
+                                {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+                                </customizer>
+                                {% endif %}
+                            {% else %}
+                                {{ _self.render_one_line_menu(menu) }}
+                            {% endif %}
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <section
+    class="header-9-sub"
+    {% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+        <div class="background"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                'opacity': data.opacity
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+        {% endif %}>&nbsp;</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="hero-unit bordered">
+                        <p class="wide-text" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</p>
+                    </div>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %} class="wide-text text-warning">{{ description }}</p>
+                </div>
+            </div>
+            <div class="nav-steps">
+                <a
+                {% if edit_mode %}
+                    dm-contenteditable
+                    ng-model= "data.first_link.name"
+                    ng-href="[[ data.first_link.url ]]"
+                {% endif %}
+                href="{{ first_link.url }}"
+                class="active">
+                    {{ first_link.name }}
+                    {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.first_link.url}" dm-edit-url="data.first_link.url"></div>
+                        </customizer>
+                    {% endif %}
+                </a>
+                <div class="steps-selectors">
+                    <a href="#" class="active">/</a>
+                    <a href="#">/</a>
+                    <a href="#">/</a>
+                    <a href="#">/</a>
+                </div>
+                <a
+                {% if edit_mode %}
+                    dm-contenteditable
+                    ng-model= "data.last_link.name"
+                    ng-href="[[ data.last_link.url ]]"
+                {% endif %}
+                href="{{ last_link.url }}">
+                    {{ last_link.name }}
+                    {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.last_link.url}" dm-edit-url="data.last_link.url"></div>
+                        </customizer>
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

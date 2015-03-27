@@ -1,0 +1,71 @@
+<!-- contacts-3 -->
+<div{% if wp_mode %} class="dm-template" dm-template="contacts.contacts3" component-id="{{ component_id }}"{% endif %}>
+    <section class="contacts-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.touch.title"{% endif %}>{{ touch.title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.touch.description"{% endif %}>{{ touch.description }}</p>
+                    <div class="links">
+                        <a href="callto:{{ contact.number }}" {% if edit_mode %} ng-href="callto:[[ data.contact.number ]]" {% endif %}>
+                            {% if edit_mode %}
+                                <span ng-class="data.numberIcon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.numberIcon.name" dm-change-icon-url="data.numberIcon.url"></div>
+                                    </customizer>
+                                </span>
+                            {% else %}
+                                <span class="{{ numberIcon.name }}"></span>
+                            {% endif %}
+                            <span {% if edit_mode %}dm-contenteditable ng-model="data.contact.number"{% endif %}> {{ contact.number }}</span>
+                        </a><br>
+                        <a href="mailto:{{ contact.email }}" {% if edit_mode %} ng-href="mailto:[[ data.contact.email ]]" {% endif %}>
+                            {% if edit_mode %}
+                                <span ng-class="data.emailIcon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.emailIcon.name" dm-change-icon-url="data.emailIcon.url"></div>
+                                    </customizer>
+                                </span>
+                            {% else %}
+                                <span class="{{ emailIcon.name }}"></span>
+                            {% endif %}
+                            <span {% if edit_mode %}dm-contenteditable ng-model="data.contact.email"{% endif %}> {{ contact.email }}</span>
+                        </a>
+                    </div>
+                    <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.find.title"{% endif %}>{{ find.title }}</h6>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.find.description"{% endif %}>{{ find.description }}</p>
+                    <div class="map">
+                        {% if edit_mode %}
+                        <div class="google-maps" dm-map="data.map"></div>
+                        {% else %}
+                        <div class="google-maps" data-map="{{ map|json_encode|e }}"></div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-1">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.mail.title"{% endif %}>{{ mail.title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.mail.description"{% endif %}>{{ mail.description }}</p>
+                    <form method="post">
+                        <label class="h6"><span {% if edit_mode %}dm-contenteditable ng-model="data.form.name"{% endif %}>{{ form.name }}</span></label>
+                        <input type="text" name="sf_contact_form[name]" class="form-control">
+                        <label class="h6"><span {% if edit_mode %}dm-contenteditable ng-model="data.form.email"{% endif %}>{{ form.email }}</span></label>
+                        <input type="text" name="sf_contact_form[from]" class="form-control">
+                        <label class="h6"><span {% if edit_mode %}dm-contenteditable ng-model="data.form.message"{% endif %}>{{ form.message }}</span></label>
+                        <textarea rows="7" name="sf_contact_form[msg]" class="form-control"></textarea>
+                        {% if edit_mode %}
+                            <button type="submit" class="btn btn-primary">
+                                <span ng-class="data.icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </button>
+                        {% else %}
+                            <button type="submit" class="btn btn-primary"><span class="{{ icon.name }}"></span></button>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

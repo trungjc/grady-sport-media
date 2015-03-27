@@ -1,0 +1,52 @@
+.content-37 {
+  border-top: 0;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+@media (max-width: 767px) {
+  .content-37 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.content-37 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-weight: 300;
+  margin: 0 0 38px;
+  text-align: center;
+}
+.content-37 .signup-form form {
+  margin: 30px auto 0;
+}
+.content-37 .signup-form form input {
+  border: 2px solid #dee1e3;
+}
+.content-37 .signup-form form input,
+.content-37 .signup-form form button,
+.content-37 .signup-form form .dm-form-button {
+  float: left;
+  width: 23%;
+  margin: 0 1%;
+}
+@media (max-width: 480px) {
+  .content-37 .signup-form form input,
+  .content-37 .signup-form form button,
+  .content-37 .signup-form form .dm-form-button {
+    width: 100%;
+    margin: 10px 0 0;
+    display: block;
+    float: none;
+    height: 41px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.content-37 .signup-form form .dm-form-button {
+  height: 42px;
+}
+.content-37 .signup-form form input:focus {
+  border-color: #3498db !important;
+}

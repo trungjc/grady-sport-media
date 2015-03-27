@@ -1,0 +1,220 @@
+/**
+ * Header 23 stylesheet  
+ * */
+.header-23 {
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.header-23 > .container {
+  position: relative;
+}
+.header-23 .navbar {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-23 .navbar.navbar-fixed-top {
+  position: fixed;
+}
+.header-23 .navbar .brand {
+  padding-left: 0;
+  font-size: 25px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+.header-23 .navbar .nav > li {
+  margin-left: 20px;
+}
+.header-23 .navbar .nav > li:first-child {
+  margin-left: 0;
+}
+.header-23 .navbar .nav > li > a {
+  padding: 31px 0 27px;
+  font-size: 16px;
+  font-weight: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.header-23 .navbar .nav > li > a:hover,
+.header-23 .navbar .nav > li > a:focus,
+.header-23 .navbar .nav > li > a.active {
+  color: #506e8c;
+}
+.header-23 .navbar .nav > li.active > a {
+  color: #506e8c;
+}
+.header-23 .navbar .nav > li.active > a:hover,
+.header-23 .navbar .nav > li.active > a:focus,
+.header-23 .navbar .nav > li.active > a.active {
+  color: #405870;
+}
+.header-23 .navbar .navbar-toggle {
+  margin-top: 28px;
+  background: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/icons/menu-icon@2x.png") 50% no-repeat;
+  -webkit-background-size: 17px 12px;
+  -moz-background-size: 17px 12px;
+  -o-background-size: 17px 12px;
+  background-size: 17px 12px;
+}
+.header-23-sub {
+  z-index: 50;
+  left: 0;
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+  background: #1b1e21;
+  min-height: 650px;
+}
+.header-23-sub .background {
+  background-image: url('../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/header/img-video.jpg');
+}
+.header-23-sub .container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  margin-top: -34px;
+}
+@media (max-width: 991px) {
+  .header-23-sub .container {
+    margin-top: -110px;
+  }
+}
+.header-23-sub .hero-unit {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.header-23-sub .hero-unit strong {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+@media (max-width: 991px) {
+  .header-23-sub .hero-unit strong {
+    display: block;
+  }
+}
+.header-23-sub .hero-unit span {
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .header-23-sub .hero-unit span {
+    display: block;
+  }
+}
+.header-23-sub .hero-unit .btn-play {
+  vertical-align: middle;
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 67px;
+  height: 67px;
+  margin: 0 50px;
+  background: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/header/btn-play.png") no-repeat;
+}
+@media (max-width: 991px) {
+  .header-23-sub .hero-unit .btn-play {
+    margin: 35px 0;
+  }
+}
+.header-23-sub .background {
+  opacity: 10;
+  filter: alpha(opacity=1000);
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+.header-23-sub video {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: #000;
+}
+.mask {
+  z-index: 1000;
+  background-color: #000;
+  opacity: 90;
+  filter: alpha(opacity=9000);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.popup-video {
+  z-index: 1000;
+  margin: 0 10%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.popup-video.shown {
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  overflow: visible;
+  display: none;
+}
+.popup-video .embed-video,
+.popup-video iframe {
+  width: 100%;
+  height: 100%;
+}
+#bgVideo,
+#bgVideoPreview {
+  overflow: hidden;
+}
+#bgVideo,
+#bgVideoPreview {
+  position: static;
+}
+@media (max-width: 1200px) {
+  #bgVideo,
+  #bgVideoPreview {
+    height: 650px;
+  }
+}
+#bgVideo video,
+#bgVideoPreview video {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: -22px;
+  display: block !important;
+}
+@media (max-width: 1200px) {
+  #bgVideo video,
+  #bgVideoPreview video {
+    width: auto !important;
+    height: auto !important;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

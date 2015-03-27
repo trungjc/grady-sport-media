@@ -1,0 +1,73 @@
+{
+    "plans": [{
+        "title": "FREE PLAN",
+        "currency": "$",
+        "count": "0",
+        "descriptions": [{
+            "title": "10,000 users",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }, {
+            "title": "10 photos per month",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }],
+        "description_more": {
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "title": "10,000 users",
+            "info": "Without iconic symbolsreally finish your work - for clearly understand.",
+            "btn": {
+                "name": "Change to this Plan",
+                "url": "\/"
+            }
+        }
+    }, {
+        "title": "DEVELOPER PLAN",
+        "currency": "$",
+        "count": "29",
+        "descriptions": [{
+            "title": "Unlimited users",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }, {
+            "title": "10 photos per month",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }],
+        "description_more": {
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "title": "Unlimited users",
+            "info": "Without iconic symbolsreally finish your work - for clearly understand.",
+            "btn": {
+                "name": "Change to this Plan",
+                "url": "\/"
+            }
+        }
+    }, {
+        "title": "EXTENDED PLAN",
+        "currency": "$",
+        "count": "50",
+        "descriptions": [{
+            "title": "50,000 users",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }, {
+            "title": "50 photos per month",
+            "text": "Without iconic symbolsreally finish your work - for clearly understand."
+        }],
+        "description_more": {
+            "icon": {
+                "url": "",
+                "name": "fui-cmd"
+            },
+            "title": "50,000 users",
+            "info": "Without iconic symbolsreally finish your work - for clearly understand.",
+            "btn": {
+                "name": "Change to this Plan",
+                "url": "\/"
+            }
+        }
+    }],
+    "terms": "Be sure to take a look at our <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy Policy</a>"
+}

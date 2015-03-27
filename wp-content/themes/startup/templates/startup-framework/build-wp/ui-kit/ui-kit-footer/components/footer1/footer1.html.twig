@@ -1,0 +1,106 @@
+<!-- footer-1 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer1" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-1 bg-midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p {% if edit_mode %} text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.count"{% endif %} class="lead">{{ count }}</p>
+                    <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</span>
+                    <div class="social-btns">
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                        </customizer>
+                        <span
+                        class="social-item"
+                        ng-repeat="social_btn in data.social_btns">
+                            <a
+                            class="social-holder"
+                            ng-href="[[ social_btn.url ]]">
+                                <div class="[[ social_btn.name ]]"></div>
+                                <div class="[[ social_btn.name ]]"></div>
+                            </a>
+                        </span>
+                        {% else %}
+                            {% for social_btn in social_btns %}
+                                <a class="social-holder" href="{{ social_btn.url }}">
+                                    <div class="{{ social_btn.name }}"></div>
+                                    <div class="{{ social_btn.name }}"></div>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <nav>
+                    {% macro render_two_column_menu(items) %}
+                        {% for item in items %}
+                            <div class="col-sm-2 {% if loop.index == 1 %}col-sm-offset-1{% endif %}">
+                                <h6>{{ item.title }}</h6>
+                                <ul>
+                                    {% for child in item.children %}
+                                        <li>
+                                            <a href="{{ child.url }}">{{ child.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% endmacro %}
+                    {% if wp_mode %}
+                        {{ _self.render_two_column_menu(footerMenuTwoColumns.items) }}
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuTwoColumns.id) }}"></div>
+                        </customizer>
+                        {% endif %}
+                    {% else %}
+                        {{ _self.render_two_column_menu(menu) }}
+                    {% endif %}
+                </nav>
+                <div class="col-sm-2 buy-btn">
+                    <a
+                    {% if edit_mode %}
+                        dm-contenteditable
+                        ng-model="data.btn_buy.title"
+                        ng-href="[[ data.btn_buy.url ]]"
+                    {% endif %}
+                    class="btn btn-danger btn-block"
+                    href="{{ btn_buy.url }}">
+                        {{ btn_buy.title }}
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.btn_buy.url}" dm-edit-url="data.btn_buy.url"></div>
+                        </customizer>
+                        {% endif %}
+                    </a>
+                    <span {% if edit_mode %} text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.text" {% endif %}>{{ text }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 additional-links">
+                    <nav>
+                        {% macro render_one_line_menu(items) %}
+        					<ul>
+                                {% for item in items %}
+                                    <li>
+                                        <a href="{{ item.url }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endmacro %}
+                        {% if wp_mode %}
+                            {{ _self.render_one_line_menu(footerAdditionalMenuOneLine.items) }}
+                            {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerAdditionalMenuOneLine.id) }}"></div>
+                                </customizer>
+                            {% endif %}
+                        {% else %}
+                            {{ _self.render_one_line_menu(additional_menu) }}
+                        {% endif %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

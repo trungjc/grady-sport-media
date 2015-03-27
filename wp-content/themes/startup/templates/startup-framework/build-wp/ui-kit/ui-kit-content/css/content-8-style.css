@@ -1,0 +1,95 @@
+/**
+ * Content 8 stylesheet  
+ * */
+.content-8 {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  position: relative;
+  text-align: center;
+}
+.content-8 h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  color: #34495e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 70px 0 35px;
+}
+.content-8 p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #7f8c8d;
+  margin-bottom: 43px;
+}
+.content-8 .img {
+  max-width: 397px;
+  margin: 0 auto;
+}
+.content-8 .img img {
+  width: 100%;
+}
+.content-8 .btn.btn-clear {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none;
+  border: 2px solid #e74c3c;
+  font-size: 14px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 12px 28px 12px;
+  color: #e74c3c;
+}
+.content-8 .btn.btn-clear:hover,
+.content-8 .btn.btn-clear:focus {
+  background: #e74c3c;
+  color: #fff;
+}
+.content-8 .btn.btn-clear:active,
+.content-8 .btn.btn-clear.active {
+  border-color: #c44133;
+  background: #c44133;
+  color: rgba(255, 255, 255, 0.75);
+}
+.content-8.v-center,
+.content-8 .v-center {
+  display: table;
+  width: 100%;
+}
+.content-8.v-center > div,
+.content-8 .v-center > div {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+}
+@media (min-width: 768px) {
+  .content-8 .v-center.row:before,
+  .content-8 .v-center.row:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .content-8 .v-center {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .content-8 .v-center.row {
+    display: block;
+    width: auto;
+  }
+  .content-8 .v-center.row:before,
+  .content-8 .v-center.row:after {
+    display: none;
+  }
+  .content-8 .v-center.row > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}

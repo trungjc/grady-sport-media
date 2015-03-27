@@ -1,0 +1,120 @@
+/**
+ * Footer 14 stylesheet  
+ * */
+.footer-14 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #f4f5f6;
+  line-height: 25px;
+}
+.footer-14 .brand {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+.footer-14 a {
+  color: #95a5a6;
+  font-weight: 500;
+}
+.footer-14 a:hover,
+.footer-14 a:focus,
+.footer-14 a.active {
+  color: #e74c3c;
+}
+.footer-14 nav {
+  font-size: 16px;
+  font-weight: normal;
+  color: inherit;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 100px;
+}
+.footer-14 nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-14 nav ul li {
+  float: none;
+  display: inline-block;
+  margin-left: 50px;
+  line-height: 25px;
+}
+@media (max-width: 767px) {
+  .footer-14 nav ul li {
+    margin-left: 20px;
+  }
+}
+.footer-14 nav ul li:first-child {
+  margin-left: 0;
+}
+.footer-14 .social-btns {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  white-space: nowrap;
+}
+.footer-14 .social-btns > * {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #95a5a6;
+  width: 16px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: top;
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.footer-14 .social-btns > *:first-child {
+  margin-left: 0;
+}
+.footer-14 .social-btns > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.footer-14 .social-btns > *:hover > * {
+  top: -100%;
+}
+.footer-14 .social-btns .social-holder > * {
+  display: block;
+}
+@media (max-width: 1200px) {
+  .footer-14 nav {
+    text-align: left;
+  }
+}
+@media (max-width: 992px) {
+  .footer-14 .brand {
+    display: none;
+  }
+  .footer-14 nav {
+    text-align: left;
+    margin: 0 0 20px;
+  }
+  .footer-14 nav ul li {
+    float: none;
+    margin: 18px 0 0;
+    display: block;
+  }
+  .footer-14 nav ul li:first-child {
+    margin-top: 0;
+  }
+  .footer-14 .social-btns {
+    margin: 0 0 30px;
+    position: relative;
+    display: block;
+    float: none;
+    right: 0;
+  }
+}

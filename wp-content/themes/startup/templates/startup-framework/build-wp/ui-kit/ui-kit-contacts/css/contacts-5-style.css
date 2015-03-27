@@ -1,0 +1,43 @@
+/**
+ * Copntact 5 stylesheet  
+ * */
+.contacts-5 {
+  padding-bottom: 100px;
+}
+.contacts-5 h6 {
+  font-size: 18px;
+  text-transform: none;
+}
+.contacts-5 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.contacts-5 a {
+  color: #1abc9c;
+}
+.contacts-5 a:hover,
+.contacts-5 a:focus,
+.contacts-5 a.active {
+  color: #15967d;
+}
+.contacts-5 .map {
+  height: 550px;
+  margin-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .contacts-5 .map {
+    height: 480px;
+    margin-bottom: 80px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .contacts-5 .box {
+    margin-top: 33px;
+  }
+  .contacts-5 .box.box-first {
+    margin-top: 0;
+  }
+}
+.contacts-5 .dm-popover {
+  white-space: nowrap;
+}

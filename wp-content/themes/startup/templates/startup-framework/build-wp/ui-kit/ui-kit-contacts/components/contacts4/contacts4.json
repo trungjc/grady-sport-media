@@ -1,0 +1,15 @@
+{
+    "title": "Get in touch with us",
+    "description": "As a Harvard professor, he was one of the first to <br />explore the relationship in equilibrium.",
+    "email": "info@designmodo.com",
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

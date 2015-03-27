@@ -1,0 +1,41 @@
+<!-- contacts-4 -->
+<div{% if wp_mode %} class="dm-template" dm-template="contacts.contacts4" component-id="{{ component_id }}"{% endif %}>
+    <section class="contacts-4">
+        <div class="container">
+            <div class="content">
+                <div class="social-btns">
+                    <div class="social-btns-holder">
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                        </customizer>
+                        <span
+                        class="social-item"
+                        ng-repeat="social_btn in data.social_btns">
+                            <a
+                            class="social-holder"
+                            ng-href="[[ social_btn.url ]]">
+                                <div class="[[ social_btn.name ]]"></div>
+                                <div class="[[ social_btn.name ]]"></div>
+                            </a>
+                        </span>
+                        {% else %}
+                            {% for social_btn in social_btns %}
+                            <a
+                            href="{{ social_btn.url }}">
+                                <div class="{{ social_btn.name }}"></div>
+                                <div class="{{ social_btn.name }}"></div>
+                            </a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+                <div class="links">
+                    <a {% if edit_mode %}dm-contenteditable ng-model="data.email"{% endif %} href="mailto:{{ email }}">{{ email }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

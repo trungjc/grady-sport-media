@@ -1,0 +1,282 @@
+/**
+ * Header 12 stylesheet  
+ * */
+.header-12 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.header-12 .navbar {
+  position: absolute;
+  z-index: 2;
+  width: 70%;
+  top: 90px;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #bdc3c7;
+}
+.header-12 .navbar .brand {
+  padding: 0;
+  font-size: 25px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 800;
+}
+.header-12 .navbar .brand img:first-child {
+  float: left;
+  margin: -10px 15px 0 0;
+}
+.header-12 .navbar .navbar-toggle {
+  background: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/icons/menu-icon@2x.png") 50% no-repeat;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-background-size: 17px 12px;
+  -moz-background-size: 17px 12px;
+  -o-background-size: 17px 12px;
+  background-size: 17px 12px;
+}
+.header-12 .navbar .nav {
+  margin: 0 0 0 100px;
+  float: left;
+}
+.header-12 .navbar .nav a {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #bdc3c7;
+  letter-spacing: 2px;
+}
+.header-12 .navbar .nav a:hover,
+.header-12 .navbar .nav a:focus,
+.header-12 .navbar .nav a.active {
+  color: #ffffff;
+}
+@media (max-width: 1200px) {
+  .header-12 .navbar .nav {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+  .header-12 .navbar .nav a {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .header-12 .navbar {
+    top: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .header-12 .navbar {
+    width: 100%;
+  }
+}
+.header-12-sub {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.header-12-sub:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 14px solid white;
+  border-left-color: #fff55b;
+  border-top-color: #fff55b;
+  z-index: 3;
+}
+.header-12-sub .row {
+  float: left;
+}
+.header-12-sub .hero-unit {
+  margin: 260px 0 0;
+  padding: 0;
+  background: transparent;
+}
+.header-12-sub .hero-unit h1 {
+  margin: 0 0 22px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 40px;
+}
+.header-12-sub .hero-unit p {
+  font-size: 18px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header-12-sub .background {
+  background-image: url("../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/NY_001.jpg");
+  opacity: 30;
+  filter: alpha(opacity=3000);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+@media (max-width: 991px) {
+  .header-12-sub {
+    padding-bottom: 0;
+  }
+  .header-12-sub .row {
+    float: none;
+  }
+  .header-12-sub .row > .col-sm-5 {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .header-12-sub .hero-unit {
+    margin: 120px 0 0;
+  }
+}
+@media (max-width: 480px) {
+  .header-12-sub {
+    padding-bottom: 0;
+  }
+  .header-12-sub .row {
+    float: none;
+  }
+  .header-12-sub .hero-unit {
+    margin: 60px 0 0;
+  }
+  .header-12-sub .hero-unit h1 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 40px;
+  }
+}
+.header-12-sub .aside {
+  position: relative;
+  background: #e74c3c;
+  float: right;
+  text-align: center;
+  margin-right: -9999px;
+  padding-right: 9999px;
+  padding-left: 95px;
+  border-left: 5px solid #fff;
+  margin-top: -80px;
+  margin-bottom: -80px;
+  padding-top: 80px;
+  padding-bottom: 117px;
+}
+.header-12-sub .aside > * {
+  position: relative;
+}
+.header-12-sub .aside > div > [class*="fui-"] {
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff55b;
+  margin-bottom: 100px;
+}
+.header-12-sub .aside h1,
+.header-12-sub .aside .h1,
+.header-12-sub .aside h2,
+.header-12-sub .aside .h2,
+.header-12-sub .aside h3,
+.header-12-sub .aside .h3,
+.header-12-sub .aside h4,
+.header-12-sub .aside .h4,
+.header-12-sub .aside h5,
+.header-12-sub .aside .h5,
+.header-12-sub .aside h6,
+.header-12-sub .aside .h6 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-12-sub .aside h3 {
+  font-size: 32px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0 0 30px;
+}
+.header-12-sub .aside p {
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  line-height: 24.3px;
+}
+.header-12-sub .aside .muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+.header-12-sub .aside .price {
+  position: relative;
+  display: inline-block;
+  margin: -1px 0 17px;
+  font-size: 140px;
+  font-weight: normal;
+  color: #ffffff;
+  font-weight: 600;
+}
+.header-12-sub .aside .price .currency {
+  position: absolute;
+  top: 30px;
+  left: -1em;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header-12-sub .aside .btn {
+  margin-top: 100px;
+  padding-left: 37px;
+  padding-right: 37px;
+  color: #e74c3c;
+  background-color: #fff55b;
+}
+.header-12-sub .aside .btn:hover,
+.header-12-sub .aside .btn:focus {
+  background-color: #fff77c;
+}
+.header-12-sub .aside .btn:active,
+.header-12-sub .aside .btn.active {
+  background-color: #d9d04d;
+}
+@media (max-width: 991px) {
+  .header-12-sub .aside {
+    max-width: none;
+    float: none;
+    border-left: 0;
+    margin: 60px -9999px 0;
+    padding-left: 9999px;
+  }
+  .header-12-sub .aside:before {
+    left: 50%;
+    margin-left: -2500px;
+    border-top: 5px solid #fff;
+  }
+}
+@media (max-width: 480px) {
+  .header-12-sub .aside {
+    max-width: none;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-top: 5px solid #fff;
+    margin: 60px -20px 0;
+  }
+  .header-12-sub .aside:before {
+    display: none;
+  }
+  .header-12-sub .aside > div > [class*="fui-"] {
+    margin-bottom: 40px;
+  }
+  .header-12-sub .aside .btn {
+    margin-top: 40px;
+  }
+  .header-12-sub .aside p {
+    max-width: 55%;
+    margin: 0 auto 10px;
+  }
+}

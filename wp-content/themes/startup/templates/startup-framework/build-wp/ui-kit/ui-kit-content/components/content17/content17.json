@@ -1,0 +1,16 @@
+{
+    "brand": {
+        "image": "common-files/icons/twitter@2x.png"
+    },
+    "slider": [{
+        "text": "I love how it uses a 12 grid system. Responsive design is the future!"
+    }, {
+        "text": "Responsive design is the future!"
+    }, {
+        "text": "Responsive design is the future! I love how it uses a 12 grid system."
+    }, {
+        "text": "I love how it uses a 12 grid system."
+    }],
+    "description": "You should <a href=\"#\">follow us</a> on Twitter to post something"
+        
+}

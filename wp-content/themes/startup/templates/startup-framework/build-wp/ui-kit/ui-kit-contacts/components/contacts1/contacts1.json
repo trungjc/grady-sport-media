@@ -1,0 +1,24 @@
+{
+    "title": "We love what we do. <br> This is features of our products",
+    "form": {
+        "name": "Name / Last Name",
+        "email": "E-mail",
+        "message": "Message"
+    },
+    "help": {
+        "title": "Need help?",
+        "description": "Don’t hesitate to ask us something. Email us directly <a href=\"#\">info@designmodo.com</a> or call us at <a href=\"#\">1-347-567-8670</a>. You can checkout our <a href=\"#\">FAQ</a> and <a href=\"#\">Help</a> page to get more information about our products."
+    },
+    "faq": {
+        "title": "FAQ",
+        "description": "As a Harvard professor, he was one of the first to explore the relationship between chemical equilibrium and the reaction rate of chemical processes."
+    },
+    "phone": {
+        "number": "347 567 78 90",
+        "time": "AVAILABLE AT 12PM - 18PM"
+    },
+    "icon": {
+        "url": "",
+        "name": "fui-mail"
+    }
+}

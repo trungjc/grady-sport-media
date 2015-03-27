@@ -1,0 +1,44 @@
+{
+    "bg_image": "common-files/img/NY_001.jpg",
+    "bg_color": "#192735",
+    "opacity": "0.5",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "\/"
+    },
+    "title": "You have the design, you have the code",
+    "description": "We’ve created the product that will help your startup to look even better.",
+    "player": {
+        "src": "https://vimeo.com/80282064"
+    },
+    "btn_primary": {
+        "name": "Sign In"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }],
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

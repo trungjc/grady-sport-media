@@ -1,0 +1,49 @@
+{
+    "title": "Startup Framework<br/> The Second Sneak-Peek of Startup Framework",
+    "members": [{
+        "image": "common-files/img/crew/vladimir-k.png",
+        "name": "Vladimir Kudinov",
+        "text": "<b>Designer</b> who makes easy to change and easy to create new elements.",
+        "contacts": "<a href=\"\/\">http://vladimirkudinov.com</a><br /><a href=\"\/\">@stSilent</a>",
+        "social_btns": [{
+            "name": "fui-facebook",
+            "url": "\/"
+        }, {
+            "name": "fui-twitter",
+            "url": "\/"
+        }, {
+            "name": "fui-vimeo",
+            "url": "\/"
+        }]
+    }, {
+        "image": "common-files/img/crew/sergey-s.png",
+        "name": "Sergey Shmidt",
+        "text": "<b>Designer</b> who makes easy to change and easy to create new elements.",
+        "contacts": "<a href=\"\/\">http://vladimirkudinov.com</a><br /><a href=\"\/\">@stSilent</a>",
+        "social_btns": [{
+            "name": "fui-facebook",
+            "url": "\/"
+        }, {
+            "name": "fui-twitter",
+            "url": "\/"
+        }, {
+            "name": "fui-vimeo",
+            "url": "\/"
+        }]
+    }, {
+        "image": "common-files/img/crew/adrian-v.png",
+        "name": "Adrian Valeanu",
+        "text": "<b>Designer</b> who makes easy to change and easy to create new elements.",
+        "contacts": "<a href=\"\/\">http://vladimirkudinov.com</a><br /><a href=\"\/\">@stSilent</a>",
+        "social_btns": [{
+            "name": "fui-facebook",
+            "url": "\/"
+        }, {
+            "name": "fui-twitter",
+            "url": "\/"
+        }, {
+            "name": "fui-vimeo",
+            "url": "\/"
+        }]
+    }]
+}

@@ -1,0 +1,40 @@
+{
+    "title": "We love what we do. <br> This is features of our products",
+    "projects": [{
+        "url": "\/",
+        "icon": {
+            "url": "",
+            "name": "fui-eye"
+        },
+        "bg_color": "#E74C3C",
+        "name": "Polaris UI",
+        "year": "2012"
+    }, {
+        "url": "\/",
+        "icon": {
+            "url": "",
+            "name": "fui-mic"
+        },
+        "bg_color": "#F1C40F",
+        "name": "Linecons",
+        "year": "2012"
+    }, {
+        "url": "\/",
+        "icon": {
+            "url": "",
+            "name": "fui-cmd"
+        },
+        "bg_color": "#3498DB",
+        "name": "Flat UI Pro",
+        "year": "2012"
+    }, {
+        "url": "\/",
+        "icon": {
+            "url": "",
+            "name": "fui-user"
+        },
+        "bg_color": "#1ABC9C",
+        "name": "Startup Kit",
+        "year": "2012"
+    }]
+}

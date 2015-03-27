@@ -1,0 +1,11 @@
+{
+    "brand": {
+        "name": "Startup",
+        "url": "/"
+    },
+    "add_links": "By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy</a>",
+    "address": {
+        "title": "New York, NY",
+        "description": "62 West 55th Street, Suite 302<br>New York, NY, 10230"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "bg_image": "common-files/img/NY_001.jpg",
+    "bg_color": "#2c3e50",
+    "opacity": "0.3",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "\/"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }],
+    "title": "We have a great surprise for Designmodo fans our first free HTML user interface kit.",
+    "description": "It contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects.",
+    "aside": {
+        "title": "Register Today",
+        "top_description": "AND GET FREE MONTH OF USING",
+        "bottom_description": "AND GET FREE MONTH OF USING"
+    },
+    "icon": {
+        "url": "",
+        "name": "fui-cmd"
+    },
+    "price": {
+        "currency": "$",
+        "value": "0"
+    },
+    "btn": {
+        "name": "Just Get it Now",
+        "url": "\/"
+    }
+}

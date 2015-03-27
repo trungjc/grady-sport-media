@@ -1,0 +1,39 @@
+{
+    "bg_image": "common-files/img/Brazil_002.jpg",
+    "bg_color": "#2c3e50",
+    "opacity": "1",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "/"
+    },
+    "title": "Features of Startup Framework",
+    "description": "You have the design, you have the code. We’ve created the product that will help your startup to look even better.",
+    "player": {
+        "src": "https://vimeo.com/80282064"
+    },
+    "btn_primary": {
+        "name": "Sign In",
+        "url": "\/"
+    },
+    "btn_info": {
+        "name": "Sign In"
+    },
+    "add_links": "By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy</a>",
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

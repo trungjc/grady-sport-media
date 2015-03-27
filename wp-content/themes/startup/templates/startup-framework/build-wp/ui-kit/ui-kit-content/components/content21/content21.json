@@ -1,0 +1,37 @@
+{
+    "title": "We love what we do",
+    "description": "The most important part of the Startup Design Framework is the samples",
+    "features": [{
+        "label": "ALIGNED TO GRID",
+        "icon": "fui-cmd",
+        "title": "Aligned to grid",
+        "description": "We have considered your needs in developing the html version of our UI Kit, which contains the same elements as the PSD version and are perfect for creating great              websites.",
+        "name": "With this UI Kit, you can spend even less time on routine work, saving that time for creativity."
+    }, {
+        "label": "AVAILABLE FOR REC",
+        "icon": "fui-mic",
+        "title": "Available for rec",
+        "description": "With this UI Kit, you can spend even less time on routine work, saving that time for creativity.",
+        "name": "We have considered your needs in developing the html version of our UI Kit, which contains the same elements as the PSD version and are perfect for creating great websites."
+    }, {
+        "label": "MANY USERS",
+        "icon": "fui-user",
+        "title": "Many users",
+        "description": "We have considered your needs in developing the html version of our UI Kit, which contains the same elements as the PSD version and are perfect for creating great websites.",
+        "name": "With this UI Kit, you can spend even less time on routine work, saving that time for creativity."
+    }],
+    "box": {
+        "icon1": {
+            "url": "",
+            "name": "fui-cmd"
+        },
+        "icon2": {
+            "url": "",
+            "name": "fui-mic"
+        },
+        "icon3": {
+            "url": "",
+            "name": "fui-user"
+        }
+    }
+}

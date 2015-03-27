@@ -1,0 +1,37 @@
+{
+    "sliderItems": [{
+        "slider": [{
+            "title": "You can combine any blocks",
+            "description": "These Samples will guide you through and show how to use the blocks and give you the feeling on how to play around using the components in the website building process.",
+            "image": "common-files/img/content/ticket-navy@2x.png"
+        }]
+    }, {
+        "slider": [{
+            "title": "Easy way to prototyping ideas",
+            "description": "It contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects, checkboxes and radio-buttons, tags.",
+            "image": "common-files/img/content/map@2x.png"
+        }, {
+            "title": "Each block is coded for web",
+            "description": "HTML layout is based on one of the common and reliable frameworks at this time - Bootstrap v 2.3.2. The most important parts of the Startup Framework are Samples and the UI Kit that includes a set of different components.",
+            "image": "common-files/img/content/ps-wire-imac@2x.png"
+        }, {
+            "title": "Based on Twitter Bootstrap",
+            "description": "For example, let&rsquo;s take a look at Sample #4. This page consists of different blocks that are taken from a UI Kit - header, feature blocks, content blocks and footer with address.",
+            "image": "common-files/img/content/ticket-navy@2x.png"
+        }]
+    }, {
+        "slider": [{
+            "title": "File transfer with no disconnects",
+            "description": "It contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects, checkboxes and radio-buttons, tags.",
+            "image": "common-files/img/content/ps-wire-imac@2x.png"
+        }, {
+            "title": "Make beautiful sites much faster",
+            "description": "It contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects, checkboxes and radio-buttons, tags.",
+            "image": "common-files/img/content/ticket-navy@2x.png"
+        }, {
+            "title": "Easy way to prototyping ideas",
+            "description": "It contains many basic and complex components which are great for designers to have at hand: buttons, inputs, button groups, selects, checkboxes and radio-buttons, tags.",
+            "image": "common-files/img/content/map@2x.png"
+        }]
+    }]
+}

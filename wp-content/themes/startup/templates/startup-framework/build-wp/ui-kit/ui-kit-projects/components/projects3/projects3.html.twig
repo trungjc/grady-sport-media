@@ -1,0 +1,55 @@
+<!--projects-3 -->
+<div{% if wp_mode %} class="dm-template" dm-template="projects.projects3" component-id="{{ component_id }}"{% endif %}>
+    <section class="projects-3">
+        <div class="container">
+            <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+            <div class="projects">
+                {% if edit_mode %}
+                <div class="project-wrapper" ng-repeat="project in data.projects">
+                    <div class="project">
+                        <div class="photo-wrapper custom-img">
+                            <div class="photo" ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + project.image + ')'}">
+                                <img
+                                alt=""
+                                ng-class="{'removed-image': project.image == '../../../img/1x1.png'}"
+                                ng-src="{{ sfBuildUri }}[[ project.image ]]" />
+                            </div>
+                            <div class="overlay"><span class="fui-eye"></span></div>
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top dm-image">
+                                <div class="dm-control-button" data-width="220" dm-upload-type="image" dm-upload-media="project.image"></div>
+                                <div class="dm-control-button" data-width="50" dm-remove-media="project.image"></div>
+                            </customizer>
+                            {% endif %}
+                        </div>
+                        <div class="info">
+                            <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="project.name" class="name"></div>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="project.info"></span>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                    {% for project in projects %}
+                    <div class="project-wrapper">
+                        <div class="project">
+                            <div class="photo-wrapper">
+                                <div class="photo">
+                                    <img
+                                    alt=""
+                                    src="{{ sfBuildUri }}{{ project.image }}"
+                                    />
+                                </div>
+                                <div class="overlay"><span class="fui-eye"></span></div>
+                            </div>
+                            <div class="info">
+                                <div class="name">{{ project.name }}</div>
+                                <span>{{ project.info }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

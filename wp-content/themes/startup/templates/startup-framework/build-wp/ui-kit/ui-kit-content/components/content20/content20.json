@@ -1,0 +1,25 @@
+{
+    "title": "Register your account today and get free month trial",
+    "description": "The most important part of the Startup Design Framework is the samples",
+    "label": [{
+        "title": "What is your e-mail?"
+    }, {
+        "title": "Password"
+    }, {
+        "title": "Confirmation"
+    }, {
+        "title": "Your Site Link"
+    }, {
+        "title": ".startup.com"
+    }],
+    "boxes": [{
+        "title": "Easy to use",
+        "description": "To get started, you select the desired sample and build on the basis of its entire website."
+    }, {
+        "title": "Variety of designs",
+        "description": "Responsive web design is a web design approach aimed at crafting sites to provide."
+    }],
+    "btn_huge": {
+        "name": "Sign Up"
+    }
+}

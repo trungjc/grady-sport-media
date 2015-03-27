@@ -1,0 +1,32 @@
+{
+    "bg_image": "",
+    "bg_color": "#f2f3f4",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "\/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "btn_primary": {
+        "name": "Sign In",
+        "url": "\/"
+    },
+    "title": "Twenty five awesome samples",
+    "description": "These Samples will guide you through and show how to use the blocks and give you the feeling on how to play around using the components in the website building process.",
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

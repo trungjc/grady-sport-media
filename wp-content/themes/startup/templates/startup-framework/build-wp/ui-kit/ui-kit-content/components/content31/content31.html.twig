@@ -1,0 +1,78 @@
+<!-- content-31 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content31" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-31">
+        {% if edit_mode %}
+        <div class="container content-31-inner">
+            <div
+            class="row"
+            ng-repeat="sliderItem in data.sliderItems">
+                <div class="number">[[ $index + 1 ]]</div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div
+                    dm-slider="c-31-pt-main-[[ $index + 1 ]]-{{ component_id }}"
+                    dm-slider-model="sliderItem.slider"
+                    dm-slider-archive="c31ptMain[[ $index + 1 ]]"
+                    class="page-transitions pt-perspective">
+                        <div
+                        class="pt-page"
+                        ng-repeat="slide in sliderItem.slider"
+                        dm-slider-repeat>
+                            <h3 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h3>
+                            <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                            <div class="box">
+                                <div class="img custom-img">
+                                    <img
+                                    width="380"
+                                    height="187"
+                                    alt=""
+                                    ng-class="{'removed-image': slide.image == '../../../img/1x1.png'}"
+                                    ng-src="{{ sfBuildUri }}[[ slide.image ]]" />
+                                    <customizer class="dm-popover popover fade top dm-image">
+                                        <div class="dm-control-button" data-width="380" dm-upload-type="image" dm-upload-media="slide.image"></div>
+                                        <div class="dm-control-button" data-width="50" dm-remove-media="slide.image"></div>
+                                    </customizer>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-controls">
+                            <a class="pt-control-prev" href="#"></a>
+                            <a class="pt-control-next" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div id="content-31-inner-{{ component_id }}" class="container">
+            {% for sliderItem in sliderItems %}
+            <div class="row">
+                <div class="number">{{ loop.index }}</div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="page-transitions pt-perspective">
+                        {% for slide in sliderItem.slider %}
+                        <div class="pt-page">
+                            <h3>{{ slide.title }}</h3>
+                            <p>{{ slide.description }}</p>
+                            <div class="box">
+                                <div class="img">
+                                    <img
+                                    width="380"
+                                    height="187"
+                                    alt=""
+                                    src="{{ sfBuildUri }}{{ slide.image }}" />
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="pt-controls">
+                            <a class="pt-control-prev" href="#"></a>
+                            <a class="pt-control-next" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+</div>

@@ -1,0 +1,31 @@
+{
+    "bg_image": "common-files/img/Hawaii_001.jpg",
+    "bg_color": "#2c3e50",
+    "opacity": "1",
+    "title": "Startup Design Framework is coming!",
+    "description": "The Second Sneak-Peek of Startup Design Framework",
+    "btn_primary": {
+        "name": "Join Startup Kit",
+        "url": "\/"
+    },
+    "btn_gray": {
+        "name": "Sign In",
+        "url": "\/"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

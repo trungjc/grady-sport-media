@@ -1,0 +1,51 @@
+<!-- contacts-1 -->
+<div{% if wp_mode %} class="dm-template" dm-template="contacts.contacts1" component-id="{{ component_id }}"{% endif %}>
+    <section class="contacts-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form method="post">
+                        <label class="h6"><span  {% if edit_mode %}dm-contenteditable ng-model="data.form.name"{% endif %}>{{ form.name }}</span></label>
+                        <input type="text" name="sf_contact_form[name]" class="form-control">
+                        <label class="h6"><span {% if edit_mode %}dm-contenteditable ng-model="data.form.email"{% endif %}>{{ form.email }}</span></label>
+                        <input type="text" name="sf_contact_form[from]" class="form-control">
+                        <label class="h6"><span  {% if edit_mode %}dm-contenteditable ng-model="data.form.message"{% endif %}>{{ form.message }}</span></label>
+                        <textarea rows="7" name="sf_contact_form[msg]" class="form-control"></textarea>
+                        {% if edit_mode %}
+                            <button type="submit" class="btn btn-primary">
+                                <span ng-class="data.icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url"></div>
+                                    </customizer>
+                                </span>
+                            </button>
+                        {% else %}
+                            <button type="submit" class="btn btn-primary"><span class="{{ icon.name }}"></span></button>
+                        {% endif %}
+                    </form>
+                </div>
+
+                <div class="col-sm-4 col-sm-offset-1">
+                    <div class="additional">
+                        <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.help.title"{% endif %}>{{ help.title }}</h6>
+                        <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.help.description"{% endif %}>{{ help.description }}</p>
+                    </div>
+                    <div class="additional">
+                        <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.faq.title"{% endif %}>{{ faq.title }}</h6>
+                        <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.faq.description"{% endif %}>{{ faq.description }}</p>
+                    </div>
+                    <div class="phone">
+                        <big><a {% if edit_mode %}dm-contenteditable ng-model="data.phone.number" ng-href="callto:[[ data.phone.number ]]"{% endif %} href="callto:{{ phone.number }}">{{ phone.number }}</a></big>
+                        <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.phone.time"{% endif %}>{{ phone.time }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

@@ -1,0 +1,33 @@
+{
+    "bg_image": "",
+    "bg_color": "#fff",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "/"
+    },
+    "icon": {
+        "url": "",
+        "name": "fui-cmd"
+    },
+    "title": "We have considered your needs in developing the html version of our UI Kit, which contains components &amp; elements.",
+    "description": "We have a great surprise for Designmodo fans – our first free HTML user interface kit. Flat UI Free is made on the basis of Twitter Bootstrap in a stunning flat-style, and the kit also includes a PSD version for designers.",
+    "name": "Designmodo fans – our first free HTML user interface kit. Flat UI Free is made on the basis of Twitter Bootstrap in a stunning flat-style, and the kit also includes a PSD version for developers.",
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

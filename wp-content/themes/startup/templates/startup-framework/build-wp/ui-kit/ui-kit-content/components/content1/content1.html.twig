@@ -1,0 +1,74 @@
+<!--content-1 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content1" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>
+                        {{ description }}
+                    </p>
+                    <div class="row box-video">
+                        <div class="col-sm-7">
+                            <div class="player">
+                                {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" ng-class="{hasUrl: data.player.src}" dm-edit-url="data.player.src" dm-edit-url-type="video"></div>
+                                </customizer>
+                                <div
+                                    dm-video="data.player.src"
+                                    width="212"
+                                    height="142"
+                                    class="embed-video"
+                                    id="pPlayer{{ component_id }}">
+                                </div>
+                                {% else %}
+                                <div class="embed-video">
+                                    <iframe id="pPlayer{{ component_id }}" data-src="{{ player.src }}" frameborder="0" width="212" height="142" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.box.title"{% endif %}>{{ box.title }}</h6>
+                            <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.box.description"{% endif %}>{{ box.description }}</p>
+                        </div>
+                        <div class="col-sm-4 col-sm-offset-1">
+                            <div class="btns">
+                                <a
+                                class="btn btn-inverse fui-apple btn-editable"
+                                href="{{ btns[0].url }}"
+                                {% if edit_mode %}
+                                    ng-href="[[ data.btns[0].url ]]"
+                                    dm-contenteditable
+                                    ng-model="data.btns[0].name"
+                                {% endif %}>
+                                    {% if edit_mode %}
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-control-button" ng-class="{hasUrl: data.btns[0].url}" dm-edit-url="data.btns[0].url"></div>
+                                    </customizer>
+                                    {% endif %}
+                                    {{ btns[0].name }}
+                                </a>
+                                <a
+                                class="btn btn-primary fui-android btn-editable"
+                                href="{{ btns[1].url }}"
+                                {% if edit_mode %}
+                                    ng-href="[[ data.btns[1].url ]]"
+                                    dm-contenteditable
+                                    ng-model="data.btns[1].name"
+                                {% endif %}>
+                                    {% if edit_mode %}
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-control-button" ng-class="{hasUrl: data.btns[1].url}" dm-edit-url="data.btns[1].url"></div>
+                                    </customizer>
+                                    {% endif %}
+                                    {{ btns[1].name }}
+                                </a>
+                            </div>
+                            <div class="additional-links" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.add_links"{% endif %}>{{ add_links }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

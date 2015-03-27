@@ -1,0 +1,15 @@
+{
+    "title": "We’ve created the product that will help your startup to look better.",
+    "description": "Startup Framework contains components and complex blocks which can easily be integrated into almost any design. Responsive layout, clear grid, retina ready.",
+    "image": "common-files/img/content/ticket-green@2x.png",
+    "boxes": [{
+        "title": "High Resolution",
+        "description": "We did a 2.5K size high resolution photo that will suit even for a very large web site."
+    }, {
+        "title": "Easy to use",
+        "description": "To get started, you select the desired sample and base the entire website on it. It’s that simple!"
+    }, {
+        "title": "Feel our design",
+        "description": "Samples will show you the feeling on how to play around using the components."
+    }]
+}

@@ -1,0 +1,20 @@
+{
+    "bg_image": "common-files/img/NY_001.jpg",
+    "bg_color": "#1c201d",
+    "opacity": "0.2",
+    "icon": {
+        "url": "",
+        "name": "fui-cmd"
+    },
+    "top": {
+        "name": "COMING SOON"
+    },
+    "title": "Made in New York",
+    "text": {
+        "title": "We’re making something interesting, creative amazing and awesome products amazing",
+        "description": "We have a great surprise for Designmodo fans – our first free HTML user interface kit. Flat UI Free is made on the basis of Twitter Bootstrap."
+    },
+    "btn": {
+        "name": "Notify Me"
+    }
+}

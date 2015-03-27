@@ -1,0 +1,17 @@
+{
+    "title": "We love what we do",
+    "description": "This is a probably the best plans ever born",
+    "mainQuote": {
+        "description": "We have considered your needs in developing the html version of our UI Kit, which contains elements.",
+        "title": "VLADIMIR KUDINOV, DESIGNMODO"
+    },
+    "quotes": [{
+        "description": "Easy to change and easy to create new elements with color.",
+        "time": "25 MINUTES AGO",
+        "title": "@mc"
+    }, {
+        "description": "Easy to change and easy to create new elements with color.",
+        "time": "1 HOUR AGO",
+        "title": "@stSilent"
+    }]
+}

@@ -1,0 +1,106 @@
+<!-- header-10 -->
+<div{% if wp_mode %} class="dm-template" dm-template="header.header10" component-id="{{ component_id }}"{% endif %}>
+	<header class="header-10">
+		<div class="container">
+			<div class="row">
+				<div class="navbar col-sm-12" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle"></button>
+						<a
+						{% if edit_mode %}
+							dm-contenteditable
+							ng-model="data.brand.name"
+							ng-href="[[ data.brand.url ]]"
+						{% endif %}
+						class="brand"
+						href="{{ brand.url }}">
+							{{ brand.name }}
+							{% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                            </customizer>
+                            {% endif %}
+						</a>
+					</div>
+					<div class="collapse navbar-collapse pull-right">
+						<div class="pull-left">
+							{% macro render_one_line_menu(items) %}
+	        					<ul class="nav">
+	                                {% for item in items %}
+	                                    <li>
+	                                        <a href="{{ item.url }}">{{ item.title }}</a>
+	                                    </li>
+	                                {% endfor %}
+	                            </ul>
+	                        {% endmacro %}
+	                        {% if wp_mode %}
+	                            {{ _self.render_one_line_menu(headerMenu.items) }}
+	                            {% if edit_mode %}
+	                            <customizer class="dm-popover popover fade top">
+	                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+	                            </customizer>
+	                            {% endif %}
+	                        {% else %}
+	                            {{ _self.render_one_line_menu(menu) }}
+	                        {% endif %}
+                        </div>
+						<form class="navbar-form pull-left">
+								<a
+								{% if edit_mode %}
+									dm-contenteditable
+									ng-model="data.btn_primary.name"
+									ng-href="[[ data.btn_primary.url ]]"
+								{% endif %}
+								class="btn btn-success"
+								href="{{ btn_primary.url }}">
+									{{ btn_primary.name }}
+									{% if edit_mode %}
+		                            <customizer class="dm-popover popover fade top">
+		                                <div class="dm-control-button" ng-class="{hasUrl: data.btn_primary.url}" dm-edit-url="data.btn_primary.url"></div>
+		                            </customizer>
+		                            {% endif %}
+								</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-background"></div>
+	</header>
+	<section
+	class="header-10-sub v-center dm-controlsView-holder"
+	{% if edit_mode %}
+        ng-style="{'background-color': data.bg_color}"
+    {% else %}
+        style="background-color: {{ bg_color }}"
+    {% endif %}>
+    	{% if edit_mode %}
+        <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg_image || data.bg_image == '../../../img/1x1.png'}">
+	        <div class="btn-group">
+	            <div class="dm-control-button" dm-remove-media="data.bg_image"></div>
+	            <div class="dm-control-button" dm-upload-media="data.bg_image"></div>
+	            <div class="dm-control-button" dm-opacity="data.opacity" dm-gradient="data.bg_color"></div>
+	            <div class="dm-control-button" dm-bg-color="data.bg_color"></div>
+	        </div>
+	    </div>
+        {% endif %}
+        <div class="background"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.bg_image + ')',
+                'opacity': data.opacity
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ bg_image }}); opacity: {{ opacity }}"
+        {% endif %}>&nbsp;</div>
+	    <div>
+	        <div class="container">
+	            <div class="hero-unit">
+	                <h1 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h1>
+	                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</p>
+	            </div>
+	        </div>
+	    </div>
+	    <a class="control-btn fui-arrow-down" href="#"> </a>
+	</section>
+</div>

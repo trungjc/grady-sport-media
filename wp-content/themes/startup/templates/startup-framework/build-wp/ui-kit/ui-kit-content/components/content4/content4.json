@@ -1,0 +1,16 @@
+{
+    "title": "We love what we do. This is features of our products ",
+    "rows": [{
+        "name": "You can easily combine any components in a variety of design projects. It’s easy! ",
+        "title": "Block Model",
+        "image": "common-files/icons/retina-ready-s@2x.png"
+    }, {
+        "name": "There are a lot of different blocks that will help you to make a perfect project. ",
+        "title": "Multi-components",
+        "image": "common-files/icons/clock@2x.png"
+    }, {
+        "name": "Use your time for generating new ideas for your startup. Take a break from the routine. ",
+        "title": "Save Your Time",
+        "image": "common-files/icons/rocket@2x.png"
+    }]
+}

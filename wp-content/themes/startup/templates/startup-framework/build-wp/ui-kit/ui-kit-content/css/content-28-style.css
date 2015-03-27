@@ -1,0 +1,32 @@
+.content-28 {
+  position: relative;
+  overflow: hidden;
+  padding-top: 128px;
+  padding-bottom: 0;
+  text-align: center;
+}
+.content-28 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
+  font-weight: 300;
+}
+.content-28 p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+}
+.content-28 .img-holder {
+  margin-top: 50px;
+  position: relative;
+}
+.content-28 .img-holder img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .content-28 {
+    padding-top: 100px;
+  }
+}

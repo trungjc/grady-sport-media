@@ -1,0 +1,38 @@
+{
+    "title": "Perfect for your project ",
+    "description": "You have the design, you have the code ",
+    "image": "common-files/icons/magic-wand@2x.png",
+    "featuresRow": [{
+        "item": [{
+            "icon": {
+                "name": "fui-cmd",
+                "url": ""
+            },
+            "title": "Save Your Time",
+            "name": "Use your time for generating new ideas for your startup. Take a break from the routine and work for new ideas. "
+        }, {
+            "icon": {
+                "name": "fui-windows",
+                "url": ""
+            },
+            "title": "Responsive Layout",
+            "name": "Of course we haven’t forgotten about the responsive layout. Create a website with full mobile support. "
+        }]
+    }, {
+        "item": [{
+            "icon": {
+                "name": "fui-upload",
+                "url": ""
+            },
+            "title": "Retina Ready",
+            "name": "Startup Framework works fine on devices supporting Retina Display. Feel the clarity in each pixel. "
+        }, {
+            "icon": {
+                "name": "fui-credit-card",
+                "url": ""
+            },
+            "title": "Money Economy",
+            "name": "Startups can save money on design and code and spend it on concept, ideas and functionality. "
+        }]
+    }]
+}

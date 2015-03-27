@@ -1,0 +1,104 @@
+/**
+ * Copntact 4 stylesheet  
+ * */
+.contacts-4 {
+  background: #34495e url('../wp-content/themes/startup/templates/startup-framework/build-wp/common-files/img/map.jpg') 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #bdc3c7;
+  text-align: right;
+  padding-top: 175px;
+  padding-bottom: 180px;
+}
+.contacts-4 h3 {
+  font-size: 30px;
+  margin: 0 0 12px;
+  color: #fff;
+  font-weight: 300px;
+}
+.contacts-4 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.contacts-4 a {
+  color: #1abc9c;
+}
+.contacts-4 a:hover,
+.contacts-4 a:focus,
+.contacts-4 a.active {
+  color: #15967d;
+}
+.contacts-4 .content {
+  margin: 0 80px;
+}
+@media (max-width: 767px) {
+  .contacts-4 .content {
+    margin: 0;
+  }
+}
+.contacts-4 .social-btns-holder {
+  display: inline-block;
+}
+.contacts-4 .social-btns-holder > * {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 30px;
+  width: 30px;
+  height: 38px;
+  overflow: hidden;
+  text-align: center;
+  color: #1abc9c;
+}
+.contacts-4 .social-btns-holder > *:first-child {
+  margin-left: 0;
+}
+.contacts-4 .social-btns-holder > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.contacts-4 .social-btns-holder > * > *:first-child {
+  color: #fff;
+}
+.contacts-4 .social-btns-holder > *:hover > * {
+  top: -100%;
+}
+.contacts-4 .social-btns-holder .social-holder > * {
+  display: block;
+  color: #1abc9c;
+}
+.contacts-4 .social-btns-holder .social-holder > *:first-child {
+  color: #fff;
+}
+.contacts-4 .social-btns {
+  white-space: nowrap;
+  margin-bottom: 35px;
+}
+.contacts-4 .links {
+  margin: 35px 0 0;
+  font-size: 47px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  word-break: break-all;
+}
+.contacts-4 .links a {
+  padding-bottom: 3px;
+  color: #14ddb3;
+  border-bottom: 2px solid;
+}
+.contacts-4 .links a:hover,
+.contacts-4 .links a:focus,
+.contacts-4 .links a.active {
+  color: #10b18f;
+}
+@media (max-width: 480px) {
+  .contacts-4 .links a {
+    font-size: 26px;
+  }
+}

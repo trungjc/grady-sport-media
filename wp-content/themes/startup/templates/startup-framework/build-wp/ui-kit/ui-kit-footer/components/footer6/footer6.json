@@ -1,0 +1,19 @@
+{
+    "brand": {
+        "name": "Startup",
+        "url": "\/"
+    },
+    "form": {
+        "title": "Subscribe"
+    },
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

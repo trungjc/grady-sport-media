@@ -1,0 +1,44 @@
+{
+    "btn": "MENU",
+    "slider": [{
+        "bg_image": "",
+        "bg_color": "#1abc9c",
+        "opacity": "0.2",
+        "title": "Turquoise",
+        "view_more": "SCROLL TO VIEW MORE",
+        "cntrl_prev": "EMERLAND",
+        "cntrl_next": "PETER RIVER"
+    }, {
+        "bg_image": "",
+        "bg_color": "#3498db",
+        "opacity": "0.2",
+        "title": "Peter river",
+        "view_more": "SCROLL TO VIEW MORE",
+        "cntrl_prev": "TURQUOISE",
+        "cntrl_next": "EMERLAND"
+    }, {
+        "bg_image": "",
+        "bg_color": "#2ecc71",
+        "opacity": "0.2",
+        "title": "Emerland",
+        "view_more": "SCROLL TO VIEW MORE",
+        "cntrl_prev": "PETER RIVER",
+        "cntrl_next": "TURQUOISE"
+    }],
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

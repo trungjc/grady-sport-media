@@ -1,0 +1,24 @@
+{
+    "title": "The Second Sneak-Peek of Startup Design Framework",
+    "description": "You can decide whether to create your site using UI Kit blocks or samples.",
+    "textBoxes": [{
+        "title": "Easy to use",
+        "text": "To get started, you select the desired sample and base the entire website on it. It’s that simple!",
+        "image": "common-files/icons/retina@2x.png"
+    }, {
+        "title": "Feel our design",
+        "text": "Samples will show you the feeling on how to play around using the components in the website building process.",
+        "image": "common-files/icons/Gift-Box@2x.png"
+    }, {
+        "title": "Variety of designs",
+        "text": "Responsive web design is a web design approach aimed to provide crafting sites.",
+        "image": "common-files/icons/time@2x.png"
+    }],
+    "slider": [{
+        "image": "common-files/img/content/iphone@2x.png"
+    }, {
+        "image": "common-files/img/content/iphone@2x.png"
+    }, {
+        "image": "common-files/img/content/iphone@2x.png"
+    }]
+}

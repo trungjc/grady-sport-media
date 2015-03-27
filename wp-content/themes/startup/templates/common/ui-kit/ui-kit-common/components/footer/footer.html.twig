@@ -1,0 +1,106 @@
+        	</div>
+        </div>
+
+        <script src="{{ sfBuildUri }}common-files/js/jquery-1.10.2.min.js"></script>
+	    <script src="{{ sfBuildUri }}flat-ui/js/bootstrap.min.js"></script>
+	    <script src="{{ sfBuildUri }}common-files/js/modernizr.custom.js"></script>
+	    <script src="{{ sfBuildUri }}common-files/js/page-transitions.js"></script>
+	    <script src="{{ sfBuildUri }}common-files/js/jquery.backgroundvideo.override.js"></script>
+ 	    <script src="{{ sfBuildUri }}common-files/js/froogaloop.min.js"></script>
+	    <script src="{{ sfBuildUri }}common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/jquery.sharrre.min.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/jquery.bxslider.min.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/masonry.pkgd.min.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/easing.min.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/jquery.svg.js"></script>
+        <script src="{{ sfBuildUri }}common-files/js/jquery.svganim.js"></script>
+        {% if edit_mode is empty %}
+        <script src="{{ sfBuildUri }}common-files/js/startup-kit.js"></script>
+        {% endif %}
+	    <script src="{{ themeUri }}js/{#vendor/jquery/#}jquery.cookie.js"></script>
+
+        {% if edit_mode %}
+        	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+        	<script src="{{ themeUri }}js/{#vendor/designmodo/#}angular-startup-kit.js"></script>
+        	<script src="{{ themeUri }}js/{#vendor/designmodo/#}preview-startup-kit.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}ace.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}mode-css.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}mode-html.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}worker-css.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}worker-html.js"></script>
+            <script data-cfasync="false" src="{{ themeUri }}js/{#vendor/designmodo/#}ext-searchbox.js"></script>
+	        <script src="{{ themeUri }}js/{#vendor/#}angular/3d-part/angular-file-upload-shim.js"></script>
+	        <script src="{{ themeUri }}js/{#vendor/#}angular/3d-part/angular-file-upload.js"></script>
+      		<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/lodash.underscore.min.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/angular-google-maps.min.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/textAngular-sanitize.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/textAngularSetup.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/textAngular.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/jquery.minicolors.min.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/angular-minicolors.js'></script>
+			<script src='{{ themeUri }}js/{#vendor/#}angular/3d-part/ng-slider.min.js'></script>
+	        <script src="{{ themeUri }}js/{#vendor/hertzen/#}html2canvas.js"></script>
+	        <script src="{{ themeUri }}js/{#vendor/jquery/#}jquery-ui-1.11.custom.min.js"></script>
+	        <script src="{{ themeUri }}js/{#vendor/jquery/#}jquery.menu-aim.js"></script>
+            {% if debug_mode %}
+    	        <script src="{{ themeUri }}js/angular/app.js"></script>
+    	        <script src="{{ themeUri }}js/angular/controllers.js"></script>
+    	        <script src="{{ themeUri }}js/angular/directives.js"></script>
+    	        <script src="{{ themeUri }}js/angular/filters.js"></script>
+    	        <script src="{{ themeUri }}js/angular/services.js"></script>
+    	        <script src="{{ themeUri }}js/main.js"></script>
+	        {% else %}
+    	        {#<script src="{{ themeUri }}js/vendor/designmodo/editor.min.js"></script>
+    	        <script src="{{ themeUri }}js/vendor/designmodo/main.min.js"></script>#}
+    	        <script data-cfasync="false" src="{{ themeUri }}js/angular/app.js"></script>
+    	        <script data-cfasync="false" src="{{ themeUri }}js/angular/controllers.js"></script>
+    	        <script data-cfasync="false" src="{{ themeUri }}js/angular/directives.js"></script>
+    	        <script data-cfasync="false" src="{{ themeUri }}js/angular/filters.js"></script>
+    	        <script data-cfasync="false" src="{{ themeUri }}js/angular/services.js"></script>
+    	        <script data-cfasync="false" src="{{ themeUri }}js/main.js"></script>
+	        {% endif %}
+        {% endif %}
+        {{ function('wp_footer') }}
+        <script>
+            $(function () {
+                var webFonts = [];
+                var googleFonts = [];
+
+                $.ajax({
+                    url: ajaxurl,
+                    method: "POST",
+                    data: {
+                        action: 'sf_api',
+                        method: 'font.get'
+                    }
+                }).done(function (data) {
+                    var wFonts = data.family.webFonts;
+                    var gFonts = data.family.googleFonts;
+
+                    var key;
+                    for (key in wFonts) {
+                        if (wFonts.hasOwnProperty(key)) {
+                            webFonts.push({key: key, value: wFonts[key]});
+                        }
+                    }
+
+                    for (key in gFonts) {
+                        if (gFonts.hasOwnProperty(key)) {
+                            googleFonts.push({key: key, value: gFonts[key]});
+                        }
+                    }
+
+                    var fontLinks = '';
+                    for (var i = 0; i != googleFonts.length; ++i) {
+                        var family = googleFonts[i].key.replace(' ', '+');
+                        fontLinks += "<link href='https://fonts.googleapis.com/css?family=" + family + ":400,700' rel='stylesheet' type='text/css'>"
+                    }
+
+                    fontLinks += "<link href='https://fonts.googleapis.com/css?family=Muli:400italic' rel='stylesheet' type='text/css'>";
+
+                    $('head').append(fontLinks);
+                });
+            });
+        </script>
+    </body>
+</html>

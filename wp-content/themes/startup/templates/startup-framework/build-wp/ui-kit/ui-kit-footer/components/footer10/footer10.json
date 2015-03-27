@@ -1,0 +1,21 @@
+{
+    "brand": {
+        "name": "Startup",
+        "url": "\/",
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "btn": {
+        "name": "Subscribe now"
+    },
+    "addresses": [{
+        "title": "New York, NY",
+        "description": "62 West 55th Street, Suite 302 New York, NY, 10230"
+    }, {
+        "title": "San Francisco, CA",
+        "description": "560 Judah St &amp; 15th Ave, Apt 5 San Francisco, CA, 230903"
+    }],
+    "help": {
+        "title": "Need help?",
+        "description": "Don’t hesitate to ask us something. Email us directly <a href=\"#\">info@designmodo.com</a> or call us at <a href=\"#\">1-347-567-8670</a>. You can checkout our <a href=\"#\">FAQ</a> and <a href=\"#\">Help</a> page to get more information about our products."
+    }
+}

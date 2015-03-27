@@ -1,0 +1,138 @@
+/**
+ * Crew 1 stylesheet  
+ * */
+.crew-1 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.crew-1 h3 {
+  margin: 0 0 73px;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 300;
+}
+.crew-1 .members {
+  display: table;
+  width: 100%;
+}
+.crew-1 .members + .members {
+  margin-top: 80px;
+}
+.crew-1 .members .member-wrapper {
+  display: table-cell;
+}
+.crew-1 .members .member-wrapper:first-child + .member-wrapper {
+  text-align: center;
+}
+.crew-1 .members .member-wrapper:first-child + .member-wrapper + .member-wrapper {
+  text-align: right;
+}
+.crew-1 .members .member {
+  width: 220px;
+  display: inline-block;
+}
+.crew-1 .members .photo-wrapper {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.crew-1 .members .photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: 50% 50% no-repeat;
+  opacity: 30;
+  filter: alpha(opacity=3000);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.crew-1 .members .photo img {
+  display: none;
+}
+.crew-1 .members .overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 220px;
+  overflow: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.crew-1 .members .overlay [class*="fui-"] {
+  font-size: 46px;
+}
+.crew-1 .members .info {
+  text-align: center;
+  font-size: 14px;
+  color: #95a5a6;
+  margin-top: 36px;
+}
+.crew-1 .members .name {
+  color: #34495e;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.crew-1 .members .member:hover .photo-wrapper {
+  background-color: #1abc9c;
+}
+.crew-1 .members .member:hover .photo {
+  opacity: 40;
+  filter: alpha(opacity=4000);
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.crew-1 .members .member:hover .overlay {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.crew-1 .members .member:hover .name {
+  color: #1abc9c;
+}
+@media (max-width: 767px) {
+  .crew-1 .members {
+    display: block;
+    width: auto;
+  }
+  .crew-1 .members .member-wrapper {
+    display: block;
+    text-align: center!important;
+  }
+  .crew-1 .members .member-wrapper + .member-wrapper {
+    margin-top: 80px;
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "bg_image": "common-files/img/NY_001.jpg",
+    "bg_color": "#2C3E50",
+    "opacity": "1",
+    "brand": {
+        "name": "Startup",
+        "url": "/"
+    },
+    "title": "Made in New York",
+    "description": "WE LOVE WHAT WE DO",
+    "icon": {
+        "url": "",
+        "name": "fui-cmd"
+    },
+    "btn": {
+        "name": "TRY IT",
+        "url": "\/"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

@@ -1,0 +1,21 @@
+/**
+ * Footer 4 stylesheet  
+ * */
+.footer-4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+.footer-4 .brand {
+  font-size: 20px;
+  font-weight: normal;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+.footer-4 .brand:hover,
+.footer-4 .brand:focus,
+.footer-4 .brand.active {
+  color: #1abc9c;
+}

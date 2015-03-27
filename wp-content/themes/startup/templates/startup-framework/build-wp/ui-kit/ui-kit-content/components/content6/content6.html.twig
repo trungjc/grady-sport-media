@@ -1,0 +1,58 @@
+<!--content-6 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content6" component-id="{{ component_id }}"{% endif %}>
+<section class="content-6 v-center">
+    <div>
+        <div class="container">
+            <h3>
+                <div class="img-holder">
+                    <div class="img-wrapper custom-img">
+                        <img 
+                        src="{{ sfBuildUri }}{{ image }}" 
+                        width="100" 
+                        height="100" 
+                        alt=" "
+                        ng-class="{'removed-image': data.image == '../../../img/1x1.png'}"
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.image ]]"
+                        {% endif %}/> 
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="100" dm-upload-type="image" dm-upload-media="data.image" ></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+                        </customizer>
+                        {% endif %}
+                    </div>
+                </div>
+                <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</span> 
+            </h3>
+            <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %} class="lead">{{ description }}</p>
+            {% if edit_mode %}
+            <div class="row features" ng-repeat="featureRow in data.featuresRow">
+                <div class="col-sm-4" ng-class="{'col-sm-offset-2': $first, 'col-sm-offset-1': !$first}" ng-repeat="item in featureRow.item">
+                    <h6
+                    text-angular
+                    ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                    ng-model="item.title"></h6>
+                    <p
+                    text-angular
+                    ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                    ng-model="item.name"></p>
+                </div>
+            </div>
+            {% else %}
+                {% for featureRow in featuresRow %}
+                <div class="row features">
+                    {% for item in featureRow.item %}
+                    <div class="col-sm-4 {% if loop.first %} col-sm-offset-2{% else %} col-sm-offset-1{% endif %}">
+                        <span class="{{ item.icon }}"> </span>
+                        <h6>{{ item.title }}</h6>
+                        <p>{{ item.name }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+</div>

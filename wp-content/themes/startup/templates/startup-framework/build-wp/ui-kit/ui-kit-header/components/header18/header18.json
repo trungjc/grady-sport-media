@@ -1,0 +1,41 @@
+{
+    "slider": [{
+        "brand": {
+            "url": "\/",
+            "image": "common-files/icons/Infinity-Loop@2x.png"
+        },
+        "bg_image": "",
+        "bg_color": "#1abc9c",
+        "opacity": "0.2",
+        "title": "The First Sneak-Peek of Startup Design Framework",
+        "description": "The most important parts of the Startup Framework are Samples and the UI Kit that includes a set of different components. The samples consist of a set of 25 pages.",
+        "footer_text": "You can Sign In with popular Social Networks",
+        "btn_first": {
+            "name": "Sign In with Twitter",
+            "url": "\/"
+        },
+        "btn_second": {
+            "name": "Sign In with Facebook",
+            "url": "\/"
+        }
+    }, {
+        "brand": {
+            "url": "\/",
+            "image": "common-files/icons/Infinity-Loop@2x.png"
+        },
+        "bg_image": "",
+        "bg_color": "#1abc9c",
+        "opacity": "0.2",
+        "title": "The First Sneak-Peek of Startup Design Framework",
+        "description": "The most important parts of the Startup Framework are Samples and the UI Kit that includes a set of different components. The samples consist of a set of 25 pages.",
+        "footer_text": "You can Sign In with popular Social Networks",
+        "btn_first": {
+            "name": "Sign In with Twitter",
+            "url": "\/"
+        },
+        "btn_second": {
+            "name": "Sign In with Facebook",
+            "url": "\/"
+        }
+    }]
+}

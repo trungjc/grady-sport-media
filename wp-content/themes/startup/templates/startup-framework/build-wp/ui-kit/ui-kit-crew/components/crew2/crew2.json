@@ -1,0 +1,98 @@
+{
+    "title": "Features of Startup Design Framework",
+    "membersRows": [{
+        "members": [{
+            "image": "common-files/img/crew/vladimir-k.png",
+            "name": "Vladimir K.",
+            "position": "UI Designer",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }, {
+            "image": "common-files/img/crew/sergey-s.png",
+            "name": "Sergey S.",
+            "position": "UI Designer",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }, {
+            "image": "common-files/img/crew/adrian-v.png",
+            "name": "Adrian V.",
+            "position": "Founder",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }]
+    }, {
+        "members": [{
+            "image": "common-files/img/crew/edvard-k.png",
+            "name": "Vladimir K.",
+            "position": "UI Designer",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }, {
+            "image": "common-files/img/crew/oxana-n.png",
+            "name": "Sergey S.",
+            "position": "UI Designer",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }, {
+            "image": "common-files/img/crew/tatiana-y.png",
+            "name": "Adrian V.",
+            "position": "Founder",
+            "info": "Easy to change and easy to create new elements with color swatches.",
+            "social_btns": [{
+                "name": "fui-facebook",
+                "url": "\/"
+            }, {
+                "name": "fui-twitter",
+                "url": "\/"
+            }, {
+                "name": "fui-vimeo",
+                "url": "\/"
+            }]
+        }]
+    }]
+}

@@ -1,0 +1,57 @@
+<!--content-14 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content14" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-14 v-center">
+        <div>
+            <div class="container">
+                <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %} class="lead">{{ description }}</p>
+                <div class="row features">
+                    <div class="col-sm-2">
+                        {% if edit_mode %}
+                        <div class="box-[[$index + 1]]" ng-repeat="row in data.rowLeft">
+                            <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.title"></h6>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.description"></span>
+                        </div>
+                        {% else %}
+                            {% for row in rowLeft %}
+                                <div class="box-{{ loop.index }}">
+                                    <h6>{{ row.title }}</h6>
+                                    <span>{{ row.description }}</span>
+                                 </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-1 custom-img">
+                        <img
+                        src="{{ sfBuildUri }}{{ image }}"
+                        ng-class="{'removed-image': data.image == '../../../img/1x1.png'}"
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.image ]]"
+                        {% endif %} />
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="460" dm-upload-type="image" dm-upload-media="data.image"></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+                        </customizer>
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-1">
+                        {% if edit_mode %}
+                        <div class="box-[[$index + 5]]" ng-repeat="row in data.rowRight">
+                            <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.title"></h6>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="row.description"></span>
+                        </div>
+                        {% else %}
+                            {% for row in rowRight %}
+                                <div class="box-{{ loop.index + 4 }}">
+                                    <h6>{{ row.title }}</h6>
+                                    <span>{{ row.description }}</span>
+                                 </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

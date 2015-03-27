@@ -1,0 +1,177 @@
+<!-- header-18 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header18" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !h18ptMainSlide.bg_image || h18ptMainSlide.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="h18ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="h18ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="h18ptMainSlide.opacity" dm-gradient="h18ptMainSlide.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="h18ptMainSlide.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="header-18">
+        {% if edit_mode %}
+        <div
+        dm-slider="h-18-pt-main-{{ component_id }}"
+        dm-slider-model="data.slider"
+        dm-slider-archive="h18ptMain"
+        class="header-18-sub page-transitions pt-perspective">
+            <div
+            class="pt-page"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat>
+                <section
+                class="header-18-section s[[$index + 1]] clearfix"
+                ng-style="{'background-color': slide.bg_color}">
+                    <div class="t-row">
+                        <div>
+                            <div
+                            class="background"
+                            ng-style="{
+                                'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                                'opacity': slide.opacity
+                            }">&nbsp;</div>
+                            <header>
+                                <div class="container">
+                                    <a
+                                    class="brand custom-img"
+                                    ng-href="[[ data.slider[0].brand.url ]]">
+                                        {% if edit_mode %}
+                                        <customizer class="dm-popover popover fade top dm-image">
+                                            <div class="dm-control-button" data-width="100" dm-upload-type="image" dm-upload-media="data.slider[0].brand.image"></div>
+                                            <div class="dm-control-button" data-width="50" dm-remove-media="data.slider[0].brand.image"></div>
+                                            <div class="dm-control-button" ng-class="{hasUrl: data.slider[0].brand.url}" dm-edit-url="data.slider[0].brand.url"></div>
+                                        </customizer>
+                                        {% endif %}
+                                        <img
+                                        ng-class="{'removed-image': data.slider[0].brand.image == '../../../img/1x1.png'}"
+                                        ng-src="{{ sfBuildUri }}[[ data.slider[0].brand.image ]]"
+                                        width="100"
+                                        height="100"
+                                        alt=""
+                                         />
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="container clearfix">
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <h3  text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h3>
+                                        <div class="visible-xs text-center" style="margin-bottom: 30px"><img src="{{ sfBuildUri }}/common-files/img/header/browser-iphone@2x.png" width="300" height="300" alt="">
+                                        </div>
+                                        <p  text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-offset-1 hidden-xs">
+                                        <div class="img">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/browser-iphone@2x.png" width="300" height="300" alt="">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/browser1@2x.png" width="240" height="255" alt="">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/iphone@2x.png" width="144" height="264" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-row footer">
+                        <footer ng-style="{'background-color': slide.bg_color}">
+                            <div class="container">
+                                <span dm-contenteditable ng-model="slide.footer_text"></span>
+                                <div class="btns">
+                                    <a
+                                    class="btn btn-primary"
+                                    dm-contenteditable
+                                    ng-href="[[ slide.btn_first.url ]]"
+                                    ng-model="slide.btn_first.name">
+                                        <customizer class="dm-popover popover fade top">
+                                            <div class="dm-control-button" ng-class="{hasUrl: slide.btn_first.url}" dm-edit-url="slide.btn_first.url"></div>
+                                        </customizer>
+                                    </a>
+                                    <a
+                                    class="btn btn-primary"
+                                    dm-contenteditable
+                                    ng-href="[[ slide.btn_second.url ]]"
+                                    ng-model="slide.btn_second.name">
+                                        <customizer class="dm-popover popover fade top">
+                                            <div class="dm-control-button" ng-class="{hasUrl: data.btn_second.url}" dm-edit-url="slide.btn_second.url"></div>
+                                        </customizer>
+                                    </a>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+            <div class="pt-controls">
+                <div>
+                    <a class="pt-control-prev" href="#"><span class="fui-arrow-left"> </span></a>
+                </div>
+                <div>
+                    <a class="pt-control-next" href="#"><span class="fui-arrow-right"> </span></a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div id="h-18-pt-main-{{ component_id }}" class="header-18-sub page-transitions pt-perspective">
+            {% for slide in slider %}
+            <div class="pt-page">
+                <section class="header-18-section s{{ loop.index }} clearfix" style="background-color: {{ slide.bg_color }}">
+                    <div class="t-row">
+                        <div>
+                            <div class="background" style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}">&nbsp;</div>
+                            <header>
+                                <div class="container">
+                                    <a class="brand" href="{{ slide.brand.url }}">
+                                        <img
+                                        width="100"
+                                        height="100"
+                                        alt=""
+                                        src="{{ sfBuildUri }}{{ slide.brand.image }}" />
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="container clearfix">
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <h3>{{ slide.title }}</h3>
+                                        <div class="visible-xs text-center" style="margin-bottom: 30px"><img src="{{ sfBuildUri }}/common-files/img/header/browser-iphone@2x.png" width="300" height="300" alt="">
+                                        </div>
+                                        <p>{{ slide.description }}</p>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-offset-1 hidden-xs">
+                                        <div class="img">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/browser-iphone@2x.png" width="300" height="300" alt="">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/browser1@2x.png" width="240" height="255" alt="">
+                                            <img src="{{ sfBuildUri }}/common-files/img/header/iphone@2x.png" width="144" height="264" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-row footer">
+                        <footer style="background-color: {{ slide.bg_color }}">
+                            <div class="container">
+                                <span>{{ slide.footer_text }}</span>
+                                <div class="btns">
+                                    <a href="{{ slide.btn_first.url }}" class="btn btn-primary">{{ slide.btn_first.name }}</a>
+                                    <a href="{{ slide.btn_second.url }}" class="btn btn-primary">{{ slide.btn_second.name }}</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+            {% endfor %}
+            <div class="pt-controls">
+                <div>
+                    <a class="pt-control-prev" href="#"><span class="fui-arrow-left"> </span></a>
+                </div>
+                <div>
+                    <a class="pt-control-next" href="#"><span class="fui-arrow-right"> </span></a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

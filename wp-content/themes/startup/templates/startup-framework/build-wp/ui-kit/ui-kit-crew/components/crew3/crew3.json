@@ -1,0 +1,51 @@
+{
+    "title": "Startup Framework<br /> The Second Sneak-Peek",
+    "titles": [{
+        "name": "musician"
+    }, {
+        "name": "designer"
+    }, {
+        "name": "founder"
+    }, {
+        "name": "photographer"
+    }, {
+        "name": "analyst"
+    }, {
+        "name": "good girl"
+    }, {
+        "name": "tourist"
+    }],
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }],
+    "membersRows": [{
+        "members": [{
+            "image": "common-files/img/crew/vladimir-k.png",
+            "name": "Vladimir K."
+        }, {
+            "image": "common-files/img/crew/sergey-s.png",
+            "name": "Sergey S."
+        }, {
+            "image": "common-files/img/crew/adrian-v.png",
+            "name": "Adrian V."
+        }]
+    }, {
+        "members": [{
+            "image": "common-files/img/crew/edvard-k.png",
+            "name": "Vladimir K."
+        }, {
+            "image": "common-files/img/crew/oxana-n.png",
+            "name": "Sergey S."
+        }, {
+            "image": "common-files/img/crew/tatiana-y.png",
+            "name": "Adrian V."
+        }]
+    }]
+}

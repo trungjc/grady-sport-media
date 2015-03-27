@@ -1,0 +1,93 @@
+<!--content-24 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content24" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-24 bg-midnight-blue">
+        <div class="image-wrapper custom-img">
+            <img 
+            class="image"
+            src="{{ sfBuildUri }}{{ image }}"
+            alt=""
+            ng-class="{'removed-image': data.image == '../../../img/1x1.png'}"
+            {% if edit_mode %}
+                ng-src="{{ sfBuildUri }}[[ data.image ]]"
+            {% endif %} />
+            {% if edit_mode %}
+            <customizer class="dm-popover popover fade top dm-image">
+                <div class="dm-control-button" dm-upload-type="image" dm-upload-media="data.image"></div>
+                <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+            </customizer>
+            {% endif %}
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-6">
+                    <div class="features features-clear">
+                        <div class="features-header">
+                            <div class="box active">
+                                {% if edit_mode %}
+                                    <span ng-class="data.icons.icon1.name">
+                                        <customizer class="dm-popover popover fade top">
+                                            <div class="dm-change-icon" dm-change-icon="data.icons.icon1.name" dm-change-icon-url="data.icon1.url"></div>
+                                        </customizer>
+                                    </span>
+                                {% else %}
+                                    <span class="{{ icons.icon1.name }}"> </span>
+                                {% endif %}
+                            </div>
+                            <div class="box">
+                                {% if edit_mode %}
+                                    <span ng-class="data.icons.icon2.name">
+                                        <customizer class="dm-popover popover fade top">
+                                            <div class="dm-change-icon" dm-change-icon="data.icons.icon2.name" dm-change-icon-url="data.icon2.url"></div>
+                                        </customizer>
+                                    </span>
+                                {% else %}
+                                    <span class="{{ icons.icon2.name }}"> </span>
+                                {% endif %}
+                            </div>
+                            <div class="box">
+                                {% if edit_mode %}
+                                    <span ng-class="data.icons.icon3.name">
+                                        <customizer class="dm-popover popover fade top">
+                                            <div class="dm-change-icon" dm-change-icon="data.icons.icon3.name" dm-change-icon-url="data.icon3.url"></div>
+                                        </customizer>
+                                    </span>
+                                {% else %}
+                                    <span class="{{ icons.icon3.name }}"> </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="features-bodies">
+                            {% if edit_mode %}
+                            <div class="features-body" ng-class="{'active': $first}" ng-repeat="feature in data.features">
+                                <h3 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.title"></h3>
+                                <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.description"></p>
+                                <a
+                                dm-contenteditable 
+                                ng-model="feature.btn.name"
+                                ng-href="[[ feature.btn.url ]]"
+                                class="btn btn-clear">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-control-button" ng-class="{hasUrl: feature.btn.url}" dm-edit-url="feature.btn.url"></div>
+                                    </customizer>
+                                </a>
+                            </div>
+                            {% else %}
+                                {% for feature in features %}
+                                <div class="features-body {% if loop.first %} active{% endif %}">
+                                    <h3>{{ feature.title }}</h3>
+                                    <p>{{ feature.description }}</p>
+                                    <a 
+                                    class="btn btn-clear" 
+                                    href="{{ feature.btn.url }}">
+                                        {{ feature.btn.name }}
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

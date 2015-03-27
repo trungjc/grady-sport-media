@@ -1,0 +1,210 @@
+/**
+ * Footer 7 stylesheet  
+ * */
+.footer-7 {
+  padding-top: 150px;
+  padding-bottom: 110px;
+  color: #bdc3c7;
+  line-height: 25px;
+  text-align: center;
+  position: relative;
+}
+.footer-7.v-center,
+.footer-7 .v-center {
+  display: table;
+  width: 100%;
+}
+.footer-7.v-center > div,
+.footer-7 .v-center > div {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+}
+@media (min-width: 768px) {
+  .footer-7 .v-center.row:before,
+  .footer-7 .v-center.row:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .footer-7 .v-center {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer-7 .v-center.row {
+    display: block;
+    width: auto;
+  }
+  .footer-7 .v-center.row:before,
+  .footer-7 .v-center.row:after {
+    display: none;
+  }
+  .footer-7 .v-center.row > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+.footer-7:before {
+  content: '';
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  overflow: hidden;
+  background: #e2e4e6;
+}
+.footer-7 a {
+  color: #bdc3c7;
+  font-weight: 500;
+}
+.footer-7 a:hover,
+.footer-7 a:focus,
+.footer-7 a.active {
+  color: #a1a6a9;
+}
+.footer-7 nav {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.footer-7 nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-7 nav ul li {
+  min-width: 70px;
+  display: inline-block;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: normal;
+  color: inherit;
+  font-weight: 500;
+}
+@media (min-width: 1000px) {
+  .footer-7 nav ul li {
+    min-width: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-7 nav ul li {
+    font-size: 12px;
+    font-weight: normal;
+    color: inherit;
+    font-weight: 500;
+  }
+}
+.footer-7 nav ul li .scroll-top {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: normal;
+  color: inherit;
+  color: #ffffff;
+  background: #bdc3c7;
+}
+.footer-7 nav ul li .scroll-top:hover,
+.footer-7 nav ul li .scroll-top:focus,
+.footer-7 nav ul li .scroll-top.active {
+  color: #ffffff;
+}
+.footer-7 nav ul li .scroll-top:hover,
+.footer-7 nav ul li .scroll-top:focus {
+  background: #a1a6a9;
+}
+.footer-7 nav ul li .scroll-top:active,
+.footer-7 nav ul li .scroll-top.active {
+  background: #84898b;
+}
+.footer-7 > .container {
+  position: relative;
+}
+.footer-7 .container .home {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.footer-7 .container .home > * {
+  font-size: 22px;
+}
+.footer-7 .social-btns {
+  white-space: nowrap;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.footer-7 .social-btns > * {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  width: 16px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+}
+.footer-7 .social-btns > *:first-child {
+  margin-left: 0;
+}
+.footer-7 .social-btns > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.footer-7 .social-btns > * > *:first-child {
+  color: #bdc3c7;
+}
+.footer-7 .social-btns > *:hover > * {
+  top: -100%;
+}
+.footer-7 .social-btns .social-holder > * {
+  display: block;
+}
+@media (max-width: 1200px) {
+  .footer-7 .social-btns {
+    position: static;
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  .footer-7 .container > a,
+  .footer-7 .scroll-btn {
+    display: none;
+  }
+  .footer-7 nav ul li {
+    float: none;
+    margin: 18px 0 0;
+    display: block;
+    text-align: left;
+  }
+  .footer-7 nav ul li:first-child {
+    margin-top: 0;
+  }
+  .footer-7 .social-btns {
+    position: static;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    float: left;
+  }
+  .footer-7 .container .home {
+    position: static;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}

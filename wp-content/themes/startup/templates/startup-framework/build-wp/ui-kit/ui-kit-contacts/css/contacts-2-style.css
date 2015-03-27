@@ -1,0 +1,128 @@
+/**
+ * Copntact 2 stylesheet  
+ * */
+.contacts-2 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.contacts-2 h3 {
+  font-size: 30px;
+  margin: 0 0 40px;
+  font-weight: 300px;
+}
+@media (max-width: 480px) {
+  .contacts-2 h3 {
+    font-size: 26px;
+    margin: 0 0 30px;
+  }
+}
+.contacts-2 h6,
+.contacts-2 .h6 {
+  margin: 0 0 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: none;
+}
+.contacts-2 label.h6 {
+  margin-bottom: 12px;
+}
+.contacts-2 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.contacts-2 a {
+  color: #1abc9c;
+}
+.contacts-2 a:hover,
+.contacts-2 a:focus,
+.contacts-2 a.active {
+  color: #15967d;
+}
+.contacts-2 form {
+  margin: 0;
+  padding: 46px;
+  border: 2px solid #ebedee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.contacts-2 form input,
+.contacts-2 form textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin-bottom: 29px;
+  border-color: #ebedee;
+  color: #7f8c8d;
+}
+.contacts-2 form input:focus,
+.contacts-2 form textarea:focus {
+  border-color: #1abc9c;
+}
+.contacts-2 form textarea {
+  height: 120px;
+}
+.contacts-2 form input {
+  height: 45px;
+}
+.contacts-2 form textarea {
+  height: 120px;
+}
+.contacts-2 form label {
+  margin-bottom: 18px;
+}
+.contacts-2 form .btn {
+  margin-top: 7px;
+  min-width: 150px;
+}
+.contacts-2 form .btn [class*="fui-"] {
+  font-size: 24px;
+}
+.contacts-2 form .btn.btn-primary:hover,
+.contacts-2 form .btn.btn-primary:focus {
+  background-color: #e74c3c;
+}
+.contacts-2 form .btn.btn-primary:active,
+.contacts-2 form .btn.btn-primary.active {
+  background-color: #c44133;
+}
+.contacts-2 .map {
+  height: 165px;
+  margin: 25px 0 60px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.contacts-2 .links {
+  margin-top: 20px;
+}
+.contacts-2 .links a {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+.contacts-2 .links [class*="fui-"] {
+  font-size: 26px;
+  vertical-align: middle;
+  margin: -3px 23px 0 0;
+}
+@media (max-width: 767px) {
+  .contacts-2 > .container > .row > * + * {
+    margin-top: 55px;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-2 form {
+    margin-bottom: 80px;
+    padding: 15px;
+  }
+  .contacts-2 form label {
+    margin-bottom: 0px;
+  }
+}

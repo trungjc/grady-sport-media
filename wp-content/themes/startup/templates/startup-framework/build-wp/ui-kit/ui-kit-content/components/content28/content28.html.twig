@@ -1,0 +1,32 @@
+<!--content-28 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content28" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-28 bg-clouds">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                    <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}
+                    </p>
+                    <div class="img-holder custom-img">
+                        <img 
+                        src="{{ sfBuildUri }}{{ image }}"  
+                        width="780" 
+                        height="294" 
+                        alt=""
+                        ng-class="{'removed-image': data.image == '../../../img/1x1.png'}"
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.image ]]"
+                        {% endif %}/>
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="780" dm-upload-type="image" dm-upload-media="data.image"></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+                        </customizer>
+                        {% endif %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

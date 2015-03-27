@@ -1,0 +1,34 @@
+{
+    "bg_image": "",
+    "bg_color": "#fff",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "url": "/"
+    },
+    "title": "Startup Framework",
+    "description": "You have the design, you have the code.",
+    "btn_default": {
+        "name": "Sign In",
+        "url": "\/"
+    },
+    "icon": {
+        "image": "common-files/icons/Infinity-Loop@2x.png"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

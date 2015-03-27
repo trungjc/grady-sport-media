@@ -1,0 +1,40 @@
+{
+    "image": "common-files/img/content/graph.png",
+    "features": [{
+        "title": "Multi useful components",
+        "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style.",
+        "btn": {
+            "name": "TRY IT NOW",
+            "url": "\/"
+        }
+    }, {
+        "title": "Multi useful components",
+        "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style.",
+        "btn": {
+            "name": "TRY IT NOW",
+            "url": "\/"
+        }
+    }, {
+        "title": "Multi useful components",
+        "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style.",
+        "btn": {
+            "name": "TRY IT NOW",
+            "url": "\/"
+        }
+    }],
+    "icons": {
+        "icon1": {
+            "url": "",
+            "name": "fui-cmd"
+        },
+        "icon2": {
+            "url": "",
+            "name": "fui-mic"
+        },
+        "icon3": {
+            "url": "",
+            "name": "fui-user"
+        }
+    }
+
+}

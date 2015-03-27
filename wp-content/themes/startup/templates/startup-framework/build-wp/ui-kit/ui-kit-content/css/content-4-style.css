@@ -1,0 +1,65 @@
+/**
+ * Content 4 stylesheet  
+ * */
+.content-4 {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  position: relative;
+}
+.content-4 h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #2c3e50;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.content-4 p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 26px;
+}
+.content-4 .features h6 {
+  margin: 0 0 13px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #34495e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-transform: none;
+}
+.content-4 .features p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7f8c8d;
+}
+.content-4 .features > [class*="col-sm-"] {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 50px;
+}
+.content-4 .features .img-holder {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+}
+.content-4 .features:last-child > [class*="col-sm-"],
+.content-4 .features.last > [class*="col-sm-"] {
+  padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  .content-4 .features > [class*="col-sm-"],
+  .content-4 .features:last-child > [class*="col-sm-"],
+  .content-4 .features.last > [class*="col-sm-"] {
+    padding-top: 150px;
+    padding-bottom: 20px;
+  }
+  .content-4 .features:last-child > [class*="col-sm-"]:last-child,
+  .content-4 .features.last > [class*="col-sm-"]:last-child,
+  .content-4 .features:last-child > [class*="col-sm-"].last,
+  .content-4 .features.last > [class*="col-sm-"].last {
+    padding-bottom: 0;
+  }
+}

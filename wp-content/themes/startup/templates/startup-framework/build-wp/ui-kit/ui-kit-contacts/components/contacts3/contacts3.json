@@ -1,0 +1,43 @@
+{
+    "map": {
+        "id": "mapContacts3",
+        "center": {
+            "latitude": 40.714353,
+            "longitude": -74.005973
+        },
+        "zoom": 12
+    },
+    "touch": {
+        "title": "Get in touch",
+        "description": "As a Harvard professor, he was one of the first to explore the relationship in equilibrium."
+    },
+    "find": {
+        "title": "Where to find us",
+        "description": "As a Harvard professor, he was one of the first to explore the relationship in equilibrium."
+    },
+    "contact": {
+        "number": "+1 347 523 34 90",
+        "email": "mr.madbyte@gmail.com"
+    },
+    "mail": {
+        "title": "You can mail us",
+        "description": "As a Harvard professor, he was one of the first to explore the relationship in equilibrium."
+    },
+    "form": {
+        "name": "Name / Last Name",
+        "email": "E-mail",
+        "message": "Message"
+    },
+    "icon": {
+        "url": "",
+        "name": "fui-mail"
+    },
+    "numberIcon": {
+        "url": "",
+        "name": "fui-info-circle"
+    },
+    "emailIcon": {
+        "url": "",
+        "name": "fui-mail"
+    }
+}

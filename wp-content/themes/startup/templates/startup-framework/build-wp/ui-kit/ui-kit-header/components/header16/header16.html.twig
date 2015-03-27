@@ -1,0 +1,109 @@
+<!-- header-16 -->
+<div{% if wp_mode %} class="dm-template dm-controlsView-holder" dm-template="header.header16" component-id="{{ component_id }}"{% endif %}>
+    {% if edit_mode %}
+    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !h16ptMainSlide.bg_image || h16ptMainSlide.bg_image == '../../../img/1x1.png'}">
+        <div class="btn-group">
+            <div class="dm-control-button" dm-remove-media="h16ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-upload-media="h16ptMainSlide.bg_image"></div>
+            <div class="dm-control-button" dm-opacity="h16ptMainSlide.opacity" dm-gradient="h16ptMainSlide.bg_color"></div>
+            <div class="dm-control-button" dm-bg-color="h16ptMainSlide.bg_color"></div>
+        </div>
+    </div>
+    {% endif %}
+    <header class="header-16">
+        <div class="container">
+            <div class="row">
+                <div class="navbar" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+                            <span {% if edit_mode %}dm-contenteditable ng-model="data.btn"{% endif %}>{{btn}}</span>
+                            <div>CLOSE</div>
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+                            </customizer>
+                            {% endif %}
+                        </button>
+                        <div class="collapse navbar-collapse">
+                            {% macro render_one_line_menu(items) %}
+            					<ul class="nav pull-right">
+                                    {% for item in items %}
+                                        <li>
+                                            <a href="{{ item.url }}">{{ item.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endmacro %}
+                            {% if wp_mode %}
+                                {{ _self.render_one_line_menu(headerMenu.items) }}
+                                {% if edit_mode %}
+	                            <customizer class="dm-popover popover fade top">
+	                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+	                            </customizer>
+	                            {% endif %}
+                            {% else %}
+                                {{ _self.render_one_line_menu(menu) }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="header-16-sub">
+        {% if edit_mode %}
+        <div
+        dm-slider="h-16-pt-main-{{ component_id }}"
+        dm-slider-model="data.slider"
+        dm-slider-archive="h16ptMain"
+        class="page-transitions pt-perspective">
+            <div class="v-center pt-page pt-page-[[$index + 1]]"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat>
+                <div
+                ng-style="{'background-color': slide.bg_color}">
+                    <div class="background"
+                    ng-style="{
+                        'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                        'opacity': slide.opacity
+                    }">&nbsp;</div>
+                    <div class="container">
+                        <div class="hero-unit">
+                            <h1 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h1>
+                        </div>
+                    </div>
+                </div>
+                <span class="scroll-btn"><a href="#"> <span class="mouse"><span> </span></span><span dm-contenteditable ng-model="slide.view_more"></span></a></span>
+                <span class="pt-controls">
+                    <div class="container">
+                        <a class="pt-control-prev" dm-contenteditable ng-model="slide.cntrl_prev" href="#"></a>
+                        <a class="pt-control-next" dm-contenteditable ng-model="slide.cntrl_next" href="#"></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        {% else %}
+        <div id="h-16-pt-main-{{ component_id }}" class="page-transitions pt-perspective">
+            {% for slide in slider %}
+            <div class="v-center pt-page pt-page-{{ loop.index }}">
+                <div style="background-color: {{ slide.bg_color }}">
+                    <div class="background" style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}">&nbsp;</div>
+                    <div class="container">
+                        <div class="hero-unit">
+                            <h1>{{ slide.title }}</h1>
+                        </div>
+                    </div>
+                </div>
+                <span class="scroll-btn"><a href="#"> <span class="mouse"><span> </span></span><span>{{ slide.view_more }}</span></a></span>
+                <span class="pt-controls">
+                    <div class="container">
+                        <a class="pt-control-prev" href="#">{{ slide.cntrl_prev }}</a>
+                        <a class="pt-control-next" href="#">{{ slide.cntrl_next }}</a>
+                    </div>
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+</div>

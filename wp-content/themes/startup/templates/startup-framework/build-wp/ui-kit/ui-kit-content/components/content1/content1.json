@@ -1,0 +1,19 @@
+{
+    "title": "Multi useful components",
+    "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects.",
+    "player": {
+        "src": "https://vimeo.com/80282064"
+    },
+    "btns": [{
+        "name": "Buy in Appstore",
+        "url": "\/"
+    }, {
+        "name": "Buy in Google Play",
+        "url": "\/"
+    }],
+    "add_links": "By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy</a>",
+    "box": {
+        "title": "Introduction",
+        "description": "To get started, you select the any sample and base the entire website on it."
+    }
+}

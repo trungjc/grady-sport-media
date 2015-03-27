@@ -1,0 +1,78 @@
+<!--content-20 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content20" component-id="{{ component_id }}"{% endif %}>
+<section class="content-20 v-center bg-midnight-blue">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="signup-form">
+                        <form class="clearfix" method="post">
+                            {% if register_form_errors %}
+                                <div>
+                                    {% for error in register_form_errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                    <br />
+                                </div>
+                            {% elseif _REQUEST.success %}
+                                <div>
+                                    <div>Registered!</div>
+                                </div>
+                                <br />
+                            {% endif %}
+                            <div class="form-group">
+                                <label><span {% if edit_mode %}dm-contenteditable ng-model="data.label[0].title"{% endif %}>{{ label[0].title }}</span></label>
+                                <input type="text" class="form-control" name="sf_register_user[email]" value="{{ _REQUEST.sf_register_user.email }}" />
+                            </div>
+                            <div class="clearfix">
+                                <div class="form-group pull-left">
+                                    <label><span {% if edit_mode %}dm-contenteditable ng-model="data.label[1].title"{% endif %}>{{ label[1].title }}</span></label>
+                                    <input type="password" class="form-control" name="sf_register_user[pwd]" value="{{ _REQUEST.sf_register_user.pwd }}" />
+                                </div>
+                                <div class="form-group pull-right">
+                                    <label><span {% if edit_mode %}dm-contenteditable ng-model="data.label[2].title"{% endif %}>{{ label[2].title }}</span></label>
+                                    <input type="password" class="form-control" name="sf_register_user[rpwd]" value="{{ _REQUEST.sf_register_user.rpwd }}" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label {% if edit_mode %}dm-contenteditable ng-model="data.label[3].title"{% endif %}>{{ label[3].title }}</label>
+                                <div class="site-link">
+                                    <input type="text" class="form-control" name="sf_register_user[login]" value="{{ _REQUEST.sf_register_user.login }}" />
+                                    <b {% if edit_mode %}dm-contenteditable ng-model="data.label[4].title"{% endif %}>{{ label[4].title }}</b>
+                                </div>
+                            </div>
+                            {% if edit_mode %}
+                            <span class="dm-form-button btn btn-huge btn-info" dm-contenteditable ng-model="data.btn_huge.name"></span>
+                            {% else %}
+                            <button class="btn btn-huge btn-info">{{ btn_huge.name }}</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1 features">
+                    <big {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</big>
+                    {% if edit_mode %}
+                        <div class="col-sm-8" ng-repeat="box in data.boxes">
+                            <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.title"></h6>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.description"></span>
+                        </div>
+                    {% else %}
+                        {% for box in boxes %}
+                            <div class="col-sm-8">
+                                <h6>{{ box.title }}</h6>
+                                <span>{{ box.description }}</span>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+</div>

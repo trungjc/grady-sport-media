@@ -1,0 +1,28 @@
+{
+    "ribbon": "NEW",
+    "plans": [{
+        "title": "Starter",
+        "price": "19$/month",
+        "description": "10,000 messages<br> <b>unlimited</b> data<br> <b>unlimited</b> users<br> first 10 day free",
+        "btns": {
+            "name": "Your Current Plan",
+            "url": "\/"
+        }
+    }, {
+        "title": "Professional",
+        "price": "39$/month",
+        "description": "10,000 messages<br> <b>unlimited</b> data<br> <b>unlimited</b> users<br> first 30 day free",
+        "btns": {
+            "name": "Change to this Plan",
+            "url": "\/"
+        }
+    }, {
+        "title": "Business",
+        "price": "59$/month",
+        "description": "10,000 messages<br> <b>unlimited</b> data<br> <b>unlimited</b> users<br> first 100 day free",
+        "btns": {
+            "name": "Change to this Plan",
+            "url": "\/"
+        }
+    }]
+}

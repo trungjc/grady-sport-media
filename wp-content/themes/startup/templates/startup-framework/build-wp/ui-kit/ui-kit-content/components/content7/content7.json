@@ -1,0 +1,12 @@
+{
+    "title": "Take a look in our awesome product ",
+    "description": "Of course we haven’t forgotten about the responsive layout. Create a website with full mobile support. ",
+    "row": [{
+        "title": "Responsive Layout",
+        "name": "Of course we haven’t forgotten about the responsive layout. Create a website with full mobile support. "
+    }, {
+        "title": "Retina Ready",
+        "name": "Startup Framework works fine on devices supporting Retina Display. Feel the clarity! "
+    }],
+    "image": "common-files/img/content/screen.png"
+}

@@ -1,0 +1,15 @@
+{
+    "title": "Multi useful components",
+    "description": "All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.",
+    "btn_primary": {
+        "name": "Buy in Appstore",
+        "url": "\/"
+    },
+    "more": {
+        "name": "Learn more",
+        "url": "\/"
+    },
+    "player": {
+        "src": "https://player.vimeo.com/video/80282064"
+    }
+}

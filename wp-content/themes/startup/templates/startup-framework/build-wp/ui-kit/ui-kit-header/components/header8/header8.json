@@ -1,0 +1,29 @@
+{
+    "brand": {
+        "name": "Startup",
+        "url": "\/",
+        "image": "common-files/img/header/logo@2x.png"
+    },
+    "bg_image": "common-files/img/Italy_001.jpg",
+    "bg_color": "#2c3e50",
+    "opacity": "1",
+    "title": "Startup Design Framework",
+    "description": "We’ve created the product that will help your startup to look even better.",
+    "image": "common-files/img/header/browser@2x.png",
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

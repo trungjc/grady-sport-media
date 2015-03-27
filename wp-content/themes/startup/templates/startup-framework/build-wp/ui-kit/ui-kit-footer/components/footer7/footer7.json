@@ -1,0 +1,16 @@
+{
+    "icon": {
+        "url": "",
+        "name": "fui-home"
+    },
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

@@ -1,0 +1,16 @@
+{
+    "title": "We love what we do. <br> This is features of our products",
+    "projects": [{
+        "image": "common-files/img/projects/img-2.png",
+        "name": "Flat UI Pro",
+        "info": "Web Development, Illustrations"
+    }, {
+        "image": "common-files/img/projects/img-3.png",
+        "name": "Startup Kit",
+        "info": "Web Development, Web Design"
+    }, {
+        "image": "common-files/img/projects/img-4.png",
+        "name": "Impressionist UI",
+        "info": "Web Development, iOS Design"
+    }]
+}

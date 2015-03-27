@@ -1,0 +1,168 @@
+/**
+ * Crew 2 stylesheet  
+ * */
+.crew-2 {
+  padding-top: 110px;
+  padding-bottom: 88px;
+}
+.crew-2 h3 {
+  margin: 0 0 73px;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 300;
+}
+.crew-2 .members {
+  display: table;
+  width: 100%;
+}
+.crew-2 .members .member-wrapper {
+  display: table-cell;
+}
+.crew-2 .members .member-wrapper:first-child + .member-wrapper {
+  text-align: center;
+}
+.crew-2 .members .member-wrapper:first-child + .member-wrapper + .member-wrapper {
+  text-align: right;
+}
+.crew-2 .members .member {
+  width: 265px;
+  display: inline-block;
+  padding-bottom: 23px;
+  -webkit-transition: border-color 0.4s;
+  -moz-transition: border-color 0.4s;
+  -o-transition: border-color 0.4s;
+  transition: border-color 0.4s;
+}
+.crew-2 .members + .members .member {
+  padding-top: 78px;
+  border-top: 2px solid #ebedee;
+}
+.crew-2 .members .photo-wrapper {
+  width: 265px;
+  height: 180px;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.crew-2 .members .photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: 50% 50% no-repeat;
+  opacity: 30;
+  filter: alpha(opacity=3000);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.crew-2 .members .photo img {
+  display: none;
+}
+.crew-2 .members .info {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 29px;
+}
+.crew-2 .members .name {
+  position: absolute;
+  left: 19px;
+  bottom: 19px;
+  min-width: 100px;
+  text-align: left;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.crew-2 .members .position {
+  position: absolute;
+  right: 19px;
+  bottom: 19px;
+  color: #fff;
+  font-size: 13px;
+  font-style: italic;
+}
+.crew-2 .members .social-btns {
+  white-space: nowrap;
+  margin-top: 24px;
+  display: inline-block;
+}
+.crew-2 .members .social-btns > * {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #1abc9c;
+}
+.crew-2 .members .social-btns > *:first-child {
+  margin-left: 0;
+}
+.crew-2 .members .social-btns > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.crew-2 .members .social-btns > * > *:first-child {
+  color: #95a5a6;
+}
+.crew-2 .members .social-btns > *:hover > * {
+  top: -100%;
+}
+.crew-2 .members .social-btns .social-holder > * {
+  display: block;
+}
+.crew-2 .members .member:hover .photo-wrapper {
+  background-color: #1abc9c;
+}
+.crew-2 .members .member:hover .photo {
+  opacity: 40;
+  filter: alpha(opacity=4000);
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .crew-2 .members .member,
+  .crew-2 .members .photo-wrapper {
+    width: 230px;
+  }
+}
+@media (max-width: 767px) {
+  .crew-2 .members {
+    display: block;
+    width: auto;
+  }
+  .crew-2 .members .member-wrapper {
+    display: block;
+    text-align: center!important;
+  }
+  .crew-2 .members .member-wrapper + .member-wrapper .member {
+    padding-top: 78px;
+    border-top: 2px solid #ebedee;
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "brand": {
+        "url": "\/",
+        "image": "common-files/icons/infinity-bw@2x.png"
+    },
+    "container": {
+        "description": "<b>200,000</b> users registered since January"
+    },
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

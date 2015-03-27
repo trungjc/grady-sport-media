@@ -1,0 +1,60 @@
+<!--content-7 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content7" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-7 v-center">
+        <div>
+            <div class="container">
+                <h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+                <div class="row v-center">
+                    <div class="col-sm-3">
+                        <div {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>
+                            {{ description }}
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-offset-1">
+                            <div class="screen-wrapper">
+                                <div class="screen custom-img">
+                                    <img 
+                                    src="{{ sfBuildUri }}{{ image }}" 
+                                    {% if edit_mode %}
+                                        ng-src="{{ sfBuildUri }}[[ data.image ]]"
+                                    {% endif %}
+                                    alt="" />
+                                    {% if edit_mode %}
+                                        <customizer class="dm-popover popover fade top dm-image">
+                                            <div class="dm-control-button" dm-upload-type="image" dm-upload-media="data.image"></div>
+                                            <div class="dm-control-button" data-width="50" dm-remove-media="data.image"></div>
+                                        </customizer>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="col-sm-offset-2">
+                            {% if edit_mode %}
+                            <div class="text-block" ng-repeat="item in data.row">
+                                <h6
+                                text-angular
+                                ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                                ng-model="item.title"></h6>
+                                <span
+                                text-angular
+                                ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                                ng-model="item.name"></span>
+                            </div>
+                            {% else %}
+                                {% for item in row %}
+                                <div class="text-block">
+                                    <h6>{{ item.title }}</h6>
+                                    <span>{{ item.name }}</span>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,16 @@
+{
+    "brand": {
+        "url": "\/",
+        "image": "common-files/icons/logo-red@2x.png"
+    },
+    "social_btns": [{
+        "name": "fui-facebook",
+        "url": "\/"
+    }, {
+        "name": "fui-twitter",
+        "url": "\/"
+    }, {
+        "name": "fui-vimeo",
+        "url": "\/"
+    }]
+}

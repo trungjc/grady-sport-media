@@ -1,0 +1,74 @@
+<!--content-21 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content21" component-id="{{ component_id }}"{% endif %}>
+	<section class="content-21 bg-midnight-blue">
+		<div class="container">
+			<h3 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</h3>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="features features-tabs">
+						{% if edit_mode %}
+						<div class="features-header">
+							<div class="box active">
+			                    <span ng-class="data.box.icon1.name">
+			                        <customizer class="dm-popover popover fade top">
+			                            <div class="dm-change-icon" dm-change-icon="data.box.icon1.name" dm-change-icon-url="data.icon1.url"></div>
+			                        </customizer>
+			                    </span>
+								<span dm-contenteditable ng-model="data.features[0].label"></span>
+							</div>
+							<div class="box">
+			                    <span ng-class="data.box.icon2.name">
+			                        <customizer class="dm-popover popover fade top">
+			                            <div class="dm-change-icon" dm-change-icon="data.box.icon2.name" dm-change-icon-url="data.icon2.url"></div>
+			                        </customizer>
+			                    </span>
+								<span dm-contenteditable ng-model="data.features[1].label"></span>
+							</div>
+							<div class="box">
+			                    <span ng-class="data.box.icon3.name">
+			                        <customizer class="dm-popover popover fade top">
+			                            <div class="dm-change-icon" dm-change-icon="data.box.icon3.name" dm-change-icon-url="data.icon3.url"></div>
+			                        </customizer>
+			                    </span>
+								<span dm-contenteditable ng-model="data.features[2].label"></span>
+							</div>
+						</div>
+						{% else %}
+							<div class="features-header">
+					            <div class="box active">
+									<div class="{{ box.icon1.name }}"></div>
+									<span>{{ features[0].label }}</span>
+								</div>
+					            <div class="box">
+									<div class="{{ box.icon2.name }}"></div>
+									<span>{{ features[1].label }}</span>
+								</div>
+					            <div class="box">
+									<div class="{{ box.icon3.name }}"></div>
+									<span>{{ features[2].label }}</span>
+								</div>
+				            </div>
+						{% endif %}
+						<div class="features-bodies">
+							{% if edit_mode %}
+							<div class="features-body" ng-class="{'active': $first}" ng-repeat="feature in data.features">
+								<h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.title"></h6>
+								<p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.description"></p>
+								<p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="feature.name"></p>
+							</div>
+							{% else %}
+								{% for feature in features %}
+					            <div class="features-body {% if loop.first %} active{% endif %}">
+									<h6>{{ feature.title }}</h6>
+									<p>{{ feature.description }}</p>
+									<p>{{ feature.name }}</p>
+								</div>
+					            {% endfor %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,33 @@
+{
+    "slider": [{
+        "title": "Ready to Code",
+        "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design.",
+        "bg_image": "common-files/img/Brazil_002.jpg",
+        "bg_color": "#2c3e50",
+        "opacity": "1",
+        "box": [{
+            "bg_image": "common-files/img/content/icon-1.png",
+            "title": "HTML5, Less, CSS3",
+            "description": "We used checked-out technologies to give the best results."
+        }, {
+            "bg_image": "common-files/img/content/icon-2.png",
+            "title": "Based on Bootstrap",
+            "description": "HTML layout is based on one of the common frameworks at this time - Bootstrap v 2.3.2."
+        }]
+    }, {
+        "title": "Ready to Code",
+        "description": "Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design.",
+        "bg_image": "common-files/img/Brazil_002.jpg",
+        "bg_color": "#2c3e50",
+        "opacity": "1",
+        "box": [{
+            "bg_image": "common-files/img/content/icon-1.png",
+            "title": "HTML5, Less, CSS3",
+            "description": "We used checked-out technologies to give the best results."
+        }, {
+            "bg_image": "common-files/img/content/icon-2.png",
+            "title": "Based on Bootstrap",
+            "description": "HTML layout is based on one of the common frameworks at this time - Bootstrap v 2.3.2."
+        }]
+    }]
+}

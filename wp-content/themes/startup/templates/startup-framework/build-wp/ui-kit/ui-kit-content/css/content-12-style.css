@@ -1,0 +1,42 @@
+/**
+ * Content 12 stylesheet  
+ * */
+.content-12 {
+  position: relative;
+}
+.content-12 .wide {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+.content-12 .btn-wide {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  color: #7f8c8d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  background: #1abc9c;
+  font-weight: 300;
+  -webkit-transition: 0.25s color, 0.25s background-color;
+  -moz-transition: 0.25s color, 0.25s background-color;
+  -o-transition: 0.25s color, 0.25s background-color;
+  transition: 0.25s color, 0.25s background-color;
+}
+.content-12 .btn-wide:hover,
+.content-12 .btn-wide:focus,
+.content-12 .btn-wide.active {
+  color: #ffffff;
+}
+.content-12 .btn-wide:hover,
+.content-12 .btn-wide:active {
+  background: #e74c3c;
+}
+@media (max-width: 767px) {
+  .content-12 .btn-wide {
+    font-size: 30px;
+  }
+}
