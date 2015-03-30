@@ -1,57 +1,53 @@
 <?php
-use Designmodo\WpTheme\Utility\Post;
-/*
- * This file is part of the Designmodo WordPress Theme.
+/**
+ * The main template file
  *
- * (c) Designmodo Inc. <info@designmodo.com>
+ * This is the most generic template file in a WordPress theme and one
+ * of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query,
+ * e.g., it puts together the home page when no home.php file exists.
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * @link http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
  */
-get_header(); ?>
-    <div id="primary" class="content-area post-list">
-        <div id="content" class="site-content" role="main">
-        <?php if ( have_posts() ) : ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <div class="post-list-container">
-                        <header class="entry-header">
-                            <?php the_post_thumbnail(); ?>
-                            <h1 class="entry-title"><a href="<?php echo get_permalink();?>"><?php the_title(); ?></a></h1>
-                        </header>
-                        <div class="entry-content">
-                            <?php
-                            if ($post->post_content !== get_the_content()) {
-                                the_content('...');
-                            } else {
-                                $content = get_the_content();
-                                $content = apply_filters('the_content', $content);
-                                $content = preg_replace('@<script[^>]*?>.*?</script>@si', '', $content);
-                                $content = preg_replace('@<style[^>]*?>.*?</style>@si', '', $content);
-                                $content = strip_tags($content);
-                                if (strlen($content) > SF_POST_TEASER_LIMIT) {
-                                    $content = substr($content, 0, strrpos(substr($content, 0, SF_POST_TEASER_LIMIT), ' '));
-                                    echo $content . '...';
-                                } else {
-                                    echo $content;
-                                }
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </article>
-            <?php endwhile; ?>
-        <?php else : ?>
-            <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-            <p>Ready to publish your first post? <a href="<?php echo admin_url( 'post-new.php' ); ?>">Get started here</a>.</p>
-            <?php elseif ( is_search() ) : ?>
-            <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.' ); ?></p>
-            <?php get_search_form(); ?>
-            <?php else : ?>
-            <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.' ); ?></p>
-            <?php get_search_form(); ?>
-            <?php endif; ?>
-        <?php endif; ?>
-        </div>
-    </div>
-<?php get_footer(); ?>
+get_header();
+?>
+
+
+<?php
+$args = array( 'post_type' => 'home-section', 'posts_per_page' => -1 );
+$loop = new WP_Query( $args );
+?>
+<?php while ($loop->have_posts() ) : $loop->the_post()?>
+    <?php if (has_post_thumbnail($post->ID)) { ?>
+        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
+        <?php
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
+        $style = "background-image: url('" . $image[0] . "');backgroud-repeat: no-repeat;background-size:cover "
+        ?>
+        <?php
+    } else {
+        $style = "";
+    }
+    ?>
+
+    <div id="<?php echo the_slug(); ?>" class="section "  style="<?php  echo $style ?>">
+        <div class="<?php echo the_slug(); ?>-inner">
+            <div class="content">
+                <?php the_content(); ?>
+            </div>
+            
+        </div> <!--.story-->
+    </div> <!--#intro-->
+
+
+    <?php 
+endwhile;
+?>	
+
+<?php
+get_footer();
+?>

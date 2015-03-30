@@ -1,0 +1,11 @@
+{!$beforeWidget}
+{!$beforeTitle}{$widgetTitle}{!$afterTitle}
+	<div class="clear clearFix"></div>
+		<div class="widgetGuts">
+		<span class="success" n:if="$message">{!$message}</span>
+		{$guts}
+		<p style="max-width:180px;font-size: 10px;display:{$under_style}">By signing up, you agree to our <a href="http://www.readygraph.com/tos">Terms of Service</a> and <a href='http://readygraph.com/privacy/'>Privacy Policy</a>.</p>
+		<div class="clear clearFix"></div>
+	</div>
+	<div class="clear clearFix"></div>
+{!$afterWidget}

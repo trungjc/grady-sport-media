@@ -1,0 +1,53 @@
+<!-- footer-2 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer2" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-2 bg-midnight-blue">
+        <div class="container">
+            <nav class="pull-left">
+                {% macro render_one_line_menu(items) %}
+					<ul>
+                        {% for item in items %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endmacro %}
+                {% if wp_mode %}
+                    {{ _self.render_one_line_menu(footerMenuOneLine.items) }}
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuOneLine.id) }}"></div>
+                    </customizer>
+                    {% endif %}
+                {% else %}
+                    {{ _self.render_one_line_menu(menu) }}
+                {% endif %}
+            </nav>
+            <div class="social-btns pull-right">
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top">
+                    <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                </customizer>
+                <span
+                class="social-item"
+                ng-repeat="social_btn in data.social_btns">
+                    <a
+                    class="social-holder"
+                    ng-href="[[ social_btn.url ]]">
+                        <div class="[[ social_btn.name ]]"></div>
+                        <div class="[[ social_btn.name ]]"></div>
+                    </a>
+                </span>
+                {% else %}
+                    {% for social_btn in social_btns %}
+                        <a class="social-holder" href="{{ social_btn.url }}">
+                            <div class="{{ social_btn.name }}"></div>
+                            <div class="{{ social_btn.name }}"></div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="additional-links" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.add_links"{% endif %}>{{ add_links }}</div>
+        </div>
+    </footer>
+</div>

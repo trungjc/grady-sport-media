@@ -1,0 +1,92 @@
+<!-- footer-11 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer11" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-11">
+        <div class="container">
+            <a
+            {% if edit_mode %}
+                ng-href="[[ data.brand.url ]]"
+            {% endif %}
+            class="brand custom-img"
+            href="{{ brand.url }}">
+                <img
+                width="41"
+                height="21"
+                alt=""
+                ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                src="{{ sfBuildUri }}{{ brand.image }}"
+                {% if edit_mode %}
+                    ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                {% endif %} />
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top dm-image">
+                    <div class="dm-control-button" data-width="41" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                    <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                    <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+                </customizer>
+                {% endif %}
+            </a>
+            <nav>
+                {% macro render_one_line_menu(items) %}
+					<ul>
+                        {% for item in items %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endmacro %}
+                {% if wp_mode %}
+                    {{ _self.render_one_line_menu(footerMenuOneLine.items) }}
+                    {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuOneLine.id) }}"></div>
+                        </customizer>
+                    {% endif %}
+                {% else %}
+                    {{ _self.render_one_line_menu(menu) }}
+                {% endif %}
+            </nav>
+            <div class="social-btns">
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top">
+                    <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                </customizer>
+                <span
+                class="social-item"
+                ng-repeat="social_btn in data.social_btns">
+                    <a
+                    class="social-holder"
+                    ng-href="[[ social_btn.url ]]">
+                        <div class="[[ social_btn.name ]]"></div>
+                        <div class="[[ social_btn.name ]]"></div>
+                    </a>
+                </span>
+                {% else %}
+                    {% for social_btn in social_btns %}
+                        <a class="social-holder" href="{{ social_btn.url }}">
+                            <div class="{{ social_btn.name }}"></div>
+                            <div class="{{ social_btn.name }}"></div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="additional-links">
+            <div class="container">
+                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model= "data.container.description" {% endif %} class="lead">{{ container.description }}</p>
+                <nav>
+                    {% if wp_mode %}
+                        {{ _self.render_one_line_menu(footerAdditionalMenuOneLine.items) }}
+                        {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerAdditionalMenuOneLine.id) }}"></div>
+                            </customizer>
+                        {% endif %}
+                    {% else %}
+                        {{ _self.render_one_line_menu(additional_menu) }}
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>

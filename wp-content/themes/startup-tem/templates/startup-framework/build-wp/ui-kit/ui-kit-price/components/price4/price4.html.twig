@@ -1,0 +1,87 @@
+<!-- price-4 -->
+<div{% if wp_mode %} class="dm-template" dm-template="price.price4" component-id="{{ component_id }}"{% endif %}>
+    <section class="price-4">
+        <div class="container">
+            {% if edit_mode %}
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="span5 plan">
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model= "data.plan.title"  class="title"></div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model= "data.plan.price"  class="price"></div>
+                        <div class="description">
+                            <div
+                            ng-repeat="description in data.plan.descriptions"
+                            text-angular
+                            ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]"
+                            ng-model= "description.text"
+                            class="description-box"></div>
+                        </div>
+                        <a 
+                        class="btn btn-huge" 
+                        dm-contenteditable 
+                        ng-model="data.plan.btn.name"
+                        ng-href="[[ data.plan.btn.url ]]">
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" ng-class="{hasUrl: data.plan.btn.url}" dm-edit-url="data.plan.btn.url"></div>
+                        </customizer>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-1 description-detail">
+                    <div class="row" ng-repeat="rowsItem in data.rows">
+                        <div class="col-sm-6" ng-repeat="row in rowsItem.row">
+                            <span ng-class="row.icon.name">
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-change-icon" dm-change-icon="row.icon.name" dm-change-icon-url="row.icon.url"></div>
+                                </customizer>
+                            </span>
+                            <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model= "row.title"></h6>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model= "row.text"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="span5 plan">
+                        <div class="title">{{ plan.title }}</div>
+                        <div class="price">{{ plan.price }}</div>
+                        <div class="description">
+                            {% for description in plan.descriptions %}
+                            <div class="description-box">
+                                {{ description.text }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a 
+                        class="btn btn-huge" 
+                        href="{{ plan.btn.url }}">
+                            {{ plan.btn.name }}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-1 description-detail">
+                    {% for rowsItem in rows %}
+                    <div class="row">
+                        {% for row in rowsItem.row %}
+                        <div class="col-sm-6">
+                            {% if row.icon.url %}
+                                <a href="{{ row.icon.url }}">
+                                    <span class="{{ row.icon.name }}"> </span>
+                                </a>
+                            {% else %}
+                                <span class="{{ row.icon.name }}"> </span>
+                            {% endif %}
+                            <h6>{{ row.title }}</h6>
+                            <span>{{ row.text }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</div>

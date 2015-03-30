@@ -1,0 +1,93 @@
+<!--projects-2 -->
+<div{% if wp_mode %} class="dm-template" dm-template="projects.projects2" component-id="{{ component_id }}"{% endif %}>
+    <section class="projects-2">
+        <div
+        class="project-1 v-center dm-controlsView-holder custom-img"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.block_one.bg_image + ')'
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ block_one.bg_image }})"
+        {% endif %}>
+            {% if edit_mode %}
+            <div class="dm-controls dm-controlsView-btns dm-image">
+                <div class="btn-group">
+                    <div class="dm-control-button" dm-upload-media="data.block_one.bg_image"></div>
+                    <div class="dm-control-button" data-width="50" dm-remove-media="data.block_one.bg_image"></div>
+                </div>
+            </div>
+            {% endif %}
+            <div>
+                <div class="container">
+                    <h1 {% if edit_mode %}dm-contenteditable ng-model="data.block_one.title"{% endif %}>{{ block_one.title }}</h1>
+                    <p {% if edit_mode %}dm-contenteditable ng-model="data.block_one.description"{% endif %}>{{ block_one.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div
+        class="project-2 v-center dm-controlsView-holder custom-img"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.block_two.bg_image + ')'
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ block_two.bg_image }})"
+        {% endif %}>
+            {% if edit_mode %}
+            <div class="dm-controls dm-controlsView-btns dm-image">
+                <div class="btn-group">
+                    <div class="dm-control-button" dm-upload-media="data.block_two.bg_image"></div>
+                    <div class="dm-control-button" data-width="50" dm-remove-media="data.block_two.bg_image"></div>
+                </div>
+            </div>
+            {% endif %}
+            <div>
+                <div class="container">
+                    <div class="hero-unit">
+                        <h1  {% if edit_mode %}dm-contenteditable ng-model="data.block_two.title"{% endif %}>{{ block_two.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+        class="project-3 v-center dm-controlsView-holder custom-img"
+        {% if edit_mode %}
+            ng-style="{
+                'background-image': 'url({{ sfBuildUri }}' + data.block_three.bg_image + ')'
+            }"
+        {% else %}
+            style="background-image: url({{ sfBuildUri }}{{ block_three.bg_image }})"
+        {% endif %}>
+            {% if edit_mode %}
+            <div class="dm-controls dm-controlsView-btns dm-image">
+                <div class="btn-group">
+                    <div class="dm-control-button" dm-upload-media="data.block_three.bg_image"></div>
+                    <div class="dm-control-button" data-width="50" dm-remove-media="data.block_three.bg_image"></div>
+                </div>
+            </div>
+            {% endif %}
+            <div>
+                <div class="container">
+                    &nbsp;
+                    {% if edit_mode %}
+                    <span ng-class="data.block_three.icon.name">
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-change-icon" dm-change-icon="data.block_three.icon.name" dm-change-icon-url="data.block_three.icon.url"></div>
+                        </customizer>
+                    </span>
+                    {% else %}
+                        {% if block_three.icon.url %}
+                            <a href="{{ block_three.icon.url }}">
+                                <span class="{{ block_three.icon.name }}"> </span>
+                            </a>
+                        {% else %}
+                            <span class="{{ block_three.icon.name }}"> </span>
+                        {% endif %}
+                    {% endif %}
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

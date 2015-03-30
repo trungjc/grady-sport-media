@@ -1,0 +1,72 @@
+<!-- footer-7 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer7" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-7 ">
+        <div class="container">
+            <span class="home">
+                {% if edit_mode %}
+                <span ng-class="data.icon.name">
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-change-icon" dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url"></div>
+                    </customizer>
+                </span>
+                {% else %}
+                    {% if icon.url %}
+                        <a href="{{ icon.url }}">
+                            <span class="{{ icon.name }}"> </span>
+                        </a>
+                    {% else %}
+                        <span class="{{ icon.name }}"> </span>
+                    {% endif %}
+                {% endif %}
+            </span>
+            <nav>
+                {% macro render_one_line_menu_with_btn(items) %}
+					<ul>
+                        {% for item in items %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                            {% if  loop.index == (loop.length // 2) %}
+                                <li class="scroll-btn"><a href="#" class="scroll-top fui-arrow-up"> </a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endmacro %}
+                {% if wp_mode %}
+                    {{ _self.render_one_line_menu_with_btn(footerMenuOneLine.items) }}
+                    {% if edit_mode %}
+                    <customizer class="dm-popover popover fade top">
+                        <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuOneLine.id) }}"></div>
+                    </customizer>
+                    {% endif %}
+                {% else %}
+                    {{ _self.render_one_line_menu_with_btn(menu) }}
+                {% endif %}
+            </nav>
+            <div class="social-btns">
+                {% if edit_mode %}
+                <customizer class="dm-popover popover fade top">
+                    <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                </customizer>
+                <span
+                class="social-item"
+                ng-repeat="social_btn in data.social_btns">
+                    <a
+                    class="social-holder"
+                    ng-href="[[ social_btn.url ]]">
+                        <div class="[[ social_btn.name ]]"></div>
+                        <div class="[[ social_btn.name ]]"></div>
+                    </a>
+                </span>
+                {% else %}
+                    {% for social_btn in social_btns %}
+                        <a class="social-holder" href="{{ social_btn.url }}">
+                            <div class="{{ social_btn.name }}"></div>
+                            <div class="{{ social_btn.name }}"></div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,100 @@
+<!-- header-23 -->
+<div{% if wp_mode %} class="dm-template" dm-template="header.header23" component-id="{{ component_id }}"{% endif %}>
+	<header class="header-23">
+	    <div class="mask">&nbsp;</div>
+	    <div class="popup-video">
+	    	{% if edit_mode %}
+            <div
+                dm-video="data.player.src"
+                class="embed-video"
+                id="pPlayerHeader23">
+            </div>
+            {% else %}
+            <div class="embed-video">
+                <iframe id="pPlayerHeader23Preview" data-src="{{ player.src }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            {% endif %}
+	    </div>
+	    <div class="container">
+	        <div class="row">
+	            <div class="navbar col-sm-12" role="navigation">
+	                <div class="navbar-header">
+	                    <button type="button" class="navbar-toggle"></button>
+	                    <a
+	                    class="brand"
+	                    href="{{ brand.url }}">
+	                    	{% if edit_mode %}
+				            <customizer class="dm-popover popover fade top">
+				                <div class="dm-control-button" ng-class="{hasUrl: data.brand.url}" dm-edit-url="data.brand.url"></div>
+				            </customizer>
+				            {% endif %}
+							<span
+							{% if edit_mode %}
+							dm-contenteditable
+							ng-model="data.brand.name"
+							{% endif %}
+							>{{ brand.name }}</span>
+						</a>
+	                </div>
+	                <div class="navbar-collapse collapse">
+	                	<div class="pull-right">
+							{% macro render_one_line_menu(items) %}
+	        					<ul class="nav">
+	                                {% for item in items %}
+	                                    <li>
+	                                        <a href="{{ item.url }}">{{ item.title }}</a>
+	                                    </li>
+	                                {% endfor %}
+	                            </ul>
+	                        {% endmacro %}
+	                        {% if wp_mode %}
+	                            {{ _self.render_one_line_menu(headerMenu.items) }}
+	                            {% if edit_mode %}
+	                            <customizer class="dm-popover popover fade top">
+	                                <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(headerMenu.id) }}"></div>
+	                            </customizer>
+	                            {% endif %}
+	                        {% else %}
+	                            {{ _self.render_one_line_menu(menu) }}
+	                        {% endif %}
+	                    </div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<section class="header-23-sub bg-midnight-blue dm-controlsView-holder">
+		{% if edit_mode %}
+	    <div class="dm-controls dm-controlsView-btns">
+	        <div class="btn-group">
+	            <div class="dm-control-button" dm-multiple-upload dm-upload-type="video" dm-upload-media="data.bg_video"></div>
+	        </div>
+	    </div>
+	    <div id="bgVideo"
+	    data-video="{{ bg_video|json_encode|e }}"
+	    class="background">&nbsp;</div>
+	    {% else %}
+	    <div id="bgVideoPreview"
+	    data-video="{{ bg_video|json_encode|e }}"
+	    class="background">&nbsp;</div>
+	    {% endif %}
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="hero-unit">
+	                	<strong {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.title"{% endif %}>{{ title }}</strong>
+	                    <a class="btn-play" id="play" href="#">
+	                    	Play
+	                    	{% if edit_mode %}
+				            <customizer class="dm-popover popover fade top">
+				                <div class="dm-control-button video" ng-class="{hasUrl: data.player.src}" dm-edit-url="data.player.src"></div>
+				            </customizer>
+				            {% endif %}
+	                    </a>
+	                    <span {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{ description }}</span>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+</div>

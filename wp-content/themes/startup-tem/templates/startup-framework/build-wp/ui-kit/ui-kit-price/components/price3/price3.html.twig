@@ -1,0 +1,67 @@
+<!-- price-3 -->
+<div{% if wp_mode %} class="dm-template" dm-template="price.price3" component-id="{{ component_id }}"{% endif %}>
+    <section class="price-3">
+        <div class="container">
+            <div class="plans">
+                {% if edit_mode %}
+                    <div class="plan" ng-repeat="plan in data.plans" ng-class="{'plan-2': $index = '1'}">
+                        <div class="title">
+                            <div class="img">
+                                <div class="img-holder custom-img">
+                                    <img
+                                    ng-src="{{ sfBuildUri }}[[ plan.image ]]"
+                                    width="117"
+                                    height="104"
+                                    alt=""
+                                    ng-class="{'removed-image': plan.image == '../../../img/1x1.png'}"
+                                    />
+                                    <customizer class="dm-popover popover fade top dm-image">
+                                        <div class="dm-control-button" data-width="117" dm-upload-type="image" dm-upload-media="plan.image"></div>
+                                        <div class="dm-control-button" data-width="50" dm-remove-media="plan.image"></div>
+                                    </customizer>
+                                </div>
+                            </div>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.title"></span>
+                        </div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.price" class="price"></div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.description" class="description"></div>
+                        <a
+                            class="btn btn-primary"
+                            dm-contenteditable
+                            ng-model="plan.btns.name"
+                            ng-href="[[ plan.btns.url ]]">
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" ng-class="{hasUrl: data.btns.url}" dm-edit-url="plan.btns.url"></div>
+                            </customizer>
+                        </a>
+                    </div>
+                {% else %}
+                    {% for plan in plans %}
+                        <div class="plan plan-2">
+                            <div class="title">
+                                <div class="img">
+                                    <div class="img-holder">
+                                        <img
+                                        src="{{ sfBuildUri }}{{ plan.image }}"
+                                        width="117"
+                                        height="104"
+                                        alt=""/>
+                                    </div>
+                                </div>
+                                <span>{{ plan.title }}</span>
+                            </div>
+                            <div class="price">{{ plan.price }}</div>
+                            <div class="description">{{ plan.description }}</div>
+                            <a
+                                class="btn btn-primary"
+                                href="{{ plan.btns.url }}">
+                                {{ plan.btns.name }}
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <!--/.container-->
+    </section>
+</div>

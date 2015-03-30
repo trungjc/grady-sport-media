@@ -1,0 +1,55 @@
+<!--content-17 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content17" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-17 v-center">
+        <div>
+            <div class="container">
+                <h3>
+                    <div class="img-holder custom-img">
+                        <img
+                        width="100"
+                        height="100"
+                        alt=""
+                        ng-class="{'removed-image': data.brand.image == '../../../img/1x1.png'}"
+                        src="{{ sfBuildUri }}{{ brand.image }}"
+                        {% if edit_mode %}
+                            ng-src="{{ sfBuildUri }}[[ data.brand.image ]]"
+                        {% endif %} />
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top dm-image">
+                            <div class="dm-control-button" data-width="100" dm-upload-type="image" dm-upload-media="data.brand.image"></div>
+                            <div class="dm-control-button" data-width="50" dm-remove-media="data.brand.image"></div>
+                        </customizer>
+                        {% endif %}
+                    </div>
+                </h3>
+                {% if edit_mode %}
+                <div
+                dm-slider="c-17_myCarousel-{{ component_id }}"
+                dm-slider-model="data.slider"
+                dm-slider-archive="c17editMyCarousel"
+                class="carousel slide">
+                    <div class="carousel-inner">
+                        <div
+                        class="item"
+                        ng-repeat="slide in data.slider"
+                        dm-slider-repeat>
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.text"></span>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div id="c-17_myCarousel-{{ component_id }}" class="carousel slide">
+                    <div class="carousel-inner">
+                        {% for slide in slider %}
+                        <div class="item">
+                            <span>{{ slide.text }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                <p {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.description"{% endif %}>{{description}}</p>
+            </div>
+        </div>
+    </section>
+</div>

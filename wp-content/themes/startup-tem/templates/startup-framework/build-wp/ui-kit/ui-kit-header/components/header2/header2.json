@@ -1,0 +1,35 @@
+{
+    "bg_image": "",
+    "bg_color": "#2C3E50",
+    "opacity": "0.2",
+    "brand": {
+        "name": "Startup",
+        "image": "common-files/icons/Infinity-Loop@2x.png",
+        "url": "/"
+    },
+    "title": "We have created the product that will help your startup to look even better",
+    "btn_inverse": {
+        "name": "Learn More",
+        "url": "/"
+    },
+    "btn_danger": {
+        "name": "Buy Now for $9",
+        "url": "/"
+    },
+    "menu": [{
+        "title": "Home",
+        "url": "#"
+    }, {
+        "title": "Company",
+        "url": "#"
+    }, {
+        "title": "Portfolio",
+        "url": "#"
+    }, {
+        "title": "Blog",
+        "url": "#"
+    }, {
+        "title": "Contact",
+        "url": "#"
+    }]
+}

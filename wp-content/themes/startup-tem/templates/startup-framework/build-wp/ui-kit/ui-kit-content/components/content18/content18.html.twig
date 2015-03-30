@@ -1,0 +1,58 @@
+<!-- content-18 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content18" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-18">
+        <div class="container">
+            {% if edit_mode %}
+            <div
+            dm-slider="c-18_myCarousel_edit-{{ component_id }}"
+            dm-slider-model="data.slider"
+            dm-slider-archive="c18_myCarousel_edit"
+            class="carousel slide">
+                <div class="controls">
+                    <a class="carousel-control left" href="#" data-slide="prev"> </a>
+                    <a class="carousel-control right" href="#" data-slide="next"> </a>
+                </div>
+                <div class="carousel-inner">
+                    <div
+                    class="item"
+                    ng-repeat="slide in data.slider"
+                    dm-slider-repeat>
+                        <div class="quote-text" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.text"></div>
+                        <div class="quote-author" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.author"></div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div id="c-18_myCarousel-{{ component_id }}" class="carousel slide">
+                <div class="controls">
+                    <a class="carousel-control left" href="#" data-slide="prev"> </a>
+                    <a class="carousel-control right" href="#" data-slide="next"> </a>
+                </div>
+                <div class="carousel-inner">
+                    {% for slide in slider %}
+                    <div class="item">
+                        <div class="quote-text">{{ slide.text }}</div>
+                        <div class="quote-author">{{ slide.author }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div class="row quotes">
+                {% if edit_mode %}
+                <div class="col-sm-3" ng-repeat="textBox in data.textBoxes" ng-class="{'col-sm-offset-1': $index > '0'}">
+                    <h6 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="textBox.author"></h6>
+                    <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="textBox.text"></span>
+                </div>
+                {% else %}
+                    {% for textBox in textBoxes %}
+                    <div class="col-sm-3 {% if loop.index > 1 %}col-sm-offset-1{% endif %}">
+                        <h6>{{ textBox.author }}</h6>
+                        <span>{{ textBox.text }}</span>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

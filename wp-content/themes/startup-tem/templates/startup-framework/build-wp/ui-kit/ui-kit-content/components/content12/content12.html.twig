@@ -1,0 +1,20 @@
+<!-- content-12 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content12" component-id="{{ component_id }}"{% endif %}>
+	<section class="content-12">
+	    <a
+	    class="wide btn-wide"
+	    href="{{ btn_primary.url }}"
+	    {% if edit_mode %}
+            ng-href="[[ data.btn_primary.url ]]"
+        {% endif %}>
+	    	<span {% if edit_mode %}dm-contenteditable ng-model="data.btn_primary.text"{% endif %}>
+	    		{{ btn_primary.text }}
+	    		{% if edit_mode %}
+	            <customizer class="dm-popover popover fade top">
+	                <div class="dm-control-button" ng-class="{hasUrl: data.btn_primary.url}" dm-edit-url="data.btn_primary.url"></div>
+	            </customizer>
+	            {% endif %}
+	    	</span>
+	    </a>
+	</section>
+</div>

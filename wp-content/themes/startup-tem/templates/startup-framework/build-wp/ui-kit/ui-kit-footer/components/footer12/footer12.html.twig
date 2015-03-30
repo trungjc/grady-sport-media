@@ -1,0 +1,38 @@
+<!-- footer-12 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer12" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-12">
+        <div class="container">
+            <span
+            {% if edit_mode %}
+            	dm-contenteditable
+            	ng-model="data.preText"
+            {% endif %}>
+            	{{ preText }}
+            </span>
+            <span class="home">
+	            {% if edit_mode %}
+	            <span ng-class="data.icon.name">
+	                <customizer class="dm-popover popover fade top">
+	                    <div class="dm-change-icon" dm-change-icon="data.icon.name" dm-change-icon-url="data.icon.url"></div>
+	                </customizer>
+	            </span>
+	            {% else %}
+	                {% if icon.url %}
+	                    <a href="{{ icon.url }}">
+	                        <span class="{{ icon.name }}"> </span>
+	                    </a>
+	                {% else %}
+	                    <span class="{{ icon.name }}"> </span>
+	                {% endif %}
+	            {% endif %}
+	        </span>
+	        <span
+	        {% if edit_mode %}
+	        	dm-contenteditable
+	        	ng-model="data.postText"
+	        {% endif %}>
+	        	{{ postText }}
+	        </span>
+        </div>
+    </footer>
+</div>

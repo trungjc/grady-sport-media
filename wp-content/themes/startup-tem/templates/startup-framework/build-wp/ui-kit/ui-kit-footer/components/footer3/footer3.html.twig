@@ -1,0 +1,31 @@
+<!-- footer-3 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer3" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-3">
+        <div class="container">
+            <div class="row v-center">
+                <div class="col-sm-2">
+                    <a
+                    {% if edit_mode %}
+                        ng-href="[[ data.brand.url ]]"
+                    {% endif %}
+                    class="brand"
+                    href="{{ brand.url }}">
+                        <span {% if edit_mode %}dm-contenteditable ng-model="data.brand.name"{% endif %}>{{ brand.name }}</span>
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" dm-edit-url="data.brand.url"></div>
+                        </customizer>
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-sm-7">
+                    <div class="additional-links" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.add_links"{% endif %}>{{ add_links }}</div>
+                </div>
+                <div class="col-sm-3">
+                    <h6 {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.address.title"{% endif %}>{{ address.title }}</h6>
+                    <div class="address" {% if edit_mode %}text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="data.address.description"{% endif %}>{{ address.description }}</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

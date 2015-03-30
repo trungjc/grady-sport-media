@@ -1,0 +1,47 @@
+<div class="wrap wrapDivide">
+{wp_enqueue_style('ss_rg_admin_template', plugins_url() ."/simple-subscribe/extension/readygraph/assets/css/upgrade.css")}
+
+<div class="rg_info rg_message"><img src="{plugins_url()}/simple-subscribe/extension/readygraph/assets/Sign-Alert-icon.png" style="float: left;height: 50px;padding-right: 10px;"><a href="admin.php?page=readygraph-app"><button class="button-warning pure-button" style="float: right; margin-right: 15px;">Connect ReadyGraph</button></a><h3 style="color:white">Grow your site traffic faster: Activate Simple Subscribe's User Growth Engine (ReadyGraph)</h3><p style="color: whitesmoke">Promotion to New Users | Viral Signup Form | Site Update emails | Import Existing Users</p></div>
+	<div id="icon-users" class="icon32"><br></div><h2>Subscribers</h2>
+	<div class="clear"></div>
+	<div class="relative">
+		<div class="subscribersExport">
+			<form method="POST">
+				<span><strong>Export</strong></span>
+				<select name="criteria" id="criteria">
+					<option value="all">all</option>
+					<option value="active">active</option>
+					<option value="inactive">inactive</option>
+				</select>
+				<span>subscribers as</span>
+				<select name="export" id="export">
+					<option value="csv">.CSV</option>
+					<option value="xls">.XLS</option>
+					<option value="tsv">.TSV</option>
+					<option value="xml">.XML</option>
+				</select>
+				<input type="submit" class="button-primary" value="Export" />
+			</form>
+		</div>
+		<div class="clear"></div>
+		<form method="POST">
+			{$table->display()}
+		</form>
+	</div>
+	<div class="settingsPage">
+		<div class="leftSide prettyForm noBorder">
+			<div class="info">
+				<h3>Add a new subscriber</h3>
+				{$formSubscriber}
+			</div>
+		</div>
+		<div class="rightSide prettyForm">
+			<div class="info">
+				<h3>Add a registered Wordpress User(s)</h3>
+				{$formSubscriberWp}
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>

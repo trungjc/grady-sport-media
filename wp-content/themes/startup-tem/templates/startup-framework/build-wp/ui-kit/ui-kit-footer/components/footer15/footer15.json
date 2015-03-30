@@ -1,0 +1,11 @@
+{
+    "title": "You can Sign In with popular Social Networks",
+    "twitter": {
+        "name": "Sign In with Twitter",
+        "url": "\/"
+    },
+    "facebook": {
+        "name": "Sign In with Facebook",
+        "url": "\/"
+    }
+}

@@ -1,0 +1,68 @@
+<!--price-2 -->
+<div{% if wp_mode %} class="dm-template" dm-template="price.price2" component-id="{{ component_id }}"{% endif %}>
+    <section class="price-2">
+        <div class="container">
+            <div class="plans">
+                {% if edit_mode %}
+                    <div class="plan" ng-repeat="plan in data.plans" ng-class="{'plan-2': $index = '1'}">
+                        <div class="title">
+                            <span text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.title"></span>
+                            <div class="price">
+                                <span class="currency" dm-contenteditable ng-model="plan.currency"></span>
+                                <span dm-contenteditable ng-model="plan.count" class="plan-count"></span>
+                                <span class="period" dm-contenteditable ng-model="plan.period"></span>
+                            </div>
+                            <a dm-contenteditable ng-model="plan.btn.name" ng-href="[[ plan.btn.url ]]" class="btn btn-clear btn-small">
+                                {% if edit_mode %}
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-control-button" ng-class="{hasUrl: plan.btn.url}" dm-edit-url="plan.btn.url"></div>
+                                    </customizer>
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="description">
+                            <div class="description-box" ng-repeat="description in plan.descriptions">
+                                <span ng-class="description.icon.name">
+                                    <customizer class="dm-popover popover fade top">
+                                        <div class="dm-change-icon" dm-change-icon="description.icon.name" dm-change-icon-url="description.icon.url"></div>
+                                    </customizer>
+                                </span>
+                                <span class="description-text" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="description.text"></span>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    {% for plan in plans %}
+                        <div class="plan {% if loop.index == 2 %}plan-2{% endif %}">
+                            <div class="title">
+                                <span>{{plan.title}}</span>
+                                <div class="price">
+                                    <span class="currency">{{ plan.currency }}</span>
+                                    {{ plan.count }}
+                                    <span class="period">{{ plan.period }}</span>
+                                </div>
+                                <a class="btn btn-clear btn-small" href="{{ plan.btn.url }}">
+                                    {{ plan.btn.name }}
+                                </a>
+                            </div>
+                            <div class="description">
+                                {% for description in plan.descriptions %}
+                                    <div class="description-box">
+                                        {% if description.icon.url %}
+                                            <a href="{{ description.icon.url }}">
+                                                <span class="{{ description.icon.name }}"> </span>
+                                            </a>
+                                        {% else %}
+                                            <span class="{{ description.icon.name }}"> </span>
+                                        {% endif %}
+                                        <span>{{ description.text }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

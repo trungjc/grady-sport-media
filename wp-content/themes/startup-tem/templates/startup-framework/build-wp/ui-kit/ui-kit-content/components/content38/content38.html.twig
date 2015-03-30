@@ -1,0 +1,62 @@
+<!-- content-37 -->
+<section{% if wp_mode %} class="content-38 dm-template" dm-template="content.content38" component-id="{{ component_id }}"{% endif %} {% if edit_mode %} ng-style="{'background-color': data.bg.color}" {% else %} style="background-color: {{ bg.color }}" {% endif %}>
+    {% if edit_mode %}
+        <div class="background" ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + data.bg.image + ')', 'opacity': data.bg.opacity }">&nbsp;</div>
+        <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !data.bg.image || data.bg.image == '../../../img/1x1.png'}">
+            <div class="btn-group">
+                <div class="dm-control-button" dm-remove-media="data.bg.image"></div>
+                <div class="dm-control-button" dm-upload-media="data.bg.image"></div>
+                <div class="dm-control-button" dm-opacity="data.bg.opacity" dm-gradient="data.bg.color"></div>
+                <div class="dm-control-button" dm-bg-color="data.bg.color"></div>
+            </div>
+        </div>
+        <div class="dm-controls dm-controlsView-btns dm-upload-masonry">
+            <div class="btn-group">
+                <div class="dm-control-button" data-width="800" dm-upload-media="data.masonry" dm-upload-type="masonry" dm-multiple-upload></div>
+            </div>
+        </div>
+    {% else %}
+        <div class="background" style="background-image: url({{ sfBuildUri }}{{ bg.image }}); opacity: {{ bg.opacity }}">&nbsp;</div>
+    {% endif %}
+    <div class="container">
+        <div class="samples-holder">
+            <div class="row samples-grid">
+                {% if edit_mode %}
+                    <div class="col-sm-10 col-sm-offset-1 samples-wrapper dm-controlsView-holder">
+                        <div class="row">
+                            <div
+                            class="sample-box col-xs-3"
+                            ng-repeat="item in data.masonry"
+                            dm-masonry>
+                                <img
+                                ng-src="{{ sfBuildUri }}[[ item.image ]]"
+                                id="sample[[$index + 1]]"
+                                alt="[[ item.title ]]" />
+                                {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top dm-masonry-image">
+                                    <div class="dm-control-button" data-width="50" dm-upload-type="image" dm-upload-media="item.image"></div>
+                                    <div class="dm-control-button" data-width="50" dm-remove-masonry="data.masonry" dm-remove-masonry-item="item"></div>
+                                    <div class="dm-control-button" dm-masonry-title="true" dm-edit-url-type="text" dm-edit-url="item.title"></div>
+                                </customizer>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                <div class="col-sm-10 col-sm-offset-1 samples-wrapper">
+                    <div class="row">
+                        {% for item in masonry %}
+                        <div class="sample-box col-xs-3">
+                            <img
+                            src="{{ sfBuildUri }}{{ item.image }}"
+                            id="sample{{ loop.index }}"
+                            alt="{{ item.title }}" />
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

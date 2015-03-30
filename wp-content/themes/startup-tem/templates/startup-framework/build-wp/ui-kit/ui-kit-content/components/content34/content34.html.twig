@@ -1,0 +1,101 @@
+<!-- content-34 -->
+<div{% if wp_mode %} class="dm-template" dm-template="content.content34" component-id="{{ component_id }}"{% endif %}>
+    <section class="content-34">
+        {% if edit_mode %}
+        <div
+        dm-slider="content-34-pt-main-{{ component_id }}"
+        dm-slider-model="data.slider"
+        dm-slider-archive="content34ptMain"
+        class="page-transitions pt-perspective">
+            <div
+            class="pt-page"
+            ng-style="{'background-color': slide.bg_color}"
+            ng-repeat="slide in data.slider"
+            dm-slider-repeat>
+                <section class="dm-controlsView-holder-background">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.title"></h2>
+                                <p class="lead" text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="slide.description"></p>
+                            </div>
+                        </div>
+                        <div class="row" ng-repeat="box in slide.box">
+                            <div class="col-sm-3 box-[[$index + 1]] dm-controlsView-holder">
+                                <div class="box_img custom-img" ng-style="{ 'background-image': 'url({{ sfBuildUri }}' + box.bg_image + ')'}"></div>
+                                {% if edit_mode %}
+                                <div class="dm-controls dm-controlsView-btns dm-image">
+                                    <div class="btn-group">
+                                        <div class="dm-control-button" dm-upload-media="box.bg_image"></div>
+                                        <div class="dm-control-button" data-width="50" dm-remove-media="box.bg_image"></div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <h3 text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.title"></h3>
+                                <p text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="box.description"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background"
+                    {% if edit_mode %}
+                        ng-style="{
+                            'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                            'opacity': slide.opacity
+                        }"
+                    {% else %}
+                        style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}"
+                    {% endif %}>&nbsp;</div>
+                    {% if edit_mode %}
+                    <div class="dm-controls dm-controlsView-btns dm-bg-image" ng-class="{'hide-opacity-widget': !slide.bg_image || slide.bg_image == '../../../img/1x1.png'}">
+                        <div class="btn-group">
+                            <div class="dm-control-button" dm-remove-media="slide.bg_image"></div>
+                            <div class="dm-control-button" dm-upload-media="slide.bg_image"></div>
+                            <div class="dm-control-button" dm-opacity="slide.opacity" dm-gradient="slide.bg_color"></div>
+                            <div class="dm-control-button" dm-bg-color="slide.bg_color"></div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </section>
+            </div>
+        </div>
+        {% else %}
+        <div id="content-34-pt-main-{{ component_id }}" class="page-transitions pt-perspective">
+            {% for slide in slider %}
+            <div class="pt-page" style="background-color: {{ slide.bg_color }}">
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>{{ slide.title }}</h2>
+                                <p class="lead">{{ slide.description }}</p>
+                            </div>
+                        </div>
+                        {% for box in slide.box %}
+                        <div class="row">
+                            <div class="col-sm-3 box-{{ loop.index }}">
+                                <div class="box_img"  style="background-image: url({{ sfBuildUri }}{{ box.bg_image }})"></div>
+                                <h3>{{ box.title }}</h3>
+                                <p>{{ box.description }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="background"
+                    {% if edit_mode %}
+                        ng-style="{
+                            'background-image': 'url({{ sfBuildUri }}' + slide.bg_image + ')',
+                            'opacity': slide.opacity
+                        }"
+                    {% else %}
+                        style="background-image: url({{ sfBuildUri }}{{ slide.bg_image }}); opacity: {{ slide.opacity }}"
+                    {% endif %}>&nbsp;</div>
+                </section>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="pt-controls">
+            <ol class="pt-indicators"></ol>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,89 @@
+<!-- footer-6 -->
+<div{% if wp_mode %} class="dm-template" dm-template="footer.footer6" component-id="{{ component_id }}"{% endif %}>
+    <footer class="footer-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div>
+                        <a
+                        href="{{ brand.url }}"
+                        class="brand"
+                        {% if edit_mode %}
+                            ng-href="[[ data.brand.url ]]"
+                        {% endif %}>
+                            <span {% if edit_mode %}dm-contenteditable ng-model="data.brand.name"{% endif %}>{{ brand.name }}</span>
+                            {% if edit_mode %}
+                            <customizer class="dm-popover popover fade top">
+                                <div class="dm-control-button" dm-edit-url="data.brand.url"></div>
+                            </customizer>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    {% macro render_three_column_menu(items) %}
+                        {% for item in items %}
+                            <div class="col-sm-2">
+                                <h6>{{ item.title }}</h6>
+                                <ul>
+                                {% for child in item.children %}
+                                    <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% endmacro %}
+                    {% if wp_mode %}
+                        {{ _self.render_three_column_menu(footerMenuThreeColumns.items) }}
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-control-button" dm-external-nav="{{ menuEditPageUriPattern|format(footerMenuThreeColumns.id) }}"></div>
+                        </customizer>
+                        {% endif %}
+                    {% else %}
+                        {{ _self.render_three_column_menu(menu) }}
+                    {% endif %}
+                </nav>
+                <div class="col-sm-3">
+                    <h6 {% if edit_mode %} dm-contenteditable ng-model="data.form.title"{% endif %}>{{ form.title }}</h6>
+
+                    <form method="POST">
+                    <div class="input-group">
+                            <input type="hidden" name="sf_register_user[subscribe]" value="true">
+                            <input type="text"  name="sf_register_user[email]" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit">
+                                    <span class="fui-arrow-right"> </span>
+                                </button>
+                            </span>
+                    </div>
+                    </form>
+                    <div class="social-btns">
+                        {% if edit_mode %}
+                        <customizer class="dm-popover popover fade top">
+                            <div class="dm-social-btns" dm-social-btns="data.social_btns"></div>
+                        </customizer>
+                        <span
+                        class="social-item"
+                        ng-repeat="social_btn in data.social_btns">
+                            <a
+                            class="social-holder"
+                            ng-href="[[ social_btn.url ]]">
+                                <div class="[[ social_btn.name ]]"></div>
+                                <div class="[[ social_btn.name ]]"></div>
+                            </a>
+                        </span>
+                        {% else %}
+                            {% for social_btn in social_btns %}
+                                <a class="social-holder" href="{{ social_btn.url }}">
+                                    <div class="{{ social_btn.name }}"></div>
+                                    <div class="{{ social_btn.name }}"></div>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

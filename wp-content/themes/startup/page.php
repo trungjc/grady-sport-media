@@ -1,29 +1,48 @@
 <?php
-/*
- * This file is part of the Designmodo WordPress Theme.
+/**
+ * The template for displaying all pages
  *
- * (c) Designmodo Inc. <info@designmodo.com>
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other 'pages' on your WordPress site will use a different template.
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
  */
-use Designmodo\WpTheme\Utility\Context;
-use Designmodo\WpTheme\Page\Layout\Layout;
-use Designmodo\WpTheme\Http\Http;
-$post = new TimberPost();
-if ($post->get_post_type()->name == SF_POST_TYPE) {
-    Context::getInstance()->set('post', $post);
-    $pageLayout = get_post_meta($post->ID, '_sf_page_layout', true);
-    Context::getInstance()->set('current_layout_id', $pageLayout);
-    Context::getInstance()->set('current_post_id', $post->ID);
 
-    $layout = new Layout(Context::getInstance()->get('current_layout_id'));
-    Context::getInstance()->set('current_component_ids', $layout->getComponents());
-    if (Context::getInstance()->get('edit_mode')) {
-        Context::getInstance()->set('wp_title', $post->title());
-    }
-    Context::getInstance()->set('wp_blog_name', get_bloginfo('name'));
-    echo $layout->render(Http::CONTENT_TYPE_HTML);
-} else {
-    get_template_part('stockpage');
-}
+get_header(); ?>
+
+<div id="main-content" class="main-content">
+
+<?php
+	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
+		// Include the featured content template.
+		get_template_part( 'featured-content' );
+	}
+?>
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			<?php
+				// Start the Loop.
+				while ( have_posts() ) : the_post();
+
+					// Include the page content template.
+					get_template_part( 'content', 'page' );
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+				endwhile;
+			?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	<?php get_sidebar( 'content' ); ?>
+</div><!-- #main-content -->
+
+<?php
+get_sidebar();
+get_footer();

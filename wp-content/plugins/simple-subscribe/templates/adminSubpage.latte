@@ -1,0 +1,28 @@
+<div class="wrap wrapDivide">
+{wp_enqueue_style('ss_rg_admin_template', plugins_url() ."/simple-subscribe/extension/readygraph/assets/css/upgrade.css")}
+
+<div class="rg_info rg_message"><img src="{plugins_url()}/simple-subscribe/extension/readygraph/assets/Sign-Alert-icon.png" style="float: left;height: 50px;padding-right: 10px;"><a href="admin.php?page=readygraph-app"><button class="button-warning pure-button" style="float: right; margin-right: 15px;">Connect ReadyGraph</button></a><h3 style="color:white">Grow your site traffic faster: Activate Simple Subscribe's User Growth Engine (ReadyGraph)</h3><p style="color: whitesmoke">Promotion to New Users | Viral Signup Form | Site Update emails | Import Existing Users</p></div>
+
+	<div id="icon-tools" class="icon32"><br></div><h2>Simple Subscribe Settings</h2>
+	<div class="settingsPage">
+		<div class="leftSide prettyForm">
+			{$formSettings}
+		</div>
+		<div class="rightSide prettyForm">
+			<div class="info">
+				<h3>Subscribe Form Usage</h3>
+				<ol>
+					<li><strong>Use a widget,</strong> if you have defined any <a href="widgets.php">Widget Areas,</a> simple place <em>"Subscribe"</em> or <em>"Unsubscribe"</em> widget in them.</li>
+					<li>In pages and posts, you can use one of these <strong>shortcodes:</strong>
+						<ul>
+							<li><code>[simpleSubscribeForm]</code> for Subscription Form</li>
+							<li><code>[simpleUnsubscribeForm]</code> for Unsubscription Form</li>
+						</ul></li>
+					<li>If you're a developer, or you simply need the form on a different place <a target="_blank" href="http://wordpress.org/plugins/simple-subscribe/other_notes/">have a look here.</a></li>
+				</ol>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

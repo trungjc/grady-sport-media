@@ -1,0 +1,229 @@
+@btn-font-size: 20px;
+body {
+    font-size: 18px;
+    line-height: 160%;
+}
+#header{
+    background: #fff;
+    border-bottom: 1px solid #e5eef1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    .navbar-header {
+        .logo {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+    }
+    .btn-primary {
+        .btn-default;
+    }
+}
+.mgt10 {
+    margin-top:10px;
+}
+
+.bg-turquoise {
+    .text {
+        font-size: 30px;
+        line-height: 58px;  margin: 0;
+    }
+    background: none repeat scroll 0 0 #f16334;
+    color: white;
+     .btn-primary {
+        .btn-default;
+        border-color: white;
+        color:white;
+        font-size: @btn-font-size;
+        &:hover {
+            background:white;
+            color:#f16334;
+            border-color:white;
+        }
+    }
+}
+.size-30 {
+    font-size: 30px!important;
+    line-height: 120%!important;
+}
+.semibold {
+    font-weight: 600 !important;
+}
+.light {
+    font-weight: 300 !important;
+}
+.red  {
+    color:#f16334!important
+}
+.dark {
+    color: #3f4a4d !important;
+}
+.quote .tile {
+    margin-bottom: 40px;
+    position: relative;
+    &:after {
+        border-color: #eff0f2 transparent transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-style: solid;
+    border-width: 25px 20px 20px;
+    bottom: -44px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 10%;
+    position: absolute;
+    width: 0;
+    }
+}
+.title {
+    .red;
+    margin-bottom: 30px;
+    .size-30;
+    &.left {text-align: left !important;}
+    &.dark {
+        color: #3f4a4d !important;
+    }
+    &.white {
+        color: #fff !important;
+    }
+}
+.bg-turquoise {
+    .title {color: #fff !important;}
+}
+.form-reserve {
+    text-align:left;
+    background: none repeat scroll 0 0 #c54429;
+    padding:30px;
+    .btn {
+        margin: 10px  0 ;
+        font-size: 15px;
+    }
+    .fui-time {vertical-align:middle;margin: 0 5px 0 0;}
+}
+.small {font-size: 16px;}
+.why ul {
+    color: #f16334;
+    padding: 0;
+    overflow: hidden;
+}
+.number {  
+    border: 3px solid #f16334;
+    border-radius: 50%;
+    color: #f16334;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 35px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+    
+}
+.text li {
+    margin: 0 0 35px 0;
+    font-size: 18px;
+    line-height: 160%;
+    list-style: outside none none;
+    margin: 0 0 35px;
+    overflow: hidden;
+    list-style:none;
+    .number {float:left;}
+    .number + span {
+        margin-left: 50px; display: block;
+    }
+}
+.text ul {
+    padding: 0;
+}
+.why li  {
+    margin: 25px 0 0; font-size: 18px;
+    .fui-check {
+        float: left;
+        margin: 0 10px 10px 0;
+        & + span {
+            display: block;
+        line-height: 140%;
+        margin-left: 36px;
+        }
+    }
+}
+.copyright {
+    border-left: 1px solid #bac1c8;
+    margin-left: 20px;
+    padding: 0 0 0 20px;
+}
+.content-5 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    position: relative;
+}
+.align-left {text-align:left!important}
+.btn-default{
+    color: #f16334;
+    background:transparent;
+    font-size: @btn-font-size;
+    border: 2px solid #e5eff2;
+    border-radius: 2em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 125%;white-space: normal;
+    &:hover {
+        background:#f16334;
+        color:white;
+        border-color: #f16334;
+    }
+}
+.logos > .container {
+    display: table;
+}
+.center {
+    text-align:center;
+}
+.name {font-size: 20px}
+.logos > .container > div {
+    display: table-cell;
+    text-align: center;
+}
+
+.panel-default {
+    .panel-heading{
+        background: none;
+    }
+    .media-heading {
+        margin: 24px 0 5px;
+    }
+    .panel-body{
+        background: url("../img/bg-quote-cases.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+        min-height: 135px;
+        padding: 35px 40px;
+        font-size: @btn-font-size;
+    }
+    .q{ 
+        margin-bottom:40px!important;
+    }
+ .btn  {font-size: 15px}
+}
+
+.delimiter {
+   margin-top: 50px !important;
+    padding: 0 !important;
+}
+@media (max-width: 676px) {
+    .logos > .container > div {
+        display: block;
+        margin: 10px 0;
+    }
+    .footer-14 {
+        nav,.social-btns{text-align:center}
+        .pull-left,.pull-right {float:none!important;margin:10px 0}
+    }
+}

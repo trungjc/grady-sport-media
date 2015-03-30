@@ -1,0 +1,40 @@
+<!-- price-1 -->
+<div{% if wp_mode %} class="dm-template" dm-template="price.price1" component-id="{{ component_id }}"{% endif %}>
+    <section class="price-1">
+        <div class="container">
+            <div class="row plans">
+                {% if edit_mode %}
+                <div class="col-sm-4" ng-repeat="plan in data.plans">
+                    <div class="plan">
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.title" class="title"></div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.price" class="price"></div>
+                        <div text-angular ta-toolbar="[ ['bold', 'italics', 'insertLink', 'color', 'font', 'fake'] ]" ng-model="plan.description" class="description">
+                        </div>
+                        <a class="btn btn-primary" dm-contenteditable ng-model="plan.btns.name" ng-href="[[ plan.btns.url ]]">
+                            {% if edit_mode %}
+                                <customizer class="dm-popover popover fade top">
+                                    <div class="dm-control-button" ng-class="{hasUrl: plan.btns.url}" dm-edit-url="plan.btns.url"></div>
+                                </customizer>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                    {% for plan in plans %}
+                        <div class="col-sm-4">
+                            <div class="plan">
+                                <div class="title">{{ plan.title }}</div>
+                                <div class="price">{{ plan.price }}</div>
+                                <div class="description"> {{ plan.description }}
+                                </div>
+                                <a class="btn btn-primary" href="{{ plan.btns.url }}">
+                                    {{ plan.btns.name }}
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>

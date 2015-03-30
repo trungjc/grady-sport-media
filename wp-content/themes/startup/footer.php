@@ -1,15 +1,41 @@
-            </div>
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains footer content and the closing of the #main and #page div elements.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
+ */
+?>
+
+		</div><!-- #main -->
+
+            <footer>
+                <div class="container">
+                    <h3><span class="fui-photo"></span>GRADY SPORTS MEDIA
+                    </h3>
+                    <p>ALL RIGHTS RESERVED (C) 2015</p>
+                    <div class="socail-bottom">
+                        <a href="#" class="socail-bottom-fb"></a>
+                        <a href="#" class="socail-bottom-tw"></a>
+                        <a href="#" class="socail-bottom-gg"></a>
+                        <a href="#" class="socail-bottom-p"></a>
+                        <a href="#" class="socail-bottom-v"></a>
+                        <a href="#" class="socail-bottom-t"></a>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <footer class="blog-footer">
-            <?php wp_nav_menu( array( 'theme_location' => Designmodo\WpTheme\Utility\Menu::MENU_LOCATION_FOOTER_ONE_LINE, 'menu_class' => 'nav-menu' ) ); ?>
-            <div class="footer-text">
-                <?php $_designmodo_theme_options = get_option('sf_settings'); echo $_designmodo_theme_options['SF_BLOG_FOOTER_TEXT'] ?>
-            </div>
-        </footer>
-        </div>
-    <?php wp_footer(); ?>
-    <script src="<?php echo get_template_directory_uri() . SF_DS . SF_RESOURCES_URI; ?>common-files/js/jquery-1.10.2.min.js"></script>
-    <script src="<?php echo get_template_directory_uri() . SF_DS . SF_RESOURCES_URI; ?>flat-ui/js/bootstrap.min.js"></script>
-    <script src="<?php echo get_template_directory_uri() . SF_DS . SF_RESOURCES_URI; ?>common-files/js/startup-kit.js"></script>
+        <!--end wrapper-->
+        <?php wp_footer(); ?>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../common-files/js/jquery-1.10.2.min.js"></script>
+        <script src="../../flat-ui/js/bootstrap.min.js"></script>
+        <script src="../../common-files/js/modernizr.custom.js"></script>
+        <script src="../../common-files/js/page-transitions.js"></script>
+        <script src="../../common-files/js/startup-kit.js"></script>
+        
     </body>
 </html>
