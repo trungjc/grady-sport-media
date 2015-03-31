@@ -26,15 +26,15 @@ $loop = new WP_Query( $args );
         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
         <?php
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
-        $style = "background-image: url('" . $image[0] . "');backgroud-repeat: no-repeat;background-size:cover "
-        ?>
+        $class ='has-bg';
+        $style = "background: url('" . $image[0] . "') no-repeat center center fixed; background-attachment: fixed; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
         <?php
     } else {
         $style = "";
     }
     ?>
 
-    <div id="<?php echo the_slug(); ?>" class="section "  style="<?php  echo $style ?>">
+    <div id="<?php echo the_slug(); ?>" class="section <?php echo $class ;?> "  style="<?php  echo $style ?>">
         <div class="<?php echo the_slug(); ?>-inner">
             <div class="content">
                 <?php the_content(); ?>

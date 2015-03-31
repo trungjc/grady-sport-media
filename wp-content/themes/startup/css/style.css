@@ -14104,6 +14104,7 @@ section * {
   .header-20-sub h3 {
     margin-top: 80px;
   }
+  #find-your-game {padding-top:140px}
 }
 .header-20-sub p {
   font-size: 18px;
@@ -16199,6 +16200,7 @@ section * {
 @media (max-width: 767px) {
   .projects-3 .projects {
     display: block;
+    
     width: auto;
   }
   .projects-3 .projects .project-wrapper {
@@ -16372,6 +16374,14 @@ body {
   background-size: cover;*/
   min-height: 913px;
 }
+#find-your-game:after {
+  background:url('../images/graphic-find-game.png') center center;
+  background-size:cover;
+  height:117px;
+  content:'';
+  display:block;
+  width:100%;
+}
 #section-find-your-game .slogan {
   font-size: 90px;
   font-weight: 900;
@@ -16519,6 +16529,16 @@ body {
   display: block;
   line-height: 40px;
 }
+
+#classes-offered:after {
+  background:url('../images/graphic-class.png') center center;
+  background-size:cover;
+  display:block;
+  height:51px;
+  content:'';
+  width:100%;
+  
+}
 .classes-offered {
   background: #f4f4f4;
   padding-bottom: 60px;
@@ -16657,6 +16677,17 @@ body {
   top: 385px;
   text-transform: uppercase;
 }
+#employment-2 {
+  margin-bottom:100px;
+}
+#employment-2:after {
+  background:url('../images/graphic-employment.png') center center;
+  background-size:cover;
+  display:block;
+  content:'';
+  width:100%;
+  height:210px;
+}
 .section-employment {
   /*background: url('../img/employment.png') no-repeat left center;
   background-size: cover;*/
@@ -16678,7 +16709,7 @@ body {
   height: 30px;
   margin: 20px auto;
 }
-.section-employment p {
+.section-employment p.highlight {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -16701,9 +16732,16 @@ body {
   padding: 7px 30px;
   text-transform: uppercase;
   position: absolute;
-  bottom: 0;
+  bottom: -300px;
   right: 10%;
 }
+.section-employment .logos {
+   margin: 120px 0 0 -100px;
+}
+.section-employment .logos p {
+  margin-bottom:135px;
+}
+
 .section-staff {
   padding-bottom: 30px;
 }
@@ -17038,6 +17076,14 @@ body {
 }
 .section-student-work .list-student-work li:hover .info-work {
   opacity: 1;
+}
+#event-countdown:after {
+  background:url('../images/graphic-event.png') center center;
+  background-size:cover;
+  display:block;
+  height:92px;
+  content:'';
+  width:100%;
 }
 .section-event {
  /* background: url('../img/event.png') no-repeat center center;
