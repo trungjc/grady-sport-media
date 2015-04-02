@@ -17722,3 +17722,6 @@ footer .socail-bottom a.socail-bottom-t:hover {
   }
 }
 .wpcf7-validation-errors,.wpcf7-mail-sent-ok {clear: both}
+
+  @media screen and (-webkit-min-device-pixel-ratio:0) {.has-bg { background-attachment: scroll!important; }}
+
